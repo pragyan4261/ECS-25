@@ -1,101 +1,84 @@
-import React, { useState, useEffect } from "react";
+import React, {useState} from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import { Autoplay, EffectCoverflow, Navigation } from "swiper/modules";
 
-const Gallery = () => {
-  const slides = [
-    { color: "bg-pink-500", id: 1 },
-    { color: "bg-black", id: 2 },
-    { color: "bg-blue-900", id: 3 },
-    { color: "bg-black", id: 4 },
-    { color: "bg-pink-500", id: 5 },
+const ImageCarousel = () => {
+    const [buttonImage, setButtonImage] = useState(
+        "https://i.postimg.cc/mgjNYYv7/Component-2.png"
+      );
+      const handleMouseEnter = () => {
+        setButtonImage("https://i.postimg.cc/Px3Qjwss/Group-48096106.png");
+      };
+      const handleMouseLeave = () => {
+        setButtonImage("https://i.postimg.cc/mgjNYYv7/Component-2.png");
+      };
+
+
+  const images = [
+    "https://via.placeholder.com/600x400/000000/FFFFFF?text=Image+1",
+    "https://via.placeholder.com/600x400/4A4A4A/FFFFFF?text=Image+2",
+    "https://via.placeholder.com/600x400/7A7A7A/FFFFFF?text=Image+3",
+    "https://via.placeholder.com/600x400/00A1FF/FFFFFF?text=Image+4",
+    "https://via.placeholder.com/600x400/FFA500/FFFFFF?text=Image+5",
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(2); // Center slide
-  const [isLoaded, setIsLoaded] = useState(false); // To control initial animation
-
-  useEffect(() => {
-    // Delay the gallery content's initial appearance by 3 seconds
-    const timer = setTimeout(() => {
-      setIsLoaded(true);
-    }, 3000);
-
-    // Auto-slide every 3 seconds
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 3000);
-
-    return () => {
-      clearInterval(interval);
-      clearTimeout(timer);
-    };
-  }, []);
-
-  const handleLeftClick = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
-    );
-  };
-
-  const handleRightClick = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-blue-900 to-black text-white relative overflow-hidden">
-      {/* Gallery Title */}
-      <h1 className={`text-3xl md:text-5xl font-bold tracking-widest opacity-90 mb-8 md:mb-12 z-10 ${isLoaded ? 'opacity-100 transition-opacity duration-1000' : 'opacity-0'}`}>
-        GALLERY
-      </h1>
+    <div>
+                <div className="galImg flex justify-center items-center mb-[176px]">
+                    <img src="https://i.postimg.cc/Y9sWX8Rm/Group-48096102.png" alt="" />
+                </div>
 
-      {/* Left Projector Light */}
-      <div className="absolute left-0 transform -translate-x-1/2 flex items-center justify-center z-0">
-        <div className="w-40 h-40 md:w-96 md:h-96 bg-gradient-to-r from-blue-500 to-transparent opacity-30 rounded-full blur-3xl"></div>
-        <div className="w-20 h-20 md:w-48 md:h-48 bg-blue-300 opacity-60 rounded-full blur-md"></div>
-      </div>
-
-      {/* Right Projector Light */}
-      <div className="absolute right-0 transform translate-x-1/2 flex items-center justify-center z-0">
-        <div className="w-40 h-40 md:w-96 md:h-96 bg-gradient-to-l from-blue-500 to-transparent opacity-30 rounded-full blur-3xl"></div>
-        <div className="w-20 h-20 md:w-48 md:h-48 bg-blue-300 opacity-60 rounded-full blur-md"></div>
-      </div>
-
-      {/* Gallery Content */}
-      <div className={`relative flex items-center justify-center space-x-4 md:space-x-6 z-10 ${isLoaded ? 'opacity-100 transition-opacity duration-1000' : 'opacity-0'}`}>
-        {/* Left Arrow */}
-        <div
-          onClick={handleLeftClick}
-          className="text-3xl md:text-4xl text-white opacity-75 cursor-pointer transform transition-transform hover:scale-110"
+    <div className="w-[793.36px] mx-auto">
+      <Swiper
+        autoplay={{ delay: 3000, disableOnInteraction: false }} // Autoplay after 3000ms and continues even if interacted with
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={2}
+        loop={true}
+        coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
+            slideShadows: true,
+        }}
+        modules={[EffectCoverflow, Autoplay, Navigation]}
+        navigation={{
+            nextEl: ".swiper-next",
+            prevEl: ".swiper-prev",
+        }}
+        className="mySwiper"
         >
-          <img src="https://i.postimg.cc/zvKhPnyz/Group-48096101.png" alt="prev"/>
-        </div>
-
-        {/* Gallery Slider */}
-        <div className="relative flex items-center justify-center space-x-2 md:space-x-3">
-          {slides.map((slide, index) => (
-            <div
-              key={slide.id}
-              className={`${
-                index === currentIndex
-                  ? "w-40 h-56 md:w-60 md:h-80 scale-110 shadow-xl shadow-blue-900"
-                  : "w-10 h-40 md:w-24 md:h-60 opacity-60"
-              } rounded-lg ${slide.color} transition-all duration-500 ease-in-out transform hover:scale-105`}
-            ></div>
-          ))}
-        </div>
-
-        {/* Right Arrow */}
-        <div
-          onClick={handleRightClick}
-          className="text-3xl md:text-4xl text-white opacity-75 cursor-pointer transform transition-transform hover:scale-110"
+        {images.map((img, index) => (
+            <SwiperSlide key={index} className="w-max">
+            <img
+              src={img}
+              alt={`Slide ${index + 1}`}
+              className="w-[399px] h-[311px] rounded-[50px] shadow-lg"
+              />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <button className="swiper-prev flex z-10 max-h-[469.5px] max-w-[306.6] -translate-x-[80%] -translate-y-[95%]">
+        <img src="https://i.postimg.cc/zvKhPnyz/Group-48096101.png" alt="Prev" />
+      </button>
+      <button className="swiper-next flex z-10 max-h-[469.5px] max-w-[306.6] translate-x-[140%] -translate-y-[195%]">
+        <img src="https://i.postimg.cc/gcXHZhkB/Group-48096103.png" alt="Next" />
+      </button>
+      <button
+          className="flex justify-center -translate-y-[850px] mx-auto z-20"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
-          <img src="https://i.postimg.cc/gcXHZhkB/Group-48096103.png" alt="next"/>
-        </div>
-      </div>
+          <img src={buttonImage} alt="Component 2" />
+      </button>
+    </div>
     </div>
   );
 };
 
-export default Gallery;
+export default ImageCarousel;
