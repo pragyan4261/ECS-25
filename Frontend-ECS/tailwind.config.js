@@ -12,7 +12,13 @@ module.exports = {
       },
       colors: {
         blueNeon: '#33FCFF',
+        foot: '#447BCE',
+        bot: '#447BCE',
+        top: '#6E41F7',
     },
+    fontFamily: {
+      rajdhani: ['Rajdhani', 'sans-serif'],
+    }
     },
   },
   plugins: [],

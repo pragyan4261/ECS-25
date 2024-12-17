@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from "react";
+import React, {useRef, useEffect, useState} from "react";
 import "./Message.css"
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -7,6 +7,26 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 
 const Message = () => {
+
+  const [buttonImagePrev, setButtonImagePrev] = useState(
+    "https://i.postimg.cc/9M1cQJMN/Property-1-Default-1.png"
+  );
+  const handleMouseEnterPrev = () => {
+    setButtonImagePrev("https://i.postimg.cc/wMdD9x1k/Property-1-Variant2-1.png");
+  };
+  const handleMouseLeavePrev = () => {
+    setButtonImagePrev("https://i.postimg.cc/9M1cQJMN/Property-1-Default-1.png");
+  };
+
+const [buttonImageNext, setButtonImageNext] = useState(
+    "https://i.postimg.cc/gjJmX8Lc/Property-1-Default.png"
+  );
+  const handleMouseEnterNext = () => {
+    setButtonImageNext("https://i.postimg.cc/hjm9FQtj/Property-1-Variant2.png");
+  };
+  const handleMouseLeaveNext = () => {
+    setButtonImageNext("https://i.postimg.cc/gjJmX8Lc/Property-1-Default.png");
+  };
   
   const slides = [
     {
@@ -72,11 +92,11 @@ const Message = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <button className="swiper-button-prev-custom">
-        <img src="https://i.postimg.cc/jSTrHWkT/Button.png" alt="Prev" />
+      <button className="swiper-button-prev-custom" onMouseEnter={handleMouseEnterPrev} onMouseLeave={handleMouseLeavePrev}>
+        <img src={buttonImagePrev} alt="Prev" />
       </button>
-      <button className="swiper-button-next-custom">
-        <img src="https://i.postimg.cc/kgyPfnkb/Buttonright.png" alt="Next" />
+      <button className="swiper-button-next-custom" onMouseEnter={handleMouseEnterNext} onMouseLeave={handleMouseLeaveNext}>
+        <img src={buttonImageNext} alt="Next" />
       </button>
       </div>
     </div>
