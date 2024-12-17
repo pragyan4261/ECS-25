@@ -8,10 +8,10 @@ const Footer = () => {
         <div className="text-center md:text-left mb-6 md:mb-0">
           <h2 className="text-foot text-base mb-3">QUICK LINKS</h2>
           <ul className="space-y-2 text-base font-rajdhani ">
-            <li>Resource Hub</li>
-            <li>Messages</li>
-            <li>Annual</li>
-            <li>Attraction</li>
+            <li><a href="#">Resource Hub</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Annual</a></li>
+            <li><a href="#">Attraction</a></li>
           </ul>
         </div>
 
@@ -72,10 +72,10 @@ const Footer = () => {
         <div className="text-center md:text-left">
           <h2 className="text-foot text-base mb-3">QUICK LINKS</h2>
           <ul className="space-y-2 text-right text-base font-rajdhani">
-            <li>Members</li>
-            <li>Gallery</li>
-            <li>About Us</li>
-            <li>FAQs</li>
+            <li><a href="#">Members</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">FAQs</a></li>
           </ul>
         </div>
       </div>
