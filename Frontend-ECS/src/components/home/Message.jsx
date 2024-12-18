@@ -54,7 +54,7 @@ const [buttonImageNext, setButtonImageNext] = useState(
     
     <div className="max-w-6xl mx-auto items-center p-5">
       <div className="message border border-transparent p-5 h-max text-center space-y-6">
-                <div className="msgImg flex justify-center items-center">
+                <div className="msgImg flex justify-center items-center mb-[70px]">
                     <img src="https://i.postimg.cc/hGJ1bPRD/Group-15.png" alt="" />
                 </div>        
                 

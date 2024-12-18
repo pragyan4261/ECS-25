@@ -18,10 +18,10 @@ const ImageCarousel = () => {
 
 
   const images = [
-    "https://via.placeholder.com/600x400/000000/FFFFFF?text=Image+1",
-    "https://via.placeholder.com/600x400/4A4A4A/FFFFFF?text=Image+2",
-    "https://via.placeholder.com/600x400/7A7A7A/FFFFFF?text=Image+3",
-    "https://via.placeholder.com/600x400/00A1FF/FFFFFF?text=Image+4",
+    "https://i.postimg.cc/CLCJ3Yys/MJ-9663.jpg",
+    "https://i.postimg.cc/HWy6tXBK/IMG-0417.jpg",
+    "https://i.postimg.cc/sx7KDCMy/IMG-20240426-WA0012.jpg",
+    "https://i.postimg.cc/mZv5x8PB/ARY-0100.jpg",
     "https://via.placeholder.com/600x400/FFA500/FFFFFF?text=Image+5",
   ];
 
@@ -31,7 +31,7 @@ const ImageCarousel = () => {
                     <img src="https://i.postimg.cc/Y9sWX8Rm/Group-48096102.png" alt="" />
                 </div>
 
-    <div className="w-[793.36px] mx-auto">
+    <div className="w-[900px] mx-auto">
       <Swiper
         autoplay={{ delay: 3000, disableOnInteraction: false }} // Autoplay after 3000ms and continues even if interacted with
         effect={"coverflow"}
@@ -58,7 +58,7 @@ const ImageCarousel = () => {
             <img
               src={img}
               alt={`Slide ${index + 1}`}
-              className="w-[399px] h-[311px] rounded-[50px] shadow-lg"
+              className="w-[500px] h-[320px] rounded-[50px] shadow-lg object-cover"
               />
           </SwiperSlide>
         ))}
@@ -66,7 +66,7 @@ const ImageCarousel = () => {
       <button className="swiper-prev flex z-10 max-h-[469.5px] max-w-[306.6] -translate-x-[80%] -translate-y-[95%]">
         <img src="https://i.postimg.cc/zvKhPnyz/Group-48096101.png" alt="Prev" />
       </button>
-      <button className="swiper-next flex z-10 max-h-[469.5px] max-w-[306.6] translate-x-[140%] -translate-y-[195%]">
+      <button className="swiper-next flex z-10 max-h-[469.5px] max-w-[306.6] translate-x-[160%] -translate-y-[195%]">
         <img src="https://i.postimg.cc/gcXHZhkB/Group-48096103.png" alt="Next" />
       </button>
       <button
