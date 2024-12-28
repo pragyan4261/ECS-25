@@ -61,7 +61,7 @@ const registerUser= asyncHandler(async(req,res)=>{
 try {
     const user = await User.create({
         fullName,
-        // avatar: avatar?.url, 
+        avatar: '', 
         username,
         email,
         scholar_ID,
