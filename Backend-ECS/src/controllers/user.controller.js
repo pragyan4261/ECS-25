@@ -1,7 +1,7 @@
 import { asyncHandler } from "../utils/asyncHandler.js";
 import {APIError} from "../utils/APIError.js"
 import { User } from "../models/student.js";
-import { uploadOnCloudinary ,deleteFromCloudinary } from "../utils/cloudiary.js";
+// import { uploadOnCloudinary ,deleteFromCloudinary } from "../utils/cloudiary.js";
 import { APIResponse } from "../utils/APIResponse.js";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv"
@@ -42,30 +42,30 @@ const registerUser= asyncHandler(async(req,res)=>{
     if(existingUser){
         throw new APIError(409,"User with the given scholar ID already exists")
     }
-    const avatarloaclPath=req.files?.avatar?.[0]?.path
+    // const avatarloaclPath=req.files?.avatar?.[0]?.path
 
-    if(!avatarloaclPath){
-        throw new APIError(400,"Avatar File is missing")
-    }
+    // if(!avatarloaclPath){
+    //     throw new APIError(400,"Avatar File is missing")
+    // }
 
-let avatar;
+// let avatar;
 
-try {
-    avatar = await uploadOnCloudinary(avatarloaclPath);
-    console.log("Avatar Upload Successful", avatar);
-} catch (error) {
-    console.error("Error Uploading Avatar", error);
-    throw new APIError(500, "Failed to Upload Avatar");
-}
+// try {
+//     avatar = await uploadOnCloudinary(avatarloaclPath);
+//     console.log("Avatar Upload Successful", avatar);
+// } catch (error) {
+//     console.error("Error Uploading Avatar", error);
+//     throw new APIError(500, "Failed to Upload Avatar");
+// }
 
 try {
     const user = await User.create({
         fullName,
-        avatar: avatar?.url, 
+        // avatar: avatar?.url, 
+        username,
         email,
         scholar_ID,
         password,
-        username
     });
 
     const createdUser = await User.findById(user._id).select("-password -refreshToken");
@@ -76,14 +76,15 @@ try {
 
     return res
         .status(201)
-        .json(new APIResponse(200, createdUser, "User Registered Successfully"));
+        .json('new user')
+        // .json(new APIResponse(200, createdUser, "User Registered Successfully"));
 
 } catch (error) {
     console.error("User Creation Failed:", error);
 
-    if (avatar) {
-        await deleteFromCloudinary(avatar.public_id);
-    }
+    // if (avatar) {
+    //     await deleteFromCloudinary(avatar.public_id);
+    // }
 
     throw new APIError(400, "Something went wrong.......Registration failed!");
 }
@@ -245,35 +246,35 @@ const updateAccountDetails=asyncHandler(async(req,res)=>{
     .json(new APIResponse(200,user,"Account Details Updated successfully"))
 })
 
-const updateAvatar=asyncHandler(async(req,res)=>
-    {
-        const avatarloaclPath=req.file?.path
-        if(!avatarloaclPath){
-            throw new APIError(400,"File is required")
-        }
+// const updateAvatar=asyncHandler(async(req,res)=>
+//     {
+//         const avatarloaclPath=req.file?.path
+//         if(!avatarloaclPath){
+//             throw new APIError(400,"File is required")
+//         }
 
-        const avatar= await uploadOnCloudinary(avatarloaclPath)
+//         const avatar= await uploadOnCloudinary(avatarloaclPath)
 
-        if(!avatar.url){
-            throw new APIError(500,"Something went wrong")
-        }
+//         if(!avatar.url){
+//             throw new APIError(500,"Something went wrong")
+//         }
        
-       const user= await User.findByIdAndUpdate(
-            req.user?._id,
-            {
-                $set:
-                {
-                    avatar:avatar.url
-                }
-            },{new:true}
-        ).select("-password -refreshToken")
+//        const user= await User.findByIdAndUpdate(
+//             req.user?._id,
+//             {
+//                 $set:
+//                 {
+//                     avatar:avatar.url
+//                 }
+//             },{new:true}
+//         ).select("-password -refreshToken")
 
-        return res
-        .status(200)
-        .json(new APIResponse(200,user,"Avatar Updated Successfully"))
+//         return res
+//         .status(200)
+//         .json(new APIResponse(200,user,"Avatar Updated Successfully"))
         
 
-})
+// })
 
 const dashboard=asyncHandler(async(req,res)=>{
     return res.status(200).json(new APIResponse(200, req.user,"Current User Details"))
@@ -284,7 +285,7 @@ export{
     refreshAccessToken,
     logoutuser,
     changeCurrentPassword,
-    updateAvatar,
+    // updateAvatar,
     updateAccountDetails,
     dashboard
 }
