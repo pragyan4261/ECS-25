@@ -32,7 +32,7 @@ const studentSchema = new Schema({
     },
     avatar:{
         type:String, //Cloudinary URL maybe
-        required:true,
+        
 
     },
     refreshToken:{

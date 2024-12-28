@@ -76,8 +76,8 @@ try {
 
     return res
         .status(201)
-        .json('new user')
-        // .json(new APIResponse(200, createdUser, "User Registered Successfully"));
+        
+        .json(new APIResponse(200, createdUser, "User Registered Successfully"));
 
 } catch (error) {
     console.error("User Creation Failed:", error);
