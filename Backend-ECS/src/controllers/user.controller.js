@@ -290,5 +290,5 @@ export{
     // updateAvatar,
     updateAccountDetails,
     dashboard
->>>>>>> 26596280304dcaa73a3f29ec2f74ac5bd4949efa
+
 }
