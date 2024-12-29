@@ -29,6 +29,9 @@ function Profile() {
                  mei toh atak gaya
                 okok
                 okok
+
+
+                maine na jane kya kya push kr diya h sab gobar bhi ho sakta h
             </div>
         </div>
     );
