@@ -1,3 +1,4 @@
+
 import { asyncHandler } from "../utils/asyncHandler.js";
 import {APIError} from "../utils/APIError.js"
 import { User } from "../models/student.js";
@@ -27,11 +28,11 @@ const generateAccessAndRefreshToken=async(userId)=>{
 }
 
 const registerUser= asyncHandler(async(req,res)=>{
-    const {username,fullName,email,scholar_ID,password}=req.body
+    const {username,fullName,email,scholar_ID,Mobile_No,password}=req.body
 
     //Validation
     if(
-        [username,fullName,email,scholar_ID,password].some((field)=>field?.trim()==="")
+        [username,fullName,email,scholar_ID,Mobile_No,password].some((field)=>field?.trim()==="")
     ){
         throw new APIError(400,"All fields are required")
     }
@@ -40,7 +41,7 @@ const registerUser= asyncHandler(async(req,res)=>{
         $or:[{email},{scholar_ID}]
     })
     if(existingUser){
-        throw new APIError(409,"User with the given scholar ID already exists")
+        throw new APIError(409,"User with the given scholar ID or email already exists")
     }
     // const avatarloaclPath=req.files?.avatar?.[0]?.path
 
@@ -65,6 +66,7 @@ try {
         username,
         email,
         scholar_ID,
+        Mobile_No,
         password,
     });
 
@@ -288,4 +290,5 @@ export{
     // updateAvatar,
     updateAccountDetails,
     dashboard
+>>>>>>> 26596280304dcaa73a3f29ec2f74ac5bd4949efa
 }
