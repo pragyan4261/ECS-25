@@ -10,6 +10,7 @@ import Members from './pages/members/Members.jsx'
 import Developers from './pages/developers/developers.jsx'
 import Signin from './pages/Signin.jsx'
 import Signup from './pages/Signup.jsx'
+import Profile from './pages/Profile.jsx'
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "sign-up",
         element: <Signup/>
+      },
+      {
+        path: "profile",
+        element: <Profile/>
       }
     ]
   }
