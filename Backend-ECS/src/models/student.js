@@ -26,6 +26,10 @@ const studentSchema = new Schema({
         unique:true,
 
     },
+    Mobile_No:{
+        type:Number,
+        required:true,
+    },
     password:{
         type:String,
         required:[true,"password is required"],
@@ -33,10 +37,12 @@ const studentSchema = new Schema({
     avatar:{
         type:String, //Cloudinary URL maybe
         
-
     },
     refreshToken:{
         type:String
+    },
+    eventsRegistered:{
+        type:Array
     }
 })
 
