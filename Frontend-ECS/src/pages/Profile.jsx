@@ -27,6 +27,7 @@ function Profile() {
                 Github se laude na lag jae isliye testing 
                 arre nhi lagega re, seekh gye apan
                 laude lag gye
+                Hello World I am now Up
             </div>
         </div>
     );
