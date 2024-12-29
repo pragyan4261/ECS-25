@@ -26,6 +26,7 @@ function Profile() {
                 testing github kyuki humko ata nhi achhe se
                 Github se laude na lag jae isliye testing 
                 arre nhi lagega re, seekh gye apan
+                laude lag gye
             </div>
         </div>
     );
