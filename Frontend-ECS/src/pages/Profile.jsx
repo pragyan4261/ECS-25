@@ -24,6 +24,7 @@ function Profile() {
             <div className="w-1/2 border-2 flex items-center justify-center text-white text-2xl">
                 Events 
                 testing github kyuki humko ata nhi achhe se
+                Github se laude na lag jae isliye testing 
             </div>
         </div>
     );
