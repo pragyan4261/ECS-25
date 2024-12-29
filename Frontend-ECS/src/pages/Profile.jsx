@@ -28,6 +28,7 @@ function Profile() {
                 arre nhi lagega re, seekh gye apan
 
                 okok
+                okok
             </div>
         </div>
     );
