@@ -6,6 +6,7 @@ function Signup() {
         fullName: "",
         email: "",
         scholar_ID: "",
+        Mobile_No,
         password: ""
     });
     const [error, setError] = useState("");
@@ -45,6 +46,7 @@ function Signup() {
                 fullName: "",
                 email: "",
                 scholar_ID: "",
+                Mobile_No,
                 password: ""
             });
         } catch (error) {
@@ -101,6 +103,14 @@ function Signup() {
                     type="text"
                     placeholder="Scholar ID"
                     value={formData.scholar_ID}
+                    onChange={handleChange}
+                    className="p-2 border border-gray-300 rounded"
+                />
+                <input
+                    id="Mobile_No"
+                    type="Number"
+                    placeholder="Mobile_No"
+                    value={formData.Mobile_No}
                     onChange={handleChange}
                     className="p-2 border border-gray-300 rounded"
                 />
