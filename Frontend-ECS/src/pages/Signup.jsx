@@ -6,10 +6,10 @@ function Signup() {
         fullName: "",
         email: "",
         scholar_ID: "",
-        Mobile_No,
+        Mobile_No:"",
         password: ""
     });
-    const [error, setError] = useState("");
+    const [error, setError] = useState(""); 
     const [success, setSuccess] = useState(false);
 
     const handleChange = (e) => {
