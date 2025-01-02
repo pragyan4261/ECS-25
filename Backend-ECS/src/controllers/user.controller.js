@@ -2,7 +2,7 @@
 import { asyncHandler } from "../utils/asyncHandler.js";
 import {APIError} from "../utils/APIError.js"
 import { User } from "../models/student.js";
-// import { uploadOnCloudinary ,deleteFromCloudinary } from "../utils/cloudiary.js";
+import { uploadOnCloudinary ,deleteFromCloudinary } from "../utils/cloudiary.js";
 import { APIResponse } from "../utils/APIResponse.js";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv"
@@ -248,35 +248,35 @@ const updateAccountDetails=asyncHandler(async(req,res)=>{
     .json(new APIResponse(200,user,"Account Details Updated successfully"))
 })
 
-// const updateAvatar=asyncHandler(async(req,res)=>
-//     {
-//         const avatarloaclPath=req.file?.path
-//         if(!avatarloaclPath){
-//             throw new APIError(400,"File is required")
-//         }
+const updateAvatar=asyncHandler(async(req,res)=>
+    {
+        const avatarloaclPath=req.file?.path
+        if(!avatarloaclPath){
+            throw new APIError(400,"File is required")
+        }
 
-//         const avatar= await uploadOnCloudinary(avatarloaclPath)
+        const avatar= await uploadOnCloudinary(avatarloaclPath)
 
-//         if(!avatar.url){
-//             throw new APIError(500,"Something went wrong")
-//         }
+        if(!avatar.url){
+            throw new APIError(500,"Something went wrong")
+        }
        
-//        const user= await User.findByIdAndUpdate(
-//             req.user?._id,
-//             {
-//                 $set:
-//                 {
-//                     avatar:avatar.url
-//                 }
-//             },{new:true}
-//         ).select("-password -refreshToken")
+       const user= await User.findByIdAndUpdate(
+            req.user?._id,
+            {
+                $set:
+                {
+                    avatar:avatar.url
+                }
+            },{new:true}
+        ).select("-password -refreshToken")
 
-//         return res
-//         .status(200)
-//         .json(new APIResponse(200,user,"Avatar Updated Successfully"))
+        return res
+        .status(200)
+        .json(new APIResponse(200,user,"Avatar Updated Successfully"))
         
 
-// })
+})
 
 const dashboard=asyncHandler(async(req,res)=>{
     return res.status(200).json(new APIResponse(200, req.user,"Current User Details"))
@@ -287,7 +287,7 @@ export{
     refreshAccessToken,
     logoutuser,
     changeCurrentPassword,
-    // updateAvatar,
+    updateAvatar,
     updateAccountDetails,
     dashboard
 
