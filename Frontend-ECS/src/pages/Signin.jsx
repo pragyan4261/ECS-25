@@ -55,6 +55,15 @@ function Signin() {
                 password: ""
             });
 
+            const { data: { user, token } } = data;
+
+            console.log(data)
+
+            // Store the token and user in localStorage
+            localStorage.setItem("token", token);
+            localStorage.setItem("user", JSON.stringify({ currentUser: user }));
+            console.log("User data saved to localStorage:", { currentUser: user });
+            
             navigate('/profile')
         } catch (error) {
             console.error("Error during login:", error);
