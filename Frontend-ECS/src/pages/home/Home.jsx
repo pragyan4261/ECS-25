@@ -6,7 +6,7 @@ import AboutUs from './AboutUs';
 
 export default function Home() {
     return (
-        <div className="mx-auto w-full max-w-7xl space-y-10">
+        <div className="mx-auto w-full space-y-10">
             <aside className="main border-2 border-red-500 h-[89vh] bg-[url('https://i.postimg.cc/QCWYndrJ/bgImage.png')] bg-cover bg-center bg-no-repeat flex justify-center items-center text-center">
                 <div>
                     <h2 className="text-white text-4xl font-bold sm:text-5xl">
