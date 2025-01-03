@@ -3,7 +3,53 @@ import React from "react";
 function Profile() {
   // State to hold user data
   const [user, setUser] = React.useState(null);
-
+  const updateAvatar = async () => {
+    try {
+      // Open a file picker dialog
+      const fileInput = document.createElement("input");
+      fileInput.type = "file";
+      fileInput.accept = "image/*";
+      fileInput.onchange = async (event) => {
+        const file = event.target.files[0];
+        if (!file) return;
+  
+        // Create FormData to send the file
+        const formData = new FormData();
+        formData.append("avatar", file);
+  
+        // Send the file to the backend
+        const response = await fetch("/api/v1/users/updateAvatar", {
+          method: "PATCH",
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`, 
+          },
+          body: formData,
+        });
+  
+        const data = await response.json();
+  
+        if (response.ok) {
+          // Update user avatar in local state and localStorage
+          const updatedUser = { ...user, avatar: data.data.avatar };
+          setUser(updatedUser);
+          localStorage.setItem(
+            "user",
+            JSON.stringify({ currentUser: updatedUser })
+          );
+          alert("Avatar updated successfully!");
+        } else {
+          throw new Error(data.message || "Failed to update avatar");
+        }
+      };
+  
+      // Trigger file selection dialog
+      fileInput.click();
+    } catch (error) {
+      console.error("Error updating avatar:", error);
+      alert("Failed to update avatar. Please try again.");
+    }
+  };
+  
   // Fetch user data from localStorage on component mount
   React.useEffect(() => {
     try {
@@ -29,7 +75,8 @@ function Profile() {
       {/* Left Section: User Details */}
       <div className="w-1/2 border-2 flex flex-col items-center justify-center text-white text-2xl">
         {/* User Profile Image */}
-        <div className="image bg-gray-500 w-full h-1/4 flex items-center justify-center">
+        <div className="image bg-gray-500 w-full h-1/4 flex items-center justify-center"
+             onClick={updateAvatar}>
           {user.avatar ? (
             <img
               src={user.avatar}
@@ -37,7 +84,7 @@ function Profile() {
               className="h-full w-auto object-cover"
             />
           ) : (
-            "No Avatar"
+            "Click to Upload your Avatar"
           )}
         </div>
 
