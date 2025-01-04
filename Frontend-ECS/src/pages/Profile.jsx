@@ -1,4 +1,5 @@
 import React from "react";
+import Signin from "./Signin";
 
 function Profile() {
   // State to hold user data
@@ -67,7 +68,10 @@ function Profile() {
 
   // Display message if user is not signed in or data is unavailable
   if (!user) {
-    return <div>Please sign in to view your profile.</div>;
+    return <>
+    <Signin/>
+    <p className="text-center">Don't Have an account? Click here to <a href="/sign-up" className="text-blue-600">Sign-Up</a></p>
+    </>;
   }
 
   return (
