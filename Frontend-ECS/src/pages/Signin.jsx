@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link, Navigate, useNavigate } from 'react-router-dom'
+import { AuthContext } from '../context/authContext';
 
 function Signin() {
+    const isLoggedIn = useContext(AuthContext);
 
     const navigate = useNavigate()
 
@@ -64,6 +66,9 @@ function Signin() {
             localStorage.setItem("token", refreshToken);
             localStorage.setItem("user", JSON.stringify({ currentUser: user }));
             console.log("User data saved to localStorage:", { currentUser: user });
+
+            // Update the context
+            isLoggedIn.setIsLoggedIn(true);
             
             navigate('/profile')
         } catch (error) {
