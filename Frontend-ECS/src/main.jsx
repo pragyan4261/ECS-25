@@ -5,6 +5,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Layout.jsx'
 import Home from './pages/home/Home.jsx'
+import Events from './pages/events/events.jsx'
 import AboutUs from './pages/home/AboutUs.jsx'
 import Members from './pages/members/Members.jsx'
 import Developers from './pages/developers/developers.jsx'
@@ -12,6 +13,7 @@ import Signin from './pages/Signin.jsx'
 import Signup from './pages/Signup.jsx'
 import Profile from './pages/Profile.jsx'
 import ResourceHub from './Pages/Resource Hub/ResourceHub.jsx'
+
 
 const router = createBrowserRouter([
   {
@@ -27,8 +29,8 @@ const router = createBrowserRouter([
         element: <AboutUs/>
       },
       {
-        path: "about",
-        element: <AboutUs/>
+        path: "events",
+        element: <Events/>
       },
       {
         path: "members",
