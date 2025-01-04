@@ -11,6 +11,7 @@ import Developers from './pages/developers/developers.jsx'
 import Signin from './pages/Signin.jsx'
 import Signup from './pages/Signup.jsx'
 import Profile from './pages/Profile.jsx'
+import ResourceHub from './Pages/Resource Hub/ResourceHub.jsx'
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "profile",
         element: <Profile/>
+      },
+      {
+        path: "Resource+Hub",
+        element: <ResourceHub/>
       }
     ]
   }
