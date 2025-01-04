@@ -90,7 +90,7 @@ export default function Header() {
                                         } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-blue-400 lg:p-0`
                                     }
                                 >
-                                    developers
+                                    Developers
                                 </NavLink>
                             </li>
                             <li>
