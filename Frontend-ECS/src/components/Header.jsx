@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../context/authContext';
+import { useContext } from 'react';
 
 export default function Header() {
     const [hoveredLink, setHoveredLink] = useState(null);
+    const { isLoggedIn } = useContext(AuthContext);
+    console.log(isLoggedIn);
 
     const handleHover = (link) => {
         setHoveredLink(link);
@@ -30,7 +34,7 @@ export default function Header() {
                             <Link
                                 to="/annual-attraction"
                             >
-                                <img src={hoveredLink === 'annual-attraction'? "https://i.postimg.cc/XqND1Jng/Group-174-5.png" : "https://i.postimg.cc/BQNn6Hxp/Group-174-2.png"} alt="" />
+                                <img src={hoveredLink === 'annual-attraction' ? "https://i.postimg.cc/XqND1Jng/Group-174-5.png" : "https://i.postimg.cc/BQNn6Hxp/Group-174-2.png"} alt="" />
                             </Link>
                         </li>
                         <li
@@ -41,7 +45,7 @@ export default function Header() {
                             <Link
                                 to="/resource-hub"
                             >
-                                <img src={hoveredLink === 'resource-hub'? "https://i.postimg.cc/Gpk7cY2Q/Group_174_(4).png" : "https://i.postimg.cc/mgD2Fkjs/Group-174-6.png"} alt="" />
+                                <img src={hoveredLink === 'resource-hub' ? "https://i.postimg.cc/Gpk7cY2Q/Group_174_(4).png" : "https://i.postimg.cc/mgD2Fkjs/Group-174-6.png"} alt="" />
                             </Link>
                         </li>
                         <li
@@ -51,7 +55,7 @@ export default function Header() {
                             <Link
                                 to="/members"
                             >
-                                <img src={hoveredLink === 'members'? "https://i.postimg.cc/Gp0gwzct/Group-174-1.png" : "https://i.postimg.cc/VsWYGnHw/Group-174-7.png"} alt="" />
+                                <img src={hoveredLink === 'members' ? "https://i.postimg.cc/Gp0gwzct/Group-174-1.png" : "https://i.postimg.cc/VsWYGnHw/Group-174-7.png"} alt="" />
                             </Link>
                         </li>
                         <li
@@ -62,68 +66,73 @@ export default function Header() {
                                 to="/developers"
                             >
                                 <img src={
-                                        hoveredLink === 'developers'
-                                            ? "https://i.postimg.cc/2SL9KgNg/Group-174.png"
-                                            : "https://i.postimg.cc/jSZwGBgs/Group-174-3.png"
-                                    } alt="" className='group-hover:hidden'/>
+                                    hoveredLink === 'developers'
+                                        ? "https://i.postimg.cc/2SL9KgNg/Group-174.png"
+                                        : "https://i.postimg.cc/jSZwGBgs/Group-174-3.png"
+                                } alt="" className='group-hover:hidden' />
                             </Link>
                         </li>
                     </ul>
 
                     {/* User Icon */}
-                    <Link to="/profile" className="flex items-center">
-                        <img src="https://i.postimg.cc/VLJVrcth/user-svgrepo-com-1.png" alt="" />
-                    </Link>
+
+                    {isLoggedIn ? (<div>
+                        <Link to="/profile" className="flex items-center">
+                            <img src="https://i.postimg.cc/VLJVrcth/user-svgrepo-com-1.png" alt="" />
+                        </Link>
+                    </div>) 
+                    : 
+                    <div>
+                        <Link
+                            to="/sign-up"
+                            className="text-white bg-blue-900 hover:bg-blue-950 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 focus:outline-none"
+                        >
+                            Sign Up
+                        </Link> </div>
+                    }
+
                 </div>
             </nav>
             {/* Lines */}
             <div
                 id="1"
-                className={`absolute top-7 left-[353px] h-[2px] w-[22%] bg-gradient-to-r from-[#048AB2] from-70% to-transparent ${
-                    hoveredLink === 'annual-attraction' ? 'hidden' : ''
-                }`}
+                className={`absolute top-7 left-[353px] h-[2px] w-[22%] bg-gradient-to-r from-[#048AB2] from-70% to-transparent ${hoveredLink === 'annual-attraction' ? 'hidden' : ''
+                    }`}
             ></div>
             <div
                 id="2"
-                className={`absolute top-7 left-[580px] h-[2px] w-[25%] bg-gradient-to-r from-transparent from-5% via-[#048AB2] to-transparent to-95% ${
-                    hoveredLink === 'resource-hub' ? 'hidden' : ''
-                }`}
+                className={`absolute top-7 left-[580px] h-[2px] w-[25%] bg-gradient-to-r from-transparent from-5% via-[#048AB2] to-transparent to-95% ${hoveredLink === 'resource-hub' ? 'hidden' : ''
+                    }`}
             ></div>
             <div
                 id="3"
-                className={`absolute top-7 left-[805px] h-[2px] w-[24%] bg-gradient-to-r from-transparent from-5% via-[#048AB2] to-transparent to-95% ${
-                    hoveredLink === 'members' ? 'hidden' : ''
-                }`}
+                className={`absolute top-7 left-[805px] h-[2px] w-[24%] bg-gradient-to-r from-transparent from-5% via-[#048AB2] to-transparent to-95% ${hoveredLink === 'members' ? 'hidden' : ''
+                    }`}
             ></div>
             <div
                 id="4"
-                className={`absolute top-7 rotate-180 left-[1061px] h-[2px] w-[14.7%] bg-gradient-to-r from-[#048AB2] from-70% to-transparent ${
-                    hoveredLink === 'developers' ? 'hidden' : ''
-                }`}
+                className={`absolute top-7 rotate-180 left-[1061px] h-[2px] w-[14.7%] bg-gradient-to-r from-[#048AB2] from-70% to-transparent ${hoveredLink === 'developers' ? 'hidden' : ''
+                    }`}
             ></div>
             <div
                 id="5"
-                className={`absolute top-[60px] left-[353px] h-[2px] w-[20%] bg-gradient-to-r from-[#048AB2] from-70% to-transparent ${
-                    hoveredLink === 'annual-attraction' ? 'hidden' : ''
-                }`}
+                className={`absolute top-[60px] left-[353px] h-[2px] w-[20%] bg-gradient-to-r from-[#048AB2] from-70% to-transparent ${hoveredLink === 'annual-attraction' ? 'hidden' : ''
+                    }`}
             ></div>
             <div
                 id="6"
-                className={`absolute top-[60px] left-[580px] h-[2px] w-[25%] bg-gradient-to-r from-transparent from-5% via-[#048AB2] to-transparent to-95% ${
-                    hoveredLink === 'resource-hub' ? 'hidden' : ''
-                }`}
+                className={`absolute top-[60px] left-[580px] h-[2px] w-[25%] bg-gradient-to-r from-transparent from-5% via-[#048AB2] to-transparent to-95% ${hoveredLink === 'resource-hub' ? 'hidden' : ''
+                    }`}
             ></div>
             <div
                 id="7"
-                className={`absolute top-[60px] left-[805px] h-[2px] w-[24%] bg-gradient-to-r from-transparent from-5% via-[#048AB2] to-transparent to-95% ${
-                    hoveredLink === 'members' ? 'hidden' : ''
-                }`}
+                className={`absolute top-[60px] left-[805px] h-[2px] w-[24%] bg-gradient-to-r from-transparent from-5% via-[#048AB2] to-transparent to-95% ${hoveredLink === 'members' ? 'hidden' : ''
+                    }`}
             ></div>
             <div
                 id="8"
-                className={`absolute top-[60px] rotate-180 left-[1061px] h-[2px] w-[14.7%] bg-gradient-to-r from-[#048AB2] from-70% to-transparent ${
-                    hoveredLink === 'developers' ? 'hidden' : ''
-                }`}
+                className={`absolute top-[60px] rotate-180 left-[1061px] h-[2px] w-[14.7%] bg-gradient-to-r from-[#048AB2] from-70% to-transparent ${hoveredLink === 'developers' ? 'hidden' : ''
+                    }`}
             ></div>
         </header>
     );
