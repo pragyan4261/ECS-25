@@ -23,3 +23,81 @@
     grid-template-columns: 3 1fr 3fr 2fr;
     grid-template-rows: 2;
 }
+
+linearGradient, .optionButton{
+    transition: all 0.5s ease;
+}
+
+:root {
+    --grad-color1:#0F2A58 ;
+    --grad-color2: #330C5E;
+    --grad-color3: #12D6DF;
+  }
+  
+  .optionButton {
+    display: inline-block;
+}
+
+stop {
+    transition: .4s ease;
+}
+
+.optionButton stop:first-child {
+    stop-color: #330C5E;
+}
+.optionButton stop:last-child {
+    stop-color: #0F2A58;
+}
+/* Use the colors to transition to */
+.optionButton:hover stop:first-child,.optionButton:hover  stop:last-child  {
+    stop-color: #69d8de9b;
+}
+
+/*border*/
+.optionButton:hover .buttonBody{
+    stroke: #12D6DF;
+    /* box-shadow: 120px 80px 40px 20px ; */
+    filter: drop-shadow( 2px 2px 3px #0ff);
+}
+.optionButton:hover .TopLeftEle,.optionButton:hover  .BottomRightEle{
+    fill: #12D6DF;
+}
+.optionButton:hover  .TopEle{
+    stroke: #12D6DF;
+}
+
+.optionButton:hover .buttonBody{
+    filter: drop-shadow( 3px 2px 2px #12D6DF);
+}
+
+.left-content  li:hover{
+    color: #33FCFF;
+    text-decoration: underline;
+}
+
+.sub-option p{
+    
+    text-decoration: none;
+    transition: all 0.4s ease-out 0.2s;
+}
+.sub-option:hover p{
+    text-decoration: underline;
+    color: #33FCFF;
+    transition: color text-decoration  0.4s ease-out 1s;
+}
+.arrowDes, .radioHigh{
+    opacity: 0;
+    /* transition: all 0.4s ease-out; */
+}
+.sub-option:hover .arrowDes, .sub-option:hover .radioHigh{
+    opacity: 1;
+    transition: all 0.7s ease-out 0.2s;
+}
+.sub-option:hover .regular-radio{
+    opacity: 0;
+    transition: all 0.4s ease-out 0s;
+}
+.regular-radio{
+    opacity: 1;
+    transition: all 0.4s ease-out 0.2s;
+}
