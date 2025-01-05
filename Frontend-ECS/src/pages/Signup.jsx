@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 
 function Signup() {
+    const navigate = useNavigate()
+
     const [formData, setFormData] = useState({
         username: "",
         fullName: "",
@@ -49,6 +52,8 @@ function Signup() {
                 Mobile_No,
                 password: ""
             });
+
+            navigate('/sign-in')
         } catch (error) {
             console.error("Error during registration:", error);
             setError(error.message);
