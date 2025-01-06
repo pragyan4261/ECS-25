@@ -2,7 +2,7 @@ import React from 'react'
 
 const RadioButtonHigh = (props) => {
   return (
-    <div className='flex justify-center items-center text-center gap-2 sub-option'>
+    <div className='flex justify-center items-center text-end gap-2 sub-option'>
         <p className='mr-8'>{props.subject}</p>
         <div>
             <svg className=' absolute arrowDes' width="19" height="81" viewBox="0 0 19 81" style={{margin:"-29px "}} fill="none" xmlns="http://www.w3.org/2000/svg">

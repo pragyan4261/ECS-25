@@ -4,24 +4,33 @@ import OptionPlate from './svgs/OptionPlate'
 import { Link } from 'react-router-dom'
 import './ResHub.css'
 import RadioButtonHigh from './svgs/RadioButtonHigh'
+import StaggeredDropDown from '../../components/DropdownMenu'
 const ResourceHub = () => {
+  const size={
+    xs:[{
+
+    },{}]
+  }
   const subjects=["Mathematics", "Electronic Devices", "Analogue Electronics", "Cyberpunk 2077"]
   return (<div className='flex flex-col gap-5 pb-20'>
         <ResHub/>
     <div className='flex justify-around'>
-      <div className="left-content flex flex-col justify-center text-center ">
-        <ul className='flex flex-col h-full items-end  justify-around text-center gap-y-4 pb-4 pt-4'>
-          <li><Link>1ST SEM</Link></li>
-          <li><Link>2ND SEM</Link></li>
-          <li><Link>3RD SEM</Link></li>
-          <li><Link>4TH SEM</Link></li>
-          <li><Link>5TH SEM</Link></li>
-          <li><Link>6TH SEM</Link></li>
-          <li><Link>7TH SEM</Link></li>
-          <li><Link>8TH SEM</Link></li>
+      <div className="left-content w-1/6 flex flex-col items-center">
+        <ul className='flex flex-col h-full items-end  justify-around text-center text-wrap gap-y-4 pb-4 pt-4 listmax600'>
+          <li><Link>1ST SEMESTER</Link></li>
+          <li><Link>2ND SEMESTER</Link></li>
+          <li><Link>3RD SEMESTER</Link></li>
+          <li><Link>4TH SEMESTER</Link></li>
+          <li><Link>5TH SEMESTER</Link></li>
+          <li><Link>6TH SEMESTER</Link></li>
+          <li><Link>7TH SEMESTER</Link></li>
+          <li><Link>8TH SEMESTER</Link></li>
+        </ul>
+        <ul className='flex flex-col h-full items-end  justify-around text-center text-wrap gap-y-4 pb-4 pt-4 listmin600'>
+          <StaggeredDropDown/>
         </ul>
       </div>
-      <div className="middle-content justify-center flex flex-col">
+      <div className="middle-content justify-center flex flex-col ">
           <div className='contentPlate flex p-10 justify-between '>
             <div className="50L flex flex-col justify-center ml-5">
                   <div className="paper"><svg width="230" height="274" viewBox="0 0 230 274" fill='none' xmlns="http://www.w3.org/2000/svg">
@@ -161,7 +170,7 @@ const ResourceHub = () => {
           </div>
         </div>
       <div className="right-content  justify-center flex flex-col ">
-        <ul className='flex flex-col gap-9 items-end'>
+        <ul className='flex flex-col gap-9 items-end pr-2'>
           {subjects.map((element => {
             return ( 
               <li className='flex gap-4'><RadioButtonHigh subject={element}/> </li>

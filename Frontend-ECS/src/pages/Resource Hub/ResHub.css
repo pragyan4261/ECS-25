@@ -33,6 +33,10 @@ linearGradient, .optionButton{
     --grad-color2: #330C5E;
     --grad-color3: #12D6DF;
   }
+
+.optionButton, .buttonBody , .sub-option{
+    cursor: pointer;
+}
   
   .optionButton {
     display: inline-block;
@@ -74,30 +78,114 @@ stop {
     color: #33FCFF;
     text-decoration: underline;
 }
-
+/* .right-content{
+    width: 25vw;
+} */
 .sub-option p{
-    
+    width: 100%;
+    word-wrap:break-word;
     text-decoration: none;
-    transition: all 0.4s ease-out 0.2s;
+    transition: all 0.4s ease-out 0.1s;
 }
 .sub-option:hover p{
     text-decoration: underline;
     color: #33FCFF;
-    transition: color text-decoration  0.4s ease-out 1s;
+    /* transition: color text-decoration  0.4s ease-out 1s; */
 }
 .arrowDes, .radioHigh{
     opacity: 0;
-    /* transition: all 0.4s ease-out; */
+    transition: all  ease-out 0.6s;
 }
 .sub-option:hover .arrowDes, .sub-option:hover .radioHigh{
     opacity: 1;
-    transition: all 0.7s ease-out 0.2s;
+    /* transition: all 0s ease-out 0.2s; */
 }
 .sub-option:hover .regular-radio{
     opacity: 0;
-    transition: all 0.4s ease-out 0s;
+    transition: all 0s ease-out 0s;
 }
 .regular-radio{
     opacity: 1;
-    transition: all 0.4s ease-out 0.2s;
+    transition: all 0s ease-out 0.3s;
+}
+
+.dropOption{
+    background: rgba(255, 255, 255, 0.056);
+    border-radius: 2px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.129);
+}
+.dropOption:hover{
+    translate: -2px -2px;
+    background: rgba(20, 20, 58, 0.37);
+    filter: drop-shadow( 2px 3px 2px rgb(223, 209, 255));
+    color:#0F2A58;
+}
+/* media queries */
+@media (max-width: 853px) {
+    .listmin600{
+        visibility: visible;
+        position: absolute;
+        z-index: 2;
+        top: 50px;
+        left: 20px;
+    }
+    .listmax600{
+        visibility: hidden;
+        position: absolute;
+
+    }
+}
+@media (min-width: 853px) {
+    .listmin600{
+        visibility:hidden;
+        position: absolute;
+    }
+    .listmax600{
+        visibility: visible;
+        }
+}
+        
+
+@media (min-width: 853px) and (max-width: 1200px) {
+    .contentPlate {
+        /* margin: -105px;
+        scale: 0.8;
+        margin-top: -60px; */
+        width: 528px;
+        height: 300px;
+        /* scale: 0.73; */
+        background-image: url("data:image/svg+xml,%3Csvg width='528' height='300' viewBox='0 0 694 396' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 43.6495V387.6C2 391.135 4.8654 394 8.40002 394H640.654C642.169 394 643.634 393.463 644.79 392.484L689.736 354.417C691.172 353.201 692 351.415 692 349.533V8.4C692 4.86538 689.135 2 685.6 2H54.1785C52.766 2 51.3931 2.46731 50.2739 3.32909L4.4954 38.5785C2.9219 39.7901 2 41.6635 2 43.6495Z' fill='url(%23paint0_linear_367_794)' stroke='%230066FF' stroke-width='2.4'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_367_794' x1='347' y1='2' x2='347' y2='394' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%237590EA' stop-opacity='0.4'/%3E%3Cstop offset='1' stop-color='%2300C1FE' stop-opacity='0.8'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+        /* background-image: url("data:image/svg+xml,%3Csvg width='694' height='394' viewBox='0 0 694 396' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 43.6495V387.6C2 391.135 4.8654 394 8.40002 394H640.654C642.169 394 643.634 393.463 644.79 392.484L689.736 354.417C691.172 353.201 692 351.415 692 349.533V8.4C692 4.86538 689.135 2 685.6 2H54.1785C52.766 2 51.3931 2.46731 50.2739 3.32909L4.4954 38.5785C2.9219 39.7901 2 41.6635 2 43.6495Z' fill='url(%23paint0_linear_367_794)' stroke='%230066FF' stroke-width='2.4'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_367_794' x1='347' y1='2' x2='347' y2='394' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%237590EA' stop-opacity='0.4'/%3E%3Cstop offset='1' stop-color='%2300C1FE' stop-opacity='0.8'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A"); */
+    
+    }
+    .resHubText{
+        scale: 0.95;
+    }
+    .contentPlate > * {
+        margin-left: -20px;
+        scale: 0.77;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .contentPlate {
+        /* margin-top: 0px; */
+         width: 692px;
+        height: 394px;
+        scale: 1;
+        background-image: url("data:image/svg+xml,%3Csvg width='694' height='394' viewBox='0 0 694 396' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 43.6495V387.6C2 391.135 4.8654 394 8.40002 394H640.654C642.169 394 643.634 393.463 644.79 392.484L689.736 354.417C691.172 353.201 692 351.415 692 349.533V8.4C692 4.86538 689.135 2 685.6 2H54.1785C52.766 2 51.3931 2.46731 50.2739 3.32909L4.4954 38.5785C2.9219 39.7901 2 41.6635 2 43.6495Z' fill='url(%23paint0_linear_367_794)' stroke='%230066FF' stroke-width='2.4'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_367_794' x1='347' y1='2' x2='347' y2='394' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%237590EA' stop-opacity='0.4'/%3E%3Cstop offset='1' stop-color='%2300C1FE' stop-opacity='0.8'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+    }
+    
+}
+@media (min-width: 1400px) {
+    .contentPlate {
+        margin-left: -20px;
+        /* margin-top: 30px; */
+         width: 692px;
+        height: 394px;
+        /* scale: 1.1; */
+        background-image: url("data:image/svg+xml,%3Csvg width='694' height='394' viewBox='0 0 694 396' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 43.6495V387.6C2 391.135 4.8654 394 8.40002 394H640.654C642.169 394 643.634 393.463 644.79 392.484L689.736 354.417C691.172 353.201 692 351.415 692 349.533V8.4C692 4.86538 689.135 2 685.6 2H54.1785C52.766 2 51.3931 2.46731 50.2739 3.32909L4.4954 38.5785C2.9219 39.7901 2 41.6635 2 43.6495Z' fill='url(%23paint0_linear_367_794)' stroke='%230066FF' stroke-width='2.4'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_367_794' x1='347' y1='2' x2='347' y2='394' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%237590EA' stop-opacity='0.4'/%3E%3Cstop offset='1' stop-color='%2300C1FE' stop-opacity='0.8'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+    }
 }

@@ -8,7 +8,7 @@ import Developers from './pages/developers/Developers.jsx';
 import Signin from './pages/Signin.jsx';
 import Signup from './pages/Signup.jsx';
 import Profile from './pages/Profile.jsx';
-import ResourceHub from './Pages/Resource Hub/ResourceHub.jsx';
+import ResourceHub from './pages/Resource Hub/ResourceHub.jsx';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 // import PrivateRoute from './components/PrivateRoute.jsx';

@@ -43,7 +43,7 @@ export default function Header() {
                             className='transition-transform duration-1000'
                         >
                             <Link
-                                to="/resource-hub"
+                                to="/Resource+Hub"
                             >
                                 <img src={hoveredLink === 'resource-hub' ? "https://i.postimg.cc/Gpk7cY2Q/Group_174_(4).png" : "https://i.postimg.cc/mgD2Fkjs/Group-174-6.png"} alt="" />
                             </Link>

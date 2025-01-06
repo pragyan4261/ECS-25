@@ -2,7 +2,7 @@ import React from 'react'
 
 const ResHub = () => {
   return (
-    <div className='flex justify-center '><svg width="690" height="80" viewBox="0 0 690 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <div className='flex justify-center '><svg className='resHubText' width="690" height="80" viewBox="0 0 690 80" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g filter="url(#filter0_d_362_541)">
     <mask id="path-1-outside-1_362_541" maskUnits="userSpaceOnUse" x="88" y="17" width="517" height="49" fill="black">
     <rect fill="white" x="88" y="17" width="517" height="49"/>
