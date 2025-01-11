@@ -1,5 +1,6 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React ,{useEffect}from 'react';
+import { Routes, Route} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Home from './pages/home/Home.jsx';
 import AboutUs from './pages/home/AboutUs.jsx';
 import Events from './pages/events/Events.jsx';
@@ -14,13 +15,28 @@ import Footer from './components/Footer.jsx';
 // import PrivateRoute from './components/PrivateRoute.jsx';
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Save the current page to localStorage on route change
+    localStorage.setItem("lastPage", location.pathname);
+  }, [location]);
+
+  useEffect(() => {
+    // Redirect to the saved page on load
+    const lastPage = localStorage.getItem("lastPage");
+    if (lastPage) {
+      window.history.replaceState({}, "", lastPage);
+    }
+  }, []);
+
   return (
-    <BrowserRouter>
+   <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/events" element={<Events />} />
+        <Route path="/annual-attraction" element={<Events />} />
         <Route path="/members" element={<Members />} />
         <Route path="/developers" element={<Developers />} />
         <Route path="/sign-in" element={<Signin />} />
@@ -32,7 +48,7 @@ function App() {
        
       </Routes>
       <Footer />
-    </BrowserRouter>
+      </>
   );
 }
 
