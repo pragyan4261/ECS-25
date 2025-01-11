@@ -24,7 +24,7 @@ export default function Members() {
           {rows.map((row, rowIndex) => (
             <div
               key={rowIndex}
-              className="row mt-[110px]  p-4 h-[50vh] w-full flex items-center justify-center gap-x-[18vw]"
+              className="row flex flex-col gap-4 sm:flex-row mt-[110px]  p-4 h-auto w-full items-center justify-center gap-x-[18vw]"
             >
               {row.map((card, cardIndex) => (
                 <Card

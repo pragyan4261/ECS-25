@@ -22,7 +22,10 @@ export default function Developers() {
 
       <div className="developers p-5 text-center">
         <div className="Title flex justify-center items-center">
-          <img src="https://i.postimg.cc/N08H4tBS/Group-15-1.png" alt="Members" />
+          <img
+            src="https://i.postimg.cc/N08H4tBS/Group-15-1.png"
+            alt="Developers"
+          />
         </div>
 
         {/* Senior Developer Section */}
@@ -39,7 +42,7 @@ export default function Developers() {
           {rows.map((row, rowIndex) => (
             <div
               key={rowIndex}
-              className="row mt-[80px] p-4 h-[50vh] w-full flex items-center justify-center gap-x-[18vw]"
+              className="row mt-[80px] p-4 w-full flex flex-col sm:flex-row items-center justify-center gap-y-4 sm:gap-y-0 sm:gap-x-[5vw]"
             >
               {row.map((card, cardIndex) => (
                 <Card
