@@ -18,6 +18,10 @@ module.exports = {
     },
     fontFamily: {
       rajdhani: ['Rajdhani', 'sans-serif'],
+    },
+    screens: {
+      'mobile': '320px',
+      'tablet': '650px',
     }
     },
   },

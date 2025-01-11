@@ -5,9 +5,9 @@ const Footer = () => {
     <footer className="relative bottom-0 text-white py-8 px-4">
       <div className="max-w-screen-lg mx-auto flex flex-col md:flex-row justify-between items-center md:items-start">
 
-        <div className="text-center md:text-left mb-6 md:mb-0">
+        <div className="text-center tablet:text-left mb-6 tablet:mb-0 tablet:ml-[5vw] xl:ml-0">
           <h2 className="text-foot text-base mb-3">QUICK LINKS</h2>
-          <ul className="space-y-2 text-base font-rajdhani">
+          <ul className="mobile:-translate-x-[20vw] tablet:transform-none top-0 space-y-2 text-base text-left font-rajdhani">
             <li><a href="#" className="hover:text-[#819BE2]">Resource Hub</a></li>
             <li><a href="#" className="hover:text-[#819BE2]">Messages</a></li>
             <li><a href="#" className="hover:text-[#819BE2]">Annual</a></li>
@@ -15,7 +15,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="flex flex-col items-center mb-6 md:mb-0 -translate-y-[50px]">
+        <div className="flex flex-col items-center mb-6 md:mb-0 xl:-translate-y-[50px]">
           {/* Logo */}
           <div className="mb-[25px]">
             <img
@@ -69,9 +69,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="text-center md:text-left">
-          <h2 className="text-foot text-base mb-3">QUICK LINKS</h2>
-          <ul className="space-y-2 text-right text-base font-rajdhani">
+        <div className="text-center tablet:text-left tablet:mr-[5vw] xl:mr-none">
+          <h2 className="mobile:hidden text-foot text-base mb-3 tablet:block">QUICK LINKS</h2>
+          <ul className="mobile:absolute tablet:static top-[18.1vw] right-[15vw] space-y-2 text-right text-base font-rajdhani">
             <li><a href="#" className="hover:text-[#819BE2]">Members</a></li>
             <li><a href="#" className="hover:text-[#819BE2]">Gallery</a></li>
             <li><a href="#" className="hover:text-[#819BE2]">About Us</a></li>
