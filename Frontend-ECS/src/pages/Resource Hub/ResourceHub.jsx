@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ResHub from './svgs/ResHub'
 import OptionPlate from './svgs/OptionPlate'
 import { Link } from 'react-router-dom'
@@ -6,13 +6,21 @@ import './ResHub.css'
 import RadioButtonHigh from './svgs/RadioButtonHigh'
 import StaggeredDropDownSub from '../../components/DropdownMenuSub'
 import StaggeredDropDownSem from '../../components/DropdownMenuSem'
+import { GiTireIronCross } from "react-icons/gi";
+
 const ResourceHub = () => {
-  
+  const [disItem, setdisItem] = useState(false);
   const subjects=["Mathematics", "Electronic Devices", "Analogue Electronics", "Cyberpunk 2077"]
   return (<div className='flex flex-col gap-5 pb-20'>
         <ResHub/>
-    <div className='md:flex-col flex justify-around'>
-      <div className="left-content md:w-full md:h-full md:flex-row w-1/6 flex flex-col items-center">
+    <div className='pcmd:flex-col flex justify-around h-full'>
+      <div className={`display-item ${disItem?'visible relative':'absolute invisible'}`}>
+      
+        <button className={`absolute top-6 right-6 `} onClick={()=>{
+          setdisItem(false);
+        }}><GiTireIronCross size={24}/></button>
+      </div>
+      <div className="left-content pcmd:w-full pcmd:h-full pcmd:flex-row w-1/6 flex flex-col items-center">
         
         <ul className='flex flex-col h-full items-end  justify-around text-center text-wrap gap-y-4 pb-4 pt-4 desktopView'>
           <li><Link>1ST SEMESTER</Link></li>
@@ -24,11 +32,11 @@ const ResourceHub = () => {
           <li><Link>7TH SEMESTER</Link></li>
           <li><Link>8TH SEMESTER</Link></li>
         </ul>
-        <div className='md:flex md:justify-around md:w-full mobileView z-10'>
-        <ul className='md:m-0 md:p-0  flex flex-col h-full items-end  justify-around text-center text-wrap gap-y-4 pb-4 pt-4 mobileView'>
+        <div className='pcmd:flex pcmd:justify-around pcmd:w-full mobileView z-10'>
+        <ul className='pcmd:m-0 pcmd:p-0  flex flex-col h-full items-end  justify-around text-center text-wrap gap-y-4 pb-4 pt-4 mobileView'>
           <StaggeredDropDownSem/>
         </ul>
-        <ul className='md:m-0 md:p-0  flex flex-col h-full items-end  justify-around text-center text-wrap gap-y-4 pb-4 pt-4 mobileView'>
+        <ul className='pcmd:m-0 pcmd:p-0  flex flex-col h-full items-end  justify-around text-center text-wrap gap-y-4 pb-4 pt-4 mobileView'>
           <StaggeredDropDownSub subjects={subjects}/>
         </ul>
 
@@ -51,7 +59,9 @@ const ResourceHub = () => {
 </div>
 <div className="50r flex flex-col justify-end">
 
-            <div className="book-Option"><svg className='optionButton' width="301" height="85" viewBox="0 0 301 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="book-Option" ><svg className='optionButton' onClick={()=>{
+          setdisItem(false);
+        }} width="301" height="85" viewBox="0 0 301 85" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_367_824)">
 <g filter="url(#filter1_b_367_824)">
 <path className='buttonBody' d="M116.999 20.5L123.999 25.7264L273 25.7264L280.015 31.5L280.015 49.5002L278 52L278 62.9999L264 62.9999L261 64.9999L28.3696 65L20.7506 57.4815L20.7506 38.0806L22.9995 36.5L22.9995 29L28.9995 22.5L34.9995 22.5L37.4995 20.5L116.999 20.5Z" fill="url(#paint0_linear_367_824)"/>
@@ -93,7 +103,9 @@ const ResourceHub = () => {
 </defs>
 </svg>
 </div>
-            <div className="notes-option"><svg className='optionButton' width="301" height="86" viewBox="0 0 301 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="notes-option"  ><svg className='optionButton' onClick={()=>{
+          setdisItem(true);
+        }} width="301" height="86" viewBox="0 0 301 86" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_367_879)">
 <g filter="url(#filter1_b_367_879)">
 <path className='buttonBody' d="M116.999 20.6084L123.999 25.8348L273 25.8348L280.015 31.6084L280.015 49.6086L278 52.1084L278 63.1083L264 63.1083L261 65.1083L28.3696 65.1084L20.7506 57.5899L20.7506 38.189L22.9995 36.6084L22.9995 29.1084L28.9995 22.6084L34.9995 22.6084L37.4995 20.6084L116.999 20.6084Z" fill="url(#paint0_linear_367_879)"/>
@@ -134,7 +146,10 @@ const ResourceHub = () => {
 </defs>
 </svg>
 </div>
-            <div className="pyqs-option pb-3"><svg className='optionButton' width="301" height="86" viewBox="0 0 301 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="pyqs-option pb-3" ><svg className='optionButton' onClick={()=>{
+          setdisItem(true);
+        }}
+        width="301" height="86" viewBox="0 0 301 86" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_367_890)">
     <g filter="url(#filter1_b_367_890)">
     <path className='buttonBody' d="M116.999 20.7168L123.999 25.9432L273 25.9432L280.015 31.7168L280.015 49.717L278 52.2168L278 63.2167L264 63.2167L261 65.2167L28.3696 65.2168L20.7506 57.6983L20.7506 38.2974L22.9995 36.7168L22.9995 29.2168L28.9995 22.7168L34.9995 22.7168L37.4995 20.7168L116.999 20.7168Z" fill="url(#paint0_linear_367_890)"/>
