@@ -129,7 +129,7 @@ const Events = () => {
   };
 
   // Card data array
-  const cardData = Array(10).fill({
+  const cardData = Array(9).fill({
     id: Math.random(),
     title: "Spectrum",
     description:
