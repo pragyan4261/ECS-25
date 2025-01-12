@@ -3,7 +3,7 @@ import { Routes, Route} from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import Home from './pages/home/Home.jsx';
 import AboutUs from './pages/home/AboutUs.jsx';
-import Events from './pages/events/Events.jsx';
+import Events from './pages/events/events.jsx';
 import Members from './pages/members/Members.jsx';
 import Developers from './pages/developers/Developers.jsx';
 import Signin from './pages/Signin.jsx';
@@ -34,7 +34,7 @@ function App() {
    <>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home/>} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/annual-attraction" element={<Events />} />
         <Route path="/members" element={<Members />} />
