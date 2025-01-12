@@ -4,19 +4,17 @@ import OptionPlate from './svgs/OptionPlate'
 import { Link } from 'react-router-dom'
 import './ResHub.css'
 import RadioButtonHigh from './svgs/RadioButtonHigh'
-import StaggeredDropDown from '../../components/DropdownMenu'
+import StaggeredDropDownSub from '../../components/DropdownMenuSub'
+import StaggeredDropDownSem from '../../components/DropdownMenuSem'
 const ResourceHub = () => {
-  const size={
-    xs:[{
-
-    },{}]
-  }
+  
   const subjects=["Mathematics", "Electronic Devices", "Analogue Electronics", "Cyberpunk 2077"]
   return (<div className='flex flex-col gap-5 pb-20'>
         <ResHub/>
-    <div className='flex justify-around'>
-      <div className="left-content w-1/6 flex flex-col items-center">
-        <ul className='flex flex-col h-full items-end  justify-around text-center text-wrap gap-y-4 pb-4 pt-4 listmax600'>
+    <div className='md:flex-col flex justify-around'>
+      <div className="left-content md:w-full md:h-full md:flex-row w-1/6 flex flex-col items-center">
+        
+        <ul className='flex flex-col h-full items-end  justify-around text-center text-wrap gap-y-4 pb-4 pt-4 desktopView'>
           <li><Link>1ST SEMESTER</Link></li>
           <li><Link>2ND SEMESTER</Link></li>
           <li><Link>3RD SEMESTER</Link></li>
@@ -26,16 +24,29 @@ const ResourceHub = () => {
           <li><Link>7TH SEMESTER</Link></li>
           <li><Link>8TH SEMESTER</Link></li>
         </ul>
-        <ul className='flex flex-col h-full items-end  justify-around text-center text-wrap gap-y-4 pb-4 pt-4 listmin600'>
-          <StaggeredDropDown/>
+        <div className='md:flex md:justify-around md:w-full mobileView z-10'>
+        <ul className='md:m-0 md:p-0  flex flex-col h-full items-end  justify-around text-center text-wrap gap-y-4 pb-4 pt-4 mobileView'>
+          <StaggeredDropDownSem/>
         </ul>
+        <ul className='md:m-0 md:p-0  flex flex-col h-full items-end  justify-around text-center text-wrap gap-y-4 pb-4 pt-4 mobileView'>
+          <StaggeredDropDownSub subjects={subjects}/>
+        </ul>
+
+        </div>
       </div>
       <div className="middle-content justify-center flex flex-col ">
-          <div className='contentPlate flex p-10 justify-between '>
+          <div className='contentPlate flex p-10 justify-between  '>
             <div className="50L flex flex-col justify-center ml-5">
-                  <div className="paper"><svg width="230" height="274" viewBox="0 0 230 274" fill='none' xmlns="http://www.w3.org/2000/svg">
-<path d="M8.4 272H221.6C225.135 272 228 269.135 228 265.6V53L183.5 2H8.4C4.86538 2 2 4.86538 2 8.4V265.6C2 269.135 4.86538 272 8.4 272Z" fill="white" stroke="#0066FF" stroke-width="2.4"/>
-</svg>
+                  <div className="paper desktopView">
+                    <svg width="230" height="274" viewBox="0 0 230 274" fill='none' xmlns="http://www.w3.org/2000/svg">
+<path  d="M8.4 272H221.6C225.135 272 228 269.135 228 265.6V53L183.5 2H8.4C4.86538 2 2 4.86538 2 8.4V265.6C2 269.135 4.86538 272 8.4 272Z" fill="white" stroke="#0066FF" stroke-width="2.4"/>
+                    </svg>
+                    
+                  </div>
+                  <div className="paper mobileView">
+                    <svg className='mobileView' width="184" height="220" viewBox="0 0 184 220" fill='none' xmlns="http://www.w3.org/2000/svg">
+<path className='mobileView ' d="M8.4 272H221.6C225.135 272 228 269.135 228 265.6V53L183.5 2H8.4C4.86538 2 2 4.86538 2 8.4V265.6C2 269.135 4.86538 272 8.4 272Z" fill="white" stroke="#0066FF" stroke-width="2.4"/>
+                    </svg>
                   </div>
 </div>
 <div className="50r flex flex-col justify-end">
@@ -170,7 +181,7 @@ const ResourceHub = () => {
           </div>
         </div>
       <div className="right-content  justify-center flex flex-col ">
-        <ul className='flex flex-col gap-9 items-end pr-2'>
+        <ul className='flex flex-col gap-9 items-end pr-2 desktopView'>
           {subjects.map((element => {
             return ( 
               <li className='flex gap-4'><RadioButtonHigh subject={element}/> </li>
@@ -183,6 +194,7 @@ const ResourceHub = () => {
 </svg>
 <button type='radio'></button></li> */}
         </ul>
+        
       </div>
     </div>
     </div>

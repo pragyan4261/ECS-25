@@ -5,7 +5,7 @@
     const [open, setOpen] = useState(false);
   
     return (
-      <div className="p-8 pb-56 flex items-center justify-center  ">
+      <div className="p-8 pb-56 md:p-0 md:m-0 flex items-center justify-center  ">
         <motion.div animate={open ? "open" : "closed"} className="relative">
           <button
             onClick={() => setOpen((pv) => !pv)}
@@ -21,7 +21,7 @@
             style={{ originY: "top", translateX: "-50%" }}
             className="flex flex-col  p-2 rounded-lg  shadow-xl absolute top-[120%] left-[50%] w-48 overflow-hidden"
           >
-            <Option setOpen={setOpen}  text="1st " />
+            <Option setOpen={setOpen}  text="1st" />
             <Option setOpen={setOpen}  text="2nd" />
             <Option setOpen={setOpen}  text="3rd" />
             <Option setOpen={setOpen}  text="4th" />
