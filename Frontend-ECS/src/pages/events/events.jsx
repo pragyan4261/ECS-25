@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 
 // EventsPage Component
@@ -7,26 +8,21 @@ const Events = () => {
   const HeroSection = () => {
     return (
       <div
-        className="relative w-[90vw] overflow-hidden h-[70vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] rounded-bl-[40px] sm:rounded-bl-[60px] rounded-br-[40px] sm:rounded-br-[60px] flex flex-col justify-center items-center text-center bg-cover bg-center"
+        className="relative w-[100vw] overflow-x-hidden h-[70vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] rounded-bl-[40px] sm:rounded-bl-[60px] rounded-br-[40px] sm:rounded-br-[60px] flex flex-col justify-center items-center text-center bg-cover bg-center "
         style={{
-            backgroundImage: 'url(https://res.cloudinary.com/dqlnb4ddv/image/upload/v1735998472/beautiful-urban-view-daytime_jsxoxa.jpg)',
+            backgroundImage: 'url(https://res.cloudinary.com/dqlnb4ddv/image/upload/v1736681210/bangkok-city-sunrise-thailand_lfnmni.jpg)',
         }}
       >
         {/* Semi-transparent Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div className="absolute overflow-x-hidden inset-0 bg-black bg-opacity-40"></div>
   
         {/* Title and Description */}
-        <div className="relative z-10 text-white px-4 sm:px-8">
+        <div className="relative z-10 text-white px-4 sm:px-8 overflow-y-hidden overflow-x-hidden">
           <div className="relative inline-block">
             {/* Faded Background Text */}
-            <h1 className="absolute text-[6rem] sm:text-[5rem] md:text-[6rem] lg:text-[13rem] font-extrabold uppercase  opacity-40 tracking-widest blur-[2px] lg:-translate-x-48 lg:-translate-y-20 lg:text-border sm:text-border sm:-translate-y-10">
-              EVENTS
-            </h1>
-  
-            {/* Foreground Text */}
-            <h1 className="relative text-[5rem] sm:text-[2rem] md:text-[1rem] lg:text-[7rem] font-extrabold uppercase text-white tracking-widest drop-shadow-[0_0_20px_rgba(0,0,0,0.7)] lg:text-border sm:text-border">
-              EVENTS
-            </h1>
+            <div className="flex justify-center items-center mb-[20px]">
+                    <img src="https://res.cloudinary.com/dqlnb4ddv/image/upload/v1736692146/Group_15_cphybt.png" alt="events" />
+                </div>
           </div>
   
           {/* Description Text */}
@@ -47,25 +43,27 @@ const Events = () => {
   
   // Card Component
   const Card = ({ title, description, image }) => {
-    return (
-      <div className="relative w-full sm:w-[400px] lg:w-[450px] text-white rounded-[1.5rem] p-4">
-        {/* Outer Glow Effect */}
-        <div
-          className="absolute inset-0 pointer-events-none z-0"
-          style={{
-            clipPath:
-              "polygon(8% 0, 92% 0, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0 92%, 0 8%)",
-            boxShadow: "0 0 12px 3px #008bff",
-          }}
-        ></div>
+    const [buttonImage, setButtonImage] = useState(
+      "https://i.postimg.cc/mgjNYYv7/Component-2.png"
+    );
+    const handleMouseEnter = () => {
+      setButtonImage("https://i.postimg.cc/Px3Qjwss/Group-48096106.png");
+    };
+    const handleMouseLeave = () => {
+      setButtonImage("https://i.postimg.cc/mgjNYYv7/Component-2.png");
+    };
 
+    return (
+      <div className="relative w-full mb-6 sm:w-[200px] lg:w-[450px] text-white rounded-[1.5rem] ">
+       
         {/* Main Card Content */}
         <div
-          className="relative p-4 bg-gradient-to-b from-[#0f1347] to-[#103360] shadow-lg"
+          className="relative w-[350px] p-4 bg-gradient-to-b from-[#0f1347] to-[#103360] shadow-lg"
           style={{
             clipPath:
-              "polygon(8% 0, 92% 0, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0 92%, 0 8%)",
+              "clip-path: polygon(10% 0, 94% 0, 100% 0, 100% 93%, 93% 100%, 3% 100%, 0 100%, 0 7%);",
             border: "2px solid #008bff",
+            borderRadius:"20px"
           }}
         >
           {/* Placeholder Image */}
@@ -93,15 +91,24 @@ const Events = () => {
           </div>
 
           {/* Button */}
-          <div className="mt-6 flex justify-center">
+          <div className="mt-0 flex flex-wrap justify-center">
+          <button
+          className="flex justify-center mx-auto z-20"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <img src={buttonImage} alt="Component 2" />
+      </button>
             <button
               className="relative group px-6 sm:px-8 py-3 text-sm sm:text-lg font-bold text-white uppercase transition-all duration-300 ease-in-out"
               style={{
-                width: "100%",
+                
+                width: "80%",
                 clipPath:
                   "polygon(8% 0, 92% 0, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0 92%, 0 8%)",
                 background: "linear-gradient(50deg, #6c1eb1, #008bff)",
                 border: "2px solid #008bff",
+                boxShadow: "0 0 10px 2px #007bff, inset 0 0 5px #007bff"
               }}
             >
               <span
@@ -110,9 +117,10 @@ const Events = () => {
                   clipPath:
                     "polygon(8% 0, 92% 0, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0 92%, 0 8%)",
                   background: "linear-gradient(50deg, #2c3e50, #2a4b66)",
+                  boxShadow: "0 0 10px 2px #007bff, inset 0 0 5px #007bff"
                 }}
               ></span>
-              <span className="relative z-10">View More →</span>
+              <span className="relative z-10">Register→</span>
             </button>
           </div>
         </div>
@@ -130,12 +138,12 @@ const Events = () => {
   });
 
   return (
-    <div className="bg-transparent min-h-screen flex flex-col items-center">
+    <div className="bg-transparent min-h-screen flex flex-col items-center overflow-x-hidden">
       {/* Hero Section */}
       <HeroSection />
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-8 my-12">
+      <div className=" pt-10 ml-[0vw] flex w-[90%] flex-wrap justify-center align-items-center">
         {cardData.map((card, index) => (
           <Card
             key={index}
@@ -145,7 +153,8 @@ const Events = () => {
           />
         ))}
       </div>
-    </div>
+      </div>
+  
   );
 };
 

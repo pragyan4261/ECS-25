@@ -5,7 +5,7 @@
     const [open, setOpen] = useState(false);
   
     return (
-      <div className="p-8 pb-56 md:p-0 md:m-0 flex items-center justify-center  ">
+      <div className="p-8 pb-56 pcmd:p-0 pcmd:m-0 flex items-center justify-center  ">
         <motion.div animate={open ? "open" : "closed"} className="relative">
           <button
             onClick={() => setOpen((pv) => !pv)}

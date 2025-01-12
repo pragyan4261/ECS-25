@@ -3,6 +3,17 @@ import React, { useState } from "react";
 const Annual = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const [buttonImage, setButtonImage] = useState(
+        "https://i.postimg.cc/mgjNYYv7/Component-2.png"
+      );
+      const handleMouseEnter = () => {
+        setButtonImage("https://i.postimg.cc/Px3Qjwss/Group-48096106.png");
+      };
+      const handleMouseLeave = () => {
+        setButtonImage("https://i.postimg.cc/mgjNYYv7/Component-2.png");
+      };
+  
+
   const data = [
     {
       title: "Spectrum",
@@ -87,17 +98,14 @@ const Annual = () => {
               <div key={index} className="flex-shrink-0 w-[33.33%] px-4">
                 {/* Card Component */}
                 <div
-                  className="relative text-white shadow-lg overflow-hidden"
-                  style={{
-                    clipPath:
-                      "polygon(12% 0, 94% 0, 100% 0, 100% 89%, 87% 100%, 3% 100%, 0 100%, 0 10%)",
-                    backgroundColor: "#1b2a4e", // Card background color
-                    border: "2px solid #007bff", // Border
-                    borderTopRightRadius: "30px", // Rounded corner
-                    borderBottomLeftRadius: "30px", // Rounded corner
-                    boxShadow: "0 0 10px 2px #007bff, inset 0 0 5px #007bff", // Glow effect
-                  }}
-                >
+          className="relative w-[350px] p-4 bg-gradient-to-b from-[#0f1347] to-[#103360] shadow-lg"
+          style={{
+            clipPath:
+              "clip-path: polygon(10% 0, 94% 0, 100% 0, 100% 93%, 93% 100%, 3% 100%, 0 100%, 0 7%);",
+            border: "2px solid #008bff",
+            borderRadius:"20px"
+          }}
+        >
                   {/* Square Image Shape */}
                   <div
                     className="mx-auto mt-6 h-48 w-[300px] bg-cover bg-center"
@@ -118,15 +126,13 @@ const Annual = () => {
                       {item.description}
                     </p>
                     <div className="mt-5">
-                      <button
-                        className="w-full py-2 text-center bg-blue-500 hover:bg-blue-400 text-white"
-                        style={{
-                          clipPath:
-                            "polygon(12% 0, 94% 0, 100% 0, 100% 89%, 87% 100%, 3% 100%, 0 100%, 0 10%)",
-                        }}
-                      >
-                        View More
-                      </button>
+                    <button
+          className="flex justify-center mx-auto z-20"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <img src={buttonImage} alt="Component 2" />
+      </button>
                     </div>
                   </div>
                 </div>
