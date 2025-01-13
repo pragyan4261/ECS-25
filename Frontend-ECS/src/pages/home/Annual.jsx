@@ -6,9 +6,11 @@ const Annual = () => {
   const [buttonImage, setButtonImage] = useState(
     "https://i.postimg.cc/mgjNYYv7/Component-2.png"
   );
+
   const handleMouseEnter = () => {
     setButtonImage("https://i.postimg.cc/Px3Qjwss/Group-48096106.png");
   };
+
   const handleMouseLeave = () => {
     setButtonImage("https://i.postimg.cc/mgjNYYv7/Component-2.png");
   };
@@ -34,17 +36,33 @@ const Annual = () => {
       image:
         "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1736681210/bangkok-city-sunrise-thailand_lfnmni.jpg",
     },
+    {
+      title: "Spectrum",
+      description:
+        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in classical Latin literature from 45 BC, making it over 2000 years old.",
+      image:
+        "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1736681210/bangkok-city-sunrise-thailand_lfnmni.jpg",
+    },{
+      title: "Spectrum",
+      description:
+        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in classical Latin literature from 45 BC, making it over 2000 years old.",
+      image:
+        "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1736681210/bangkok-city-sunrise-thailand_lfnmni.jpg",
+    },
+    
   ];
 
   const handleNext = () => {
+    const cardsPerView = window.innerWidth >= 768 ? 3 : 1; // 3 for desktop, 1 for mobile
     setCurrentIndex((prevIndex) =>
-      prevIndex === data.length - 1 ? 0 : prevIndex + 1
+      prevIndex === data.length - cardsPerView ? 0 : prevIndex + 1
     );
   };
 
   const handlePrev = () => {
+    const cardsPerView = window.innerWidth >= 768 ? 3 : 1; // 3 for desktop, 1 for mobile
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? data.length - 1 : prevIndex - 1
+      prevIndex === 0 ? data.length - cardsPerView : prevIndex - 1
     );
   };
 
@@ -71,7 +89,9 @@ const Annual = () => {
           <div
             className="flex transition-transform duration-500"
             style={{
-              transform: `translateX(-${currentIndex * 100}%)`,
+              transform: `translateX(-${
+                currentIndex * (window.innerWidth >= 768 ? 33.33 : 100)
+              }%)`,
             }}
           >
             {data.map((item, index) => (
