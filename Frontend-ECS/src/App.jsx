@@ -13,6 +13,7 @@ import ResourceHub from './pages/Resource Hub/ResourceHub.jsx';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Dashboard from './pages/Dashboard/dashboard.jsx';
+import PhotoGallery from './pages/Gallerydedicated/Photogallery.jsx';
 // import PrivateRoute from './components/PrivateRoute.jsx';
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
         <Route path="/sign-up" element={<Signup />} />
         <Route path="/Resource+Hub" element={<ResourceHub />} />
         <Route path="/profile" element={<Dashboard />} />
+        <Route path="/photogallery" element={<PhotoGallery />}/>
        
       </Routes>
       <Footer />
