@@ -7,11 +7,11 @@ const AboutUs = () => {
             <img src="https://i.postimg.cc/7ZpR078Y/Group-48096073.png" alt="" />
         </div>
         <section className="relative text-white py-16 px-8">
-        <div className="flex flex-col lg:flex-row justify-between items-center">
+        <div className="flex flex-col lg:flex-row justify-around items-center">
 
         <div className="max-w-[775px]">
           <p className="text-[22px] leading-[28px] font-lexend text-justify">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem eligendi cumque, ex expedita laborum neque unde commodi delectus praesentium laboriosam perspiciatis est voluptatem illum aliquam quibusdam tenetur officia accusamus inventore in assumenda necessitatibus hic laudantium temporibus. Totam nobis magnam suscipit sed! Eos, tempore aspernatur. Commodi fugiat dolorem labore ex nemo nostrum, facilis et numquam iusto suscipit, ratione voluptate sapiente quas illum sequi. Quae, voluptate sit? Error beatae perferendis esse aperiam fugit placeat! Ratione minus blanditiis reiciendis ipsam. Modi, odit eum!
+          The Electronics & Communication Society is the branch society which represents the department of ECE. The prime purpose of this society is to make the students familiar with the branch. Besides that, a number of exciting events take place under ECS. Starting from the branch Orientation, several events take place including Utkrishtha, the Freshers', the Spectrum that is the annual flagship event, Spectrum Fit for different indoor and outdoor activities and lastly, Dehleez, the farewell.
           </p>
         </div>
 

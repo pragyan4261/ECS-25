@@ -21,7 +21,7 @@ module.exports = {
       rajdhani: ['Rajdhani', 'sans-serif'],
     },
     screens: {
-      'mobile': { 'max': '320px' },
+      'mobile': { 'max': '500px' },
       'tablet': '650px',
       'pc2xl': { 'max': '1535px' }, // => @media (max-width: 1535px) { ... }
       'pcxl': { 'max': '1279px' }, // => @media (max-width: 1279px) { ... }
