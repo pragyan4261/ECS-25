@@ -13,7 +13,28 @@ const Dashboard = () => {
             fileInputRef.current.click();
         }
     };
+    const handleLogout = async () => {
+      try {
+          const response = await fetch("/api/v1/users/logout", {
+              method: "POST",
+              headers: {
+                  Authorization: `Bearer ${localStorage.getItem("token")}`,
+              },
+          });
 
+          if (response.ok) {
+              localStorage.removeItem("token");
+              localStorage.removeItem("user");
+              setUser(null); // Reset the user state
+          } else {
+              const data = await response.json();
+              throw new Error(data.message || "Failed to log out");
+          }
+      } catch (error) {
+          console.error("Error logging out:", error);
+          alert("Failed to log out. Please try again.");
+      }
+    };
     const handleFileChange = async (event) => {
         try {
             const file = event.target.files[0];
@@ -107,6 +128,7 @@ const Dashboard = () => {
                                         <MDBTypography tag="h5">{user.username || "Username"}</MDBTypography>
                                         <MDBCardText>{user.scholar_ID || "Scholar ID"}</MDBCardText>
                                         <MDBIcon far className='text-red-400' icon="edit mb-5 " />
+                                        <button onClick={handleLogout}>Logout</button>
                                     </div>
                                 </MDBCol>
                                 <MDBCol md="8" className='w-3/5 dashboard-glow text-black rounded-r-md mobile:rounded-tr-none mobile:w-full mobile:mx-3 mobile:rounded-b-md' style={{ backgroundColor: '#457eef' }}>
