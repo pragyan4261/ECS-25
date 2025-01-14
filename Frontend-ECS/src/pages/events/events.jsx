@@ -91,7 +91,7 @@ const Events = () => {
           </div>
 
           {/* Button */}
-          <div className="mt-0 flex flex-wrap justify-center">
+          <div className="mt-0 flex flex-wrap justify-center items-center">
           <button
           className="flex justify-center mx-auto z-20"
           onMouseEnter={handleMouseEnter}
