@@ -1,7 +1,7 @@
 const cardsData = [
     { title: "Ananya Chetia", description: "Vice-President", imageUrl: "https://i.postimg.cc/Bb1vMsF3/ananya.png" },
-    { title: "Aryadeep Gogoi", description: "President", imageUrl: "https://via.placeholder.com/150" },
-    { title: "Chetan Singh Verma", description: "General Secretary", imageUrl: "https://via.placeholder.com/150" },
+    { title: "Aryadeep Gogoi", description: "President", imageUrl: "https://res.cloudinary.com/nikks/image/upload/v1736851298/aryadeep_o2itqq.png" },
+    { title: "Chetan Singh Verma", description: "General Secretary", imageUrl: "https://res.cloudinary.com/nikks/image/upload/v1736850672/chetan_xfsgyz.png" },
     { title: "Tripti Golcha", description: "Literary and PR Head", imageUrl: "https://i.postimg.cc/Y04vZYJJ/tripti.png" },
     { title: "Parismita Malakar", description: "Media and Graphics Design Head", imageUrl: "https://i.postimg.cc/SRj94wz1/parismita.png" },
     { title: "Pragyan Das", description: "Technical Head", imageUrl: "https://i.postimg.cc/W1ZMhLYQ/pragyan.png" },
