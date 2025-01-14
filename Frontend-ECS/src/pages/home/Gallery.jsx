@@ -26,12 +26,12 @@ const ImageCarousel = () => {
   ];
 
   return (
-    <div>
-                <div className="galImg flex justify-center items-center mb-[176px]">
+    <div className="max-w-screen overflow-hidden">
+                <div className="galImg flex justify-center items-center mb-[20vh]">
                     <img src="https://i.postimg.cc/Y9sWX8Rm/Group-48096102.png" alt="" />
                 </div>
 
-    <div className="w-[900px] mx-auto">
+    <div className="mobile:w-[95vw] lg:w-[60vw] mx-auto">
       <Swiper
         autoplay={{ delay: 3000, disableOnInteraction: false }} // Autoplay after 3000ms and continues even if interacted with
         effect={"coverflow"}
@@ -58,19 +58,19 @@ const ImageCarousel = () => {
             <img
               src={img}
               alt={`Slide ${index + 1}`}
-              className="w-[500px] h-[320px] rounded-[50px] shadow-lg object-cover"
+              className="mobile:w-[70vw] mobile:h-[45vw] lg:w-[30vw] lg:h-[21vw] rounded-[50px] shadow-lg object-cover"
               />
           </SwiperSlide>
         ))}
       </Swiper>
-      <button className="swiper-prev flex z-10 max-h-[469.5px] max-w-[306.6] -translate-x-[80%] -translate-y-[95%]">
+      <button className="mobile:hidden lg:block swiper-prev flex z-10 max-h-[28vw] max-w-[30vw] -translate-x-[75%] -translate-y-[95%]">
         <img src="https://i.postimg.cc/zvKhPnyz/Group-48096101.png" alt="Prev" />
       </button>
-      <button className="swiper-next flex z-10 max-h-[469.5px] max-w-[306.6] translate-x-[160%] -translate-y-[195%]">
+      <button className="mobile:hidden lg:block swiper-next flex z-10 max-h-[28vw] max-w-[30vw] translate-x-[175%] -translate-y-[195%]">
         <img src="https://i.postimg.cc/gcXHZhkB/Group-48096103.png" alt="Next" />
       </button>
       <button
-          className="flex justify-center -translate-y-[850px] mx-auto z-20"
+          className="flex justify-center lg:-translate-y-[850px] mx-auto z-20 mobile:scale-[0.7]"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
