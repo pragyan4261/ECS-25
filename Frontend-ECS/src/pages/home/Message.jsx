@@ -111,7 +111,7 @@ const Message = () => {
           ))}
         </Swiper>
 
-        <button
+        {/* <button
           className="swiper-button-prev-custom"
           onMouseEnter={handleMouseEnterPrev}
           onMouseLeave={handleMouseLeavePrev}
@@ -124,7 +124,7 @@ const Message = () => {
           onMouseLeave={handleMouseLeaveNext}
         >
           <img src={buttonImageNext} alt="Next" />
-        </button>
+        </button> */}
       </div>
     </div>
   );
