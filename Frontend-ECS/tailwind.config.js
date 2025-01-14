@@ -22,6 +22,7 @@ module.exports = {
     },
     screens: {
       'mobile': { 'max': '500px' },
+      'pc': { 'min': '500px' },
       'tablet': '650px',
       'pc2xl': { 'max': '1535px' }, // => @media (max-width: 1535px) { ... }
       'pcxl': { 'max': '1279px' }, // => @media (max-width: 1279px) { ... }

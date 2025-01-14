@@ -2,8 +2,16 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../context/authContext';
 import { useContext } from 'react';
-
+import { FaUser } from "react-icons/fa6";
+import styles from './Nav.module.css'
+import classNames  from "classnames";
 export default function Header() {
+    const [isActive, setIsActive] = useState(false);
+    
+        // Toggle the active state
+        const toggleActive = () => {
+            setIsActive(!isActive);
+        };
     const [hoveredLink, setHoveredLink] = useState(null);
     const { isLoggedIn } = useContext(AuthContext);
     console.log(isLoggedIn);
@@ -13,7 +21,8 @@ export default function Header() {
     };
 
     return (
-        <header className="mobile:hidden xl:block shadow sticky z-50 top-0">
+        <>
+        <header className="mobile:hidden mobile:absolute xl:block shadow sticky z-50 top-0">
             <nav className="bg-transparent to-black px-4 lg:px-6 py-3">
                 <div className="flex justify-between items-center mx-auto max-w-screen-xl">
                     {/* Logo Section */}
@@ -135,5 +144,77 @@ export default function Header() {
                     }`}
             ></div>
         </header>
+        <header className='pc:hidden pc:absolute relative' >
+            <div className='relative p-2 flex flex-row gap-2 justify-between items-center' style={{flexDirection:"row"}}  >
+                <div className=''>
+
+            <Link to="/" className="flex items-center ">
+                        <img
+                            src="https://i.postimg.cc/RZrxm2s0/ecs-new-logo-1-black-bg-2.png"
+                            className="h-[45px]"
+                            alt="ECS Logo"
+                            />
+            </Link>
+                            </div>
+                            
+             <div>
+
+                <div className='absolute -top-3 right-20 z-20'>
+        
+        <div className={classNames(styles.dots, { [styles.active]: isActive })} onClick={toggleActive}>
+  <div className={styles.dot}></div>
+  <div className={styles.dot}></div>
+  <div className={classNames(styles.shadow, styles.cut,{ [styles.popNav]: isActive })}></div>
+  <div className={classNames(styles.container ,styles.cut, { [styles.popNav]: isActive })}>
+    <div className={classNames(styles.drop, styles.cut2, { [styles.popNav]: isActive })}></div>
+  </div>
+  <div className={classNames(styles.list,  styles.popNav)}>
+    <ul className='flex gap-3 '>
+      
+      {isLoggedIn?
+      <li className={classNames(styles.liItem,{[styles.popNav]:isActive})}>
+        <Link to="/">Home
+        </Link>
+      </li>:<li className={classNames(styles.liItem,{[styles.popNav]:isActive})}>
+        <Link to="/sign-in">Login
+        </Link>
+      </li>
+        }
+      <li className={classNames(styles.liItem,{[styles.popNav]:isActive})}>
+        <Link to="Annual-Attraction">Annual Attraction</Link>
+      </li>
+      <li  className={classNames(styles.liItem,{[styles.popNav]:isActive})}>
+      <Link to="/Members">Members</Link>
+      </li>
+      <li  className={classNames(styles.liItem,{[styles.popNav]:isActive})}>
+      <Link to="/Developers">Developers</Link>
+      </li>
+      <li  className={classNames(styles.liItem,{[styles.popNav]:isActive})}>
+      <Link to="/Resource+Hub">Resource Hub</Link>
+      </li>
+      {isLoggedIn?
+      <li className={classNames(styles.liItem,{[styles.popNav]:isActive})}>
+        <Link to="/profile" className="flex items-center justify-center">Profile
+      </Link></li>:
+      <li className={classNames(styles.liItem,{[styles.popNav]:isActive})}>
+      <Link to="/sign-up" className="flex items-center justify-center">Register 
+    </Link></li>}
+    </ul>
+  </div>
+  <div className={styles.dot}></div>
+</div>
+<div className={classNames(styles.dots, { [styles.active]: isActive })} onClick={toggleActive}></div>
+    </div>
+                        
+                    </div>
+                    
+                    
+
+            </div>
+        
+        </header>
+    </>
+    
     );
 }
+''

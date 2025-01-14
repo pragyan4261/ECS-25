@@ -82,11 +82,11 @@ const Dashboard = () => {
       <MDBContainer className=" h-100 m-auto ">
         <MDBRow className="flex justify-content-center align-items-center h-100 ">
           <MDBCol lg="6" className="mb-4 mb-lg-0">
-            <MDBCard className="mb-3 " style={{ borderRadius: '.5rem' }}>
+            <MDBCard className="mb-3 mt-5 " style={{ borderRadius: '.5rem' }}>
             {/* main-component */}
-              <MDBRow className=" flex w-screen mobile:flex-col g-0 justify-center mobile:mx-3 mobile:items-center "> 
-                <MDBCol md="4" className="dashboard-glow  w-1/5 rounded-l-md mobile:rounded-t-md mobile:rounded-b-none mobile:w-full gradient-custom text-center text-white flex flex-col gap-5 justify-center pt-4 pb-4"
-                  style={{ borderTopLeftRadius: '.5rem'}}>
+              <MDBRow className=" flex w-screen  mobile:flex-col g-0 justify-center mobile:mx-3 mobile:items-center "> 
+                <MDBCol md="4" className="dashboard-glow  w-1/5 rounded-l-md mobile:rounded-t-md mobile:rounded-b-none mobile:w-full gradient-custom text-center text-white flex flex-col mobile:flex-row pc:flex-col  gap-5 justify-center pt-4 pb-4"
+                  style={{display:'flex', flexDirection:'none', borderTopLeftRadius: '.5rem'}}>
                     {user.avatar ? (
                       
                       <MDBCardImage onClick={updateAvatar} src={user.avatar}
