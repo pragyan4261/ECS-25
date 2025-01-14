@@ -54,6 +54,12 @@ const Message = () => {
       content: "Serving as a member of the Electronics and Communication Society for the past three years has been a deeply rewarding experience. ECS has been at the forefront of encouraging our students to excel in all aspects—technical, academic, and artistic—through numerous initiatives and competitions. A big thank you to our web team for their exceptional work in maintaining our online presence. To the students of the ECE department, I extend my best wishes for your future endeavors. Remember, our collective efforts will lead us to greater heights. Let’s continue to work together for the advancement of our department.ECS ROCKS!!",
       designation: "VICE PRESIDENT ECS",
     },
+    {
+      image: "https://i.postimg.cc/13bqBvBN/Profilemsg.png",
+      name: "Chetan Singh Verma",
+      content: "As the General Secretary of ECS, I am honored to lead a society dedicated to fostering innovation, collaboration, and excellence in the field of electronics and communication. Our vision is to create a vibrant community where ideas flourish, knowledge is shared, and every member is empowered to reach their full potential. Together, we will strive to uplift our society by embracing new challenges, driving technological advancement, and making a lasting impact both within and beyond our campus. ECE rocks!!!",
+      designation: "GENERAL SECRETARY ECS",
+    },
   ];
 
   return (
