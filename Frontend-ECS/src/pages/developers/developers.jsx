@@ -16,10 +16,7 @@ export default function Developers() {
   }
 
   return (
-    <div className="mx-auto w-full max-w-7xl space-y-10">
-      {/* Background Section */}
-      <aside className="main h-[89vh] bg-[url('https://i.postimg.cc/hjt1Bfbp/bgImage.png')] bg-cover bg-center bg-no-repeat flex justify-center items-center text-center"></aside>
-
+    <div className="main mx-auto w-full max-w-7xl space-y-10">
       <div className="developers p-5 text-center">
         <div className="Title flex justify-center items-center">
           <img
@@ -42,7 +39,7 @@ export default function Developers() {
           {rows.map((row, rowIndex) => (
             <div
               key={rowIndex}
-              className="row mt-[80px] p-4 w-full flex flex-col sm:flex-row items-center justify-center gap-y-4 sm:gap-y-0 sm:gap-x-[5vw]"
+              className="row mt-[80px] p-4 w-full flex flex-col sm:flex-row items-center justify-center gap-14 sm:gap-y-0 sm:gap-x-[15vw]"
             >
               {row.map((card, cardIndex) => (
                 <Card

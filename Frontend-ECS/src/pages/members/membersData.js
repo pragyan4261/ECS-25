@@ -1,7 +1,7 @@
 const cardsData = [
     { title: "Ananya Chetia", description: "Vice-President", imageUrl: "https://i.postimg.cc/Bb1vMsF3/ananya.png" },
-    { title: "Aryadeep Gogoi", description: "President", imageUrl: "https://via.placeholder.com/150" },
-    { title: "Chetan Singh Verma", description: "General Secretary", imageUrl: "https://via.placeholder.com/150" },
+    { title: "Aryadeep Gogoi", description: "President", imageUrl: "https://res.cloudinary.com/nikks/image/upload/v1736851298/aryadeep_o2itqq.png" },
+    { title: "Chetan Singh Verma", description: "General Secretary", imageUrl: "https://res.cloudinary.com/nikks/image/upload/v1736850672/chetan_xfsgyz.png" },
     { title: "Tripti Golcha", description: "Literary and PR Head", imageUrl: "https://i.postimg.cc/Y04vZYJJ/tripti.png" },
     { title: "Parismita Malakar", description: "Media and Graphics Design Head", imageUrl: "https://i.postimg.cc/SRj94wz1/parismita.png" },
     { title: "Pragyan Das", description: "Technical Head", imageUrl: "https://i.postimg.cc/W1ZMhLYQ/pragyan.png" },
@@ -21,11 +21,11 @@ const cardsData = [
     { title: "Kasish Sahu", description: "Media & Graphics Design Member", imageUrl: "https://i.postimg.cc/pX69fGnR/kasish.png" },
     { title: "Manisha Saloi", description: "Media & Graphics Design Member", imageUrl: "https://i.postimg.cc/YCw2L5W3/manisha-1.png" },
     { title: "Indranuj Dev", description: "Media & Graphics Design Member", imageUrl: "https://i.postimg.cc/Y9W87LKm/pixelcut-export.png" },
-    { title: "Deepanshu Sharma", description: "Technical Member", imageUrl: "https://i.postimg.cc/L6Ntr3Yb/deepanshu.png" },
     { title: "Shashwat Patel", description: "Technical Member", imageUrl: "https://i.postimg.cc/fb0RfMQv/shashwat.png" },
-    { title: "Sibajit Mazumder", description: "Technical Member", imageUrl: "https://i.postimg.cc/VvMmZgt1/sibajit.png" },
-    { title: "Subrata Lodh", description: "Technical Member", imageUrl: "https://i.postimg.cc/bN3rz6R1/subrata.png" },
     { title: "Nikhil Singh", description: "Technical Member", imageUrl: "https://i.postimg.cc/k511yd9f/nikhil-1.png" },
+    { title: "Sibajit Mazumder", description: "Technical Member", imageUrl: "https://i.postimg.cc/VvMmZgt1/sibajit.png" },
+    { title: "Deepanshu Sharma", description: "Technical Member", imageUrl: "https://i.postimg.cc/L6Ntr3Yb/deepanshu.png" },
+    { title: "Subrata Lodh", description: "Technical Member", imageUrl: "https://i.postimg.cc/bN3rz6R1/subrata.png" },
   ];
   
   export default cardsData;

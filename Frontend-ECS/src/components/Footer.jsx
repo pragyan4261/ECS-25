@@ -30,7 +30,7 @@ const Footer = () => {
 
           {/* Social Links */}
           <h2 className="text-foot text-base mb-3 bg-gradient-to-b from-top to-bot bg-clip-text text-transparent">FOLLOW US</h2>
-          <div className="flex space-x-4">
+          <div className="flex col gap-2">
             <a href="#" aria-label="Discord">
               <img
                 src="https://i.postimg.cc/90RgnYDn/Discord.png"
