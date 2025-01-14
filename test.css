@@ -1,0 +1,66 @@
+#naam{
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  p{
+      font-family: "Lexend", sans-serif;
+      font-weight: 400;
+  }
+  
+  #naam2,h2{
+          font-family: "Audiowide", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+        }
+        
+        .swiper-button-prev-custom,
+        .swiper-button-next-custom {
+          position: relative;
+          top:50%;
+          z-index: 10;
+          width: 85px;
+          height: 37px;
+          transform: translateY(-1000%);
+          background: transparent;
+          border: none;
+          cursor: pointer;
+        }
+        
+        .swiper-button-prev-custom {
+          left:-50%;
+        }
+        
+        .swiper-button-next-custom {
+          right: -50%;
+        }
+        
+        .swiper-button-prev-custom img,
+        .swiper-button-next-custom img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+        
+  .swiper-pagination-bullet {
+      position: relative;
+      width: 10px !important;
+      height: 10px !important;
+      background-color: #12D6DF  !important;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.5 !important;
+    }
+    
+    .swiper-pagination-bullet-active {
+      position: relative;
+      width: 12px  !important;
+      height: 12px  !important;
+      background-color: #12D6DF  !important;
+      margin: 2px;
+      border-radius: 50%;
+      opacity: 1  !important;
+    }
+    
