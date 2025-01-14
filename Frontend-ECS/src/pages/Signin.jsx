@@ -70,6 +70,7 @@ function Signin() {
             // Update the context
             isLoggedIn.setIsLoggedIn(true);
             navigate('/profile')
+            window.location.reload();
         } catch (error) {
             console.error("Error during login:", error);
             setError(error.message);
