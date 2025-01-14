@@ -113,7 +113,7 @@ function Profile() {
       </div>
 
       {/* Right Section: Events */}
-      <div className="w-1/2 border-2 flex flex-col items-center justify-center text-white text-2xl">
+      {/* <div className="w-1/2 border-2 flex flex-col items-center justify-center text-white text-2xl">
         <div className="events">
           <h2 className="mb-4">Events Registered</h2>
           {user.eventsRegistered && user.eventsRegistered.length > 0 ? (
@@ -126,7 +126,7 @@ function Profile() {
             "No events registered yet."
           )}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
