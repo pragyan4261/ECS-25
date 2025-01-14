@@ -36,7 +36,7 @@ const ImageCarousel = () => {
                     <img src="https://i.postimg.cc/Y9sWX8Rm/Group-48096102.png" alt="" />
                 </div>
 
-    <div className="mobile:w-[95vw] lg:w-[60vw] mx-auto">
+    <div className="mobile:w-[95vw] mobile:h-[40vh] lg:w-[60vw] h-[80vh] mx-auto">
       <Swiper
         autoplay={{ delay: 3000, disableOnInteraction: false }} // Autoplay after 3000ms and continues even if interacted with
         effect={"coverflow"}
