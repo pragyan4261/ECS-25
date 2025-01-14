@@ -12,6 +12,7 @@ import Profile from './pages/Profile.jsx';
 import ResourceHub from './pages/Resource Hub/ResourceHub.jsx';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
+import Dashboard from './pages/Dashboard/dashboard.jsx';
 // import PrivateRoute from './components/PrivateRoute.jsx';
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
         <Route path="/sign-in" element={<Signin />} />
         <Route path="/sign-up" element={<Signup />} />
         <Route path="/Resource+Hub" element={<ResourceHub />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<Dashboard />} />
        
       </Routes>
       <Footer />
