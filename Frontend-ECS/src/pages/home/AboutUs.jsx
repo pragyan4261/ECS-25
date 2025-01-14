@@ -7,7 +7,7 @@ const AboutUs = () => {
             <img src="https://i.postimg.cc/7ZpR078Y/Group-48096073.png" alt="" />
         </div>
         <section className="relative text-white py-16 px-8">
-        <div className="flex flex-col lg:flex-row justify-around items-center">
+        <div className="flex flex-col-reverse lg:flex-row justify-around items-center">
 
         <div className="max-w-[775px]">
           <p className="text-[22px] leading-[28px] font-lexend text-justify">

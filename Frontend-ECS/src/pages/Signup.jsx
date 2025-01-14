@@ -1,18 +1,19 @@
 import React, { useState } from "react";
-import { Link, Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
         username: "",
         fullName: "",
         email: "",
         scholar_ID: "",
-        Mobile_No:"",
-        password: ""
+        Mobile_No: "",
+        password: "",
+        confirmPassword: "", // Add confirmPassword to track re-entered password
     });
-    const [error, setError] = useState(""); 
+    const [error, setError] = useState("");
     const [success, setSuccess] = useState(false);
 
     const handleChange = (e) => {
@@ -27,13 +28,26 @@ function Signup() {
         setError("");
         setSuccess(false);
 
+        // Validate passwords match
+        if (formData.password !== formData.confirmPassword) {
+            setError("Passwords do not match. Please try again.");
+            return;
+        }
+
         try {
             const res = await fetch("/api/v1/users/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({
+                    username: formData.username,
+                    fullName: formData.fullName,
+                    email: formData.email,
+                    scholar_ID: formData.scholar_ID,
+                    Mobile_No: formData.Mobile_No,
+                    password: formData.password,
+                }),
             });
 
             if (!res.ok) {
@@ -44,16 +58,19 @@ function Signup() {
             const data = await res.json();
             console.log("Registration successful:", data);
             setSuccess(true);
+
+            // Reset form fields
             setFormData({
                 username: "",
                 fullName: "",
                 email: "",
                 scholar_ID: "",
-                Mobile_No,
-                password: ""
+                Mobile_No: "",
+                password: "",
+                confirmPassword: "",
             });
 
-            navigate('/sign-in')
+            navigate("/sign-in");
         } catch (error) {
             console.error("Error during registration:", error);
             setError(error.message);
@@ -110,14 +127,18 @@ function Signup() {
                     value={formData.scholar_ID}
                     onChange={handleChange}
                     className="p-2 border border-gray-300 rounded"
+                    maxLength={6}
+                    minLength={6}
                 />
                 <input
                     id="Mobile_No"
-                    type="Number"
-                    placeholder="Mobile_No"
+                    type="number"
+                    placeholder="Mobile No"
                     value={formData.Mobile_No}
                     onChange={handleChange}
                     className="p-2 border border-gray-300 rounded"
+                    minLength={10}
+                    maxLength={10}
                 />
                 <input
                     id="password"
@@ -126,6 +147,16 @@ function Signup() {
                     value={formData.password}
                     onChange={handleChange}
                     className="p-2 border border-gray-300 rounded"
+                    minLength={8}
+                />
+                <input
+                    id="confirmPassword"
+                    type="password"
+                    placeholder="Re-Enter Password"
+                    value={formData.confirmPassword}
+                    onChange={handleChange}
+                    className="p-2 border border-gray-300 rounded"
+                    minLength={8}
                 />
                 <button
                     type="submit"
