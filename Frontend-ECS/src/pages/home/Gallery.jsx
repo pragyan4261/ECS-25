@@ -4,6 +4,8 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { Autoplay, EffectCoverflow, Navigation } from "swiper/modules";
+import { useNavigate,Navigate } from "react-router-dom";
+
 
 const ImageCarousel = () => {
     const [buttonImage, setButtonImage] = useState(
@@ -15,8 +17,11 @@ const ImageCarousel = () => {
       const handleMouseLeave = () => {
         setButtonImage("https://i.postimg.cc/mgjNYYv7/Component-2.png");
       };
-
-
+  const navigate= useNavigate()
+  const handleClickButton=()=>{
+    
+    navigate('/photogallery');
+  }
   const images = [
     "https://i.postimg.cc/CLCJ3Yys/MJ-9663.jpg",
     "https://i.postimg.cc/HWy6tXBK/IMG-0417.jpg",
@@ -74,7 +79,8 @@ const ImageCarousel = () => {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <img src={buttonImage} alt="Component 2" />
+          <img src={buttonImage} alt="Component 2"
+          onClick={handleClickButton} />
       </button>
     </div>
     </div>
