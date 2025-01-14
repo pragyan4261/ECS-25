@@ -21,11 +21,11 @@ const cardsData = [
     { title: "Kasish Sahu", description: "Media & Graphics Design Member", imageUrl: "https://i.postimg.cc/pX69fGnR/kasish.png" },
     { title: "Manisha Saloi", description: "Media & Graphics Design Member", imageUrl: "https://i.postimg.cc/YCw2L5W3/manisha-1.png" },
     { title: "Indranuj Dev", description: "Media & Graphics Design Member", imageUrl: "https://i.postimg.cc/Y9W87LKm/pixelcut-export.png" },
-    { title: "Deepanshu Sharma", description: "Technical Member", imageUrl: "https://i.postimg.cc/L6Ntr3Yb/deepanshu.png" },
     { title: "Shashwat Patel", description: "Technical Member", imageUrl: "https://i.postimg.cc/fb0RfMQv/shashwat.png" },
-    { title: "Sibajit Mazumder", description: "Technical Member", imageUrl: "https://i.postimg.cc/VvMmZgt1/sibajit.png" },
-    { title: "Subrata Lodh", description: "Technical Member", imageUrl: "https://i.postimg.cc/bN3rz6R1/subrata.png" },
     { title: "Nikhil Singh", description: "Technical Member", imageUrl: "https://i.postimg.cc/k511yd9f/nikhil-1.png" },
+    { title: "Sibajit Mazumder", description: "Technical Member", imageUrl: "https://i.postimg.cc/VvMmZgt1/sibajit.png" },
+    { title: "Deepanshu Sharma", description: "Technical Member", imageUrl: "https://i.postimg.cc/L6Ntr3Yb/deepanshu.png" },
+    { title: "Subrata Lodh", description: "Technical Member", imageUrl: "https://i.postimg.cc/bN3rz6R1/subrata.png" },
   ];
   
   export default cardsData;
