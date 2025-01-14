@@ -60,7 +60,7 @@ const ResourceHub = () => {
 <div className="50r flex flex-col justify-end">
 
             <div className="book-Option" ><svg className='optionButton' onClick={()=>{
-          setdisItem(false);
+          setdisItem(true);
         }} width="301" height="85" viewBox="0 0 301 85" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_367_824)">
 <g filter="url(#filter1_b_367_824)">
