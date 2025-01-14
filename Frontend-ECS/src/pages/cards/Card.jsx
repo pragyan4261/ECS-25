@@ -16,15 +16,15 @@ export default function Card({ title, description, imageUrl }) {
         />
       </div>
 
-      {/* Hover Text Container */}
+      {/* Static Text Container */}
       <div
-        className="hover-container absolute bottom-2 left-0 w-full h-[25%] bg-cover bg-center flex flex-col items-center justify-center sm:transition-transform sm:duration-300 sm:ease-out sm:transform sm:translate-y-full group-hover:translate-y-0"
+        className="text-container absolute bottom-2 left-0 w-full h-[25%] bg-cover bg-center flex flex-col items-center justify-center"
         style={{ backgroundImage: `url('https://i.postimg.cc/G3PxM1HK/Vector.png')` }}
       >
-        <h2 className="text-lg font-bold text-white group-hover:opacity-100 group-hover:translate-y-0 sm:opacity-0 sm:translate-y-2 sm:transition-all sm:duration-300">
+        <h2 className="text-lg font-bold text-white opacity-100">
           {title}
         </h2>
-        <p className="text-sm text-gray-200 group-hover:opacity-100 group-hover:translate-y-0 sm:opacity-0 sm:translate-y-2 sm:transition-all sm:duration-300">
+        <p className="text-sm text-gray-200 opacity-100">
           {description}
         </p>
       </div>

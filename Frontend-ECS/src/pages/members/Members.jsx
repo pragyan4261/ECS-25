@@ -12,8 +12,9 @@ export default function Members() {
   }
 
   return (
-    <div className="mx-auto w-full max-w-7xl space-y-10">
-      <aside className="main h-[89vh] bg-[url('https://i.postimg.cc/hjt1Bfbp/bgImage.png')] bg-cover bg-center bg-no-repeat flex justify-center items-center text-center"></aside>
+    <div className="main mx-auto w-full max-w-7xl space-y-10">
+      
+      
 
       <div className="members p-5 text-center">
         <div className="membersTitle flex justify-center items-center">
@@ -24,7 +25,7 @@ export default function Members() {
           {rows.map((row, rowIndex) => (
             <div
               key={rowIndex}
-              className="row flex flex-col gap-4 sm:flex-row mt-[110px]  p-4 h-auto w-full items-center justify-center gap-x-[18vw]"
+              className="row flex flex-col gap-10 sm:flex-row mt-[50px]  p-4 h-auto w-full items-center justify-center gap-x-[18vw]"
             >
               {row.map((card, cardIndex) => (
                 <Card
