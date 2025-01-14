@@ -69,7 +69,6 @@ function Signin() {
 
             // Update the context
             isLoggedIn.setIsLoggedIn(true);
-            
             navigate('/profile')
         } catch (error) {
             console.error("Error during login:", error);
@@ -90,7 +89,7 @@ function Signin() {
                 <div className="text-green-600 text-center mt-2">
                     Login successful!
                 </div>
-            )}
+            ) }
 
             <form
                 onSubmit={handleSubmit}

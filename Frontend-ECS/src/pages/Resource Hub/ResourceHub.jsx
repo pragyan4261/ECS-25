@@ -10,7 +10,61 @@ import { GiTireIronCross } from "react-icons/gi";
 
 const ResourceHub = () => {
   const [disItem, setdisItem] = useState(false);
-  const subjects=["Mathematics", "Electronic Devices", "Analogue Electronics", "Cyberpunk 2077"]
+  const [currSem, setcurrSem] = useState(0);
+  const subjects=[
+    
+    [
+      "Mathematics I",
+      "Basic Electronics",
+      "Introduction to Computing",
+      "Chemistry",
+      "Environmental Chemistry",
+    ],
+  
+    [ "Engineering Mechanics",
+    "Physics",
+      "Communicative English",
+      "Basic Electrical Engineering",
+      "Engineering Graphics & Design",
+    "Mathematics II"]
+    ,
+    ["Mathematics III",
+      "Electronics Devices",
+     "Analog Electronics",
+     "Signal & Systems",
+      "Netwok Analysis & Synthesis",
+      "Data Structures & Algorithms"]
+    ,
+    [
+      "Analog Communication",
+      "Digital Electronic Circuits",
+      "Control Systems",
+      "Probability & Random Process",
+      "Electrical & Electronic Materials",
+      "Electromagnetic Field & Wave Propagation",
+    ],
+    [
+      "Digital Communication",
+      "Microprocessor & Microcontrollers",
+      "Analog Integrated Circuits & Technology",
+      "Digital Signal Processing",
+      "Measurements & Instrumentations",
+      "Principles of Optoelectrinics & Optical Fibres"
+    ],
+    [
+      "RF & Microwave Engineering",
+      "Data Communication and Network",
+      "VLSI Design",
+      "Power Electronics",
+    ],
+    [
+      "Wireless Communication",
+      "Engineering Economics/Management Studies",
+    ],
+    [
+      "Engineering Economics/Management Studies"
+    ]
+  ]
   return (<div className='flex flex-col gap-5 pb-20'>
         <ResHub/>
     <div className='pcmd:flex-col flex justify-around h-full'>
@@ -23,14 +77,14 @@ const ResourceHub = () => {
       <div className="left-content pcmd:w-full pcmd:h-full pcmd:flex-row w-1/6 flex flex-col items-center">
         
         <ul className='flex flex-col h-full items-end  justify-around text-center text-wrap gap-y-4 pb-4 pt-4 desktopView'>
-          <li><Link>1ST SEMESTER</Link></li>
-          <li><Link>2ND SEMESTER</Link></li>
-          <li><Link>3RD SEMESTER</Link></li>
-          <li><Link>4TH SEMESTER</Link></li>
-          <li><Link>5TH SEMESTER</Link></li>
-          <li><Link>6TH SEMESTER</Link></li>
-          <li><Link>7TH SEMESTER</Link></li>
-          <li><Link>8TH SEMESTER</Link></li>
+          <li onClick={()=>{setcurrSem(0)}}><Link>Ist    Sem</Link></li>
+          <li onClick={()=>{setcurrSem(1)}}><Link>IInd   Sem</Link></li>
+          <li onClick={()=>{setcurrSem(2)}}><Link>IIIrd  Sem</Link></li>
+          <li onClick={()=>{setcurrSem(3)}}><Link>IVth   Sem</Link></li>
+          <li onClick={()=>{setcurrSem(4)}}><Link>Vth    Sem</Link></li>
+          <li onClick={()=>{setcurrSem(5)}}><Link>VIth   Sem</Link></li>
+          <li onClick={()=>{setcurrSem(6)}}><Link>VIIth  Sem</Link></li>
+          <li onClick={()=>{setcurrSem(7)}}><Link>VIIIth Sem</Link></li>
         </ul>
         <div className='pcmd:flex pcmd:justify-around pcmd:w-full mobileView z-10'>
         <ul className='pcmd:m-0 pcmd:p-0  flex flex-col h-full items-end  justify-around text-center text-wrap gap-y-4 pb-4 pt-4 mobileView'>
@@ -197,17 +251,12 @@ const ResourceHub = () => {
         </div>
       <div className="right-content  justify-center flex flex-col ">
         <ul className='flex flex-col gap-9 items-end pr-2 desktopView'>
-          {subjects.map((element => {
+          {subjects[currSem].map((element => {
             return ( 
               <li className='flex gap-4'><RadioButtonHigh subject={element}/> </li>
             )
           }))}
-          <li className='flex gap-4'><RadioButtonHigh subject="Electronics Devices"/> </li>
-          
-          {/* <li>Electronic devices  <svg width="19" height="81" viewBox="0 0 19 81" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18 0.52832V20.7642L1 38.4057L18 56.0472V80.434" stroke="#33FCFF"/>
-</svg>
-<button type='radio'></button></li> */}
+      
         </ul>
         
       </div>
