@@ -1,4 +1,3 @@
-
   import { motion } from "framer-motion";
   import { Dispatch, SetStateAction, useState } from "react";
   const StaggeredDropDown = ({subjects}) => {
@@ -12,9 +11,8 @@
             className="flex items-center gap-2 px-3 py-2 rounded-sm text-indigo-50 bg-indigo-500 hover:bg-indigo-500 transition-colors"
           >
             <span className="font-medium text-sm">Subjects</span>
-            
           </button>
-  
+
           <motion.ul
             initial={wrapperVariants.closed}
             variants={wrapperVariants}
