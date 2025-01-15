@@ -59,7 +59,7 @@ function Signin() {
 
             const { data: { user, accessToken, refreshToken} } = data;
 
-            console.log(data)
+            credentialsconsole.log(data)
 
             // Store the token and user in localStorage
             localStorage.setItem("token", accessToken);

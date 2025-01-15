@@ -30,7 +30,7 @@ const Message = () => {
 
   const slides = [
     {
-      image: "https://i.postimg.cc/13bqBvBN/Profilemsg.png",
+      image: "https://i.postimg.cc/5ygMbx97/wasim-img-orgqul.jpg",
       name: "Dr. Wasim Arif",
       content: 'In the spirit of continuous learning, we extend a warm welcome to all the students in our beloved institution. The alumni of this esteemed establishment have already made us proud of their achievements since graduation. I have every confidence that, just like our accomplished graduates, our present batches will have a memorable and successful journey here at NIT Silchar. So, prepare yourself to be a valuable asset, the future eagerly anticipates Three things you should acquire as a student : Self- Motivation, Self- Regulation and Self- Confidence. Maintain a sense of joy and keep radiating your brilliance! Life is beautiful, so embrace it.'
       ,
@@ -95,7 +95,7 @@ const Message = () => {
                 <img
                   src={slide.image}
                   alt={`Slide ${index + 1}`}
-                  className="image rounded-lg object-cover hover:scale-[103%] transition-transform duration-300 hover:shadow-2xl shadow-blue-700"
+                  className=" polygon image rounded-lg object-cover hover:scale-[103%] transition-transform duration-300 hover:shadow-2xl shadow-blue-700"
                 />
                 <div className="mt-4">
                   <h1 id="naam" className="name-text text-left text-blueNeon">
