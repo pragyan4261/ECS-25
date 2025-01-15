@@ -32,21 +32,21 @@ const Footer = () => {
           <h2 className="text-foot text-base mb-3 bg-gradient-to-b from-top to-bot bg-clip-text text-transparent">FOLLOW US</h2>
           <div className="flex col gap-2">
             
-            <a href="https://www.facebook.com/groups/245209962205928" aria-label="Facebook">
+            <a href="https://www.facebook.com/groups/245209962205928" target="_blank" aria-label="Facebook">
               <img
                 src="https://i.postimg.cc/2jgC8H73/Facebook.png"
                 alt="Facebook"
                 className="h-6 w-6"
               />
             </a>
-            <a href="https://www.instagram.com/ecs.nits/" aria-label="Instagram">
+            <a href="https://www.instagram.com/ecs.nits/" target="_blank" aria-label="Instagram">
               <img
                 src="https://www.citypng.com/public/uploads/preview/hd-white-instagram-round-logo-icon-png-7017516951188732y4dxbmogd.png"
                 alt="Facebook"
                 className="h-6 w-6"
               />
             </a>
-            <a href="#" aria-label="Linked In">
+            <a href="https://www.linkedin.com/company/electronics-and-communication-society-nit-silchar?trk=blended-typeahead" target="_blank" aria-label="Linked In">
               <img
                 src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-white-icon.png"
                 alt="Facebook"

@@ -1,32 +1,45 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import { Autoplay, EffectCoverflow, Navigation } from "swiper/modules";
 
 const Annual = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
-  const [buttonImage, setButtonImage] = useState(
-    "https://i.postimg.cc/mgjNYYv7/Component-2.png"
-  );
-
-  const handleMouseEnter = () => {
-    setButtonImage("https://i.postimg.cc/Px3Qjwss/Group-48096106.png");
-  };
-
-  const handleMouseLeave = () => {
-    setButtonImage("https://i.postimg.cc/mgjNYYv7/Component-2.png");
-  };
-
+  
   const data = [
     {
       title: "Spectrum",
       description:
         "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in classical Latin literature from 45 BC, making it over 2000 years old.",
       image:
+        "https://i.postimg.cc/L5WrC3tH/19-20250115-115513-0002.png",
+    },
+    {
+      title: "Radiance",
+      description:
+        "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.",
+      image:
         "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1736681210/bangkok-city-sunrise-thailand_lfnmni.jpg",
     },
     {
-      title: "Spectrum",
+      title: "Aurora",
       description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in classical Latin literature from 45 BC, making it over 2000 years old.",
+        "The passage is attributed to a section 1.10.32 of 'de Finibus Bonorum et Malorum' by Cicero, written in 45 BC.",
+      image:
+        "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1736681210/bangkok-city-sunrise-thailand_lfnmni.jpg",
+    },
+    {
+      title: "Eclipse",
+      description:
+        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      image:
+        "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1736681210/bangkok-city-sunrise-thailand_lfnmni.jpg",
+    },
+    {
+      title: "Eclipse",
+      description:
+        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
       image:
         "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1736681210/bangkok-city-sunrise-thailand_lfnmni.jpg",
     },
@@ -38,9 +51,24 @@ const Annual = () => {
         "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1736681210/bangkok-city-sunrise-thailand_lfnmni.jpg",
     },
     {
-      title: "Spectrum",
+      title: "Radiance",
       description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in classical Latin literature from 45 BC, making it over 2000 years old.",
+        "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.",
+      image:
+        "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1736681210/bangkok-city-sunrise-thailand_lfnmni.jpg",
+    },
+    {
+      title: "Aurora",
+      description:
+        "The passage is attributed to a section 1.10.32 of 'de Finibus Bonorum et Malorum' by Cicero, written in 45 BC.",
+      image:
+        "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1736681210/bangkok-city-sunrise-thailand_lfnmni.jpg",
+    },
+    ,
+    {
+      title: "Eclipse",
+      description:
+        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
       image:
         "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1736681210/bangkok-city-sunrise-thailand_lfnmni.jpg",
     },
@@ -48,139 +76,117 @@ const Annual = () => {
       title: "Spectrum",
       description:
         "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in classical Latin literature from 45 BC, making it over 2000 years old.",
+      image:
+        "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1736681210/bangkok-city-sunrise-thailand_lfnmni.jpg",
+    },
+    {
+      title: "Radiance",
+      description:
+        "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.",
+      image:
+        "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1736681210/bangkok-city-sunrise-thailand_lfnmni.jpg",
+    },
+    {
+      title: "Aurora",
+      description:
+        "The passage is attributed to a section 1.10.32 of 'de Finibus Bonorum et Malorum' by Cicero, written in 45 BC.",
+      image:
+        "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1736681210/bangkok-city-sunrise-thailand_lfnmni.jpg",
+    },,
+    {
+      title: "Eclipse",
+      description:
+        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      image:
+        "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1736681210/bangkok-city-sunrise-thailand_lfnmni.jpg",
+    },
+    {
+      title: "Spectrum",
+      description:
+        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in classical Latin literature from 45 BC, making it over 2000 years old.",
+      image:
+        "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1736681210/bangkok-city-sunrise-thailand_lfnmni.jpg",
+    },
+    {
+      title: "Radiance",
+      description:
+        "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.",
+      image:
+        "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1736681210/bangkok-city-sunrise-thailand_lfnmni.jpg",
+    },
+    {
+      title: "Aurora",
+      description:
+        "The passage is attributed to a section 1.10.32 of 'de Finibus Bonorum et Malorum' by Cicero, written in 45 BC.",
       image:
         "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1736681210/bangkok-city-sunrise-thailand_lfnmni.jpg",
     },
   ];
 
-  const handleNext = () => {
-    const cardsPerView = isDesktop ? 3 : 1; // 3 for desktop, 1 for mobile
-    setCurrentIndex((prevIndex) =>
-      prevIndex === data.length - cardsPerView ? 0 : prevIndex + 1
-    );
-  };
-
-  const handlePrev = () => {
-    const cardsPerView = isDesktop ? 3 : 1; // 3 for desktop, 1 for mobile
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? data.length - cardsPerView : prevIndex - 1
-    );
-  };
-
-  // Adjust for desktop or mobile on window resize
-  useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 768);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
-    <div className="w-full max-w-7xl mx-auto py-10 text-white">
-      <div className="galImg flex justify-center items-center mb-[50px]">
+    <div className=" overflow-hidden">
+      <div className="galImg flex justify-center items-center mb-[5vh]">
         <img
           src="https://res.cloudinary.com/dqlnb4ddv/image/upload/v1736675717/Group_48096075_jdlhkt.png"
-          alt=""
+          alt="Gallery"
         />
       </div>
 
-      <div className="relative flex items-center justify-between">
-        {/* Left Button */}
-        <button
-          className="absolute left-2 z-10 bg-gray-800 hover:bg-gray-700 text-white p-4 rounded-full shadow-lg"
-          onClick={handlePrev}
+      <div className="w-full h-[80vh] mx-auto relative">
+        <Swiper
+          autoplay={{ delay: 2000, disableOnInteraction: false }}
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={1} // Default for mobile
+          breakpoints={{
+            // Adjust for desktop view
+            1024: {
+              slidesPerView: 3, // 3 cards in view for desktop
+              spaceBetween: 20,
+            },
+          }}
+          loop={true}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 3,
+            slideShadows: true,
+          }}
+          modules={[EffectCoverflow, Autoplay, Navigation]}
+          navigation={{
+            nextEl: ".swiper-next",
+            prevEl: ".swiper-prev",
+          }}
+          className="mySwiper"
         >
-          &#8249;
-        </button>
-
-        {/* Cards Container */}
-        <div className="overflow-hidden w-full px-5 md:px-10">
-          <div
-            className="flex transition-transform duration-500"
-            style={{
-              transform: `translateX(-${
-                currentIndex * (isDesktop ? 33.33 : 100)
-              }%)`,
-            }}
-          >
-            {data.map((item, index) => (
+          {data.map((item, index) => (
+            <SwiperSlide key={index}>
               <div
-                key={index}
-                className="flex-shrink-0 w-full md:w-[33.33%] px-4"
+                className="relative w-[90%]  mx-auto p-4 bg-gradient-to-b from-[#0f1347] to-[#103360] shadow-lg rounded-[20px]  border-blue-500"
               >
-                {/* Card Component */}
                 <div
-                  className="relative w-full md:w-[350px] p-4 mx-auto bg-gradient-to-b from-[#0f1347] to-[#103360] shadow-lg"
-                  style={{
-                    clipPath:
-                      "clip-path: polygon(10% 0, 94% 0, 100% 0, 100% 93%, 93% 100%, 3% 100%, 0 100%, 0 7%);",
-                    border: "2px solid #008bff",
-                    borderRadius: "20px",
+                 className="mx-auto mt-6 h-48 w-full bg-cover bg-center rounded-[20px]"
+                 style={{
+                 backgroundImage: `url(${item.image})`,
+                 border: "2px solid #007bff",
+                 boxShadow: "0 0 10px 2px #007bff, inset 0 0 5px #007bff",
                   }}
-                >
-                  {/* Square Image Shape */}
-                  <div
-                     className="mx-auto mt-6 h-48 w-full md:w-[300px] bg-cover bg-center"
-                      style={{
-                           backgroundImage: `url(${item.image})`,
-                            border: "2px solid #007bff",
-                            borderRadius: "20px",
-                            boxShadow: "0 0 10px 2px #007bff, inset 0 0 5px #007bff",
-                           }}
                   ></div>
 
-
-                  {/* Card Content */}
-                  <div className="p-6">
-                    <h2 className="text-xl font-bold text-blue-400 text-center">
-                      {item.title}
-                    </h2>
-                    <p className="text-gray-300 text-sm mt-3 text-center">
-                      {item.description}
-                    </p>
-                    <div className="mt-5">
-                      
-                    </div>
-                  </div>
+                <div className="p-6">
+                  <h2 className="text-xl font-bold text-blue-400 text-center">
+                    {item.title}
+                  </h2>
+                  <p className="text-gray-300 text-sm mt-3 text-center">
+                    {item.description}
+                  </p>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Right Button */}
-        <button
-          className="absolute right-2 z-10 bg-gray-800 hover:bg-gray-700 text-white p-4 rounded-full shadow-lg"
-          onClick={handleNext}
-        >
-          &#8250;
-        </button>
-      </div>
-
-      {/* Dots for Navigation */}
-      <div className="flex justify-center mt-8">
-        {isDesktop
-          ? Array(3)
-              .fill(null)
-              .map((_, index) => (
-                <span
-                  key={index}
-                  className={`w-4 h-4 mx-1 rounded-full cursor-pointer ${
-                    index === currentIndex % 3 ? "bg-[#000aad]" : "bg-gray-500"
-                  }`}
-                  onClick={() => setCurrentIndex(index)}
-                ></span>
-              ))
-          : data.map((_, index) => (
-              <span
-                key={index}
-                className={`w-4 h-4 mx-1 rounded-full cursor-pointer ${
-                  index === currentIndex ? "bg-[#000aad]" : "bg-gray-500"
-                }`}
-                onClick={() => setCurrentIndex(index)}
-              ></span>
-            ))}
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ const ImageCarousel = () => {
       };
   const navigate= useNavigate()
   const handleClickButton=()=>{
-    
+    window.scrollTo(0, 0);
     navigate('/photogallery');
   }
   const images = [
