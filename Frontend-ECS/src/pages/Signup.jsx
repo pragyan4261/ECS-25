@@ -78,8 +78,11 @@ function Signup() {
     };
 
     return (
-        <div className="mb-5">
-            <h1 className="text-3xl text-center p-3 mt-7">Sign Up</h1>
+        <div className="mb-5 ">
+            <div className="pt-16">
+
+           
+            <h1 className="text-3xl text-center p-3 mt-0 ">Sign Up</h1>
 
             {error && (
                 <div className="text-red-600 text-center mt-2">
@@ -165,6 +168,7 @@ function Signup() {
                     Sign Up
                 </button>
             </form>
+        </div>
         </div>
     );
 }
