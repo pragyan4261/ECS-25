@@ -20,10 +20,7 @@ const Events = () => {
             />
           </div>
           <p className="text-md sm:text-lg leading-relaxed mt-4 max-w-4xl mx-auto p-8 pt-0 text-white">
-            Gorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-            turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-            nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-            tellus elit sed risus.
+          With the vast array of events going on under it, ECS truely proves to be a versatile society. Throughout the calendar year, a number of exciting events are organised by this thriving society. The events can be both technical, as well as non-technical. These events are meant for the goodwill of the students of the branch. The events also include competitions to level up the competitive spirit of a student. These competitions can be broadly classified into LIT-FIT-TECH. LIT stands for Literary, FIT for Fitness and TECH for Technology. Let us find out more about the events.
           </p>
         </div>
       </div>
@@ -44,26 +41,15 @@ const Events = () => {
     };
 
     return (
-      <div className="relative w-full mb-6 sm:w-[200px] lg:w-[450px] text-white rounded-[1.5rem]">
+      <div className="relative w-full mb-6 sm:w-[200px] lg:w-[450px] text-white">
         <div
-          className="relative w-[350px] p-4 bg-gradient-to-b from-[#0f1347] to-[#103360] shadow-lg"
-          style={{
-            clipPath:
-              "polygon(10% 0, 94% 0, 100% 0, 100% 93%, 93% 100%, 3% 100%, 0 100%, 0 7%)",
-            border: "2px solid #008bff",
-            borderRadius: "20px",
-          }}
+          className="relative w-[350px] p-4 bg-gradient-to-b from-[#0f1347] to-[#103360] shadow-lg rounded-[20px] border-2 border-[#008bff]"
         >
           <div>
             <img
               src={image}
               alt={title}
-              className="w-full h-48 sm:h-56 object-cover"
-              style={{
-                clipPath:
-                  "polygon(8% 0, 92% 0, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0 92%, 0 8%)",
-                border: "2px solid #008bff",
-              }}
+              className="w-full h-48 sm:h-56 object-cover rounded-[20px] border-2 border-[#008bff] shadow-md"
             />
           </div>
           <div className="mt-6 text-center">
@@ -90,40 +76,175 @@ const Events = () => {
 
   // Card data array
   const categories = [
-    {cards: Array(3).fill({
-      title: "Spectrum",
-      description:
-        "This is a LIT event focusing on literature and creative arts.",
-      image:
-        "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1735998472/beautiful-urban-view-daytime_jsxoxa.jpg",
-    }),},
     {
-      title: "LIT",
-      cards: Array(6).fill({
-        title: "Spectrum",
-        description:
-          "This is a LIT event focusing on literature and creative arts.",
-        image:
-          "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1735998472/beautiful-urban-view-daytime_jsxoxa.jpg",
-      }),
+      title: "",
+      cards: [
+        {
+          title: "ECS Orientation",
+          description: "This is a LIT event focusing on literature and creative arts.",
+          image:
+            "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1735998472/beautiful-urban-view-daytime_jsxoxa.jpg",
+        },
+        {
+          title: "Utkrishtha",
+          description: "Join us for an evening of artistic expression and creativity.",
+          image:
+            "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1735998472/beautiful-urban-view-daytime_jsxoxa.jpg",
+        },
+        {
+          title: "Speaker Sessions",
+          description: "Explore the intersection of art, literature, and culture.",
+          image:
+            "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1735998472/beautiful-urban-view-daytime_jsxoxa.jpg",
+        },
+        {
+          title: "Dehleez",
+          description: "Explore the intersection of art, literature, and culture.",
+          image:
+            "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1735998472/beautiful-urban-view-daytime_jsxoxa.jpg",
+        },
+        {
+          title: "Spectre-Annual Magazine",
+          description: "Explore the intersection of art, literature, and culture.",
+          image:
+            "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1735998472/beautiful-urban-view-daytime_jsxoxa.jpg",
+        },
+      ],
     },
     {
-      title: "FIT",
-      cards: Array(6).fill({
-        title: "Fit Challenge",
-        description: "Engage in fun fitness activities and challenges.",
-        image:
-          "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1735998472/beautiful-urban-view-daytime_jsxoxa.jpg",
-      }),
+      title: "SPECTRUM-FIT",
+      cards: [
+        {
+          title: "Chess",
+          description: "The chess competition under the Spectrum FIT domain fosters critical thinking, strategy, and mental agility. It serves as a platform for participants to showcase their intellectual prowess and decision-making skills",
+          image:
+            "https://i.postimg.cc/Y9SzsKqH/Whats-App-Image-2025-01-14-at-13-45-59-387cf123.jpg",
+        },
+        {
+          title: "Table Tennis",
+          description: "Table tennis under Spectrum FIT highlights agility, reflexes, and quick decision-making. The competition fosters both individual and team skills, requiring intense focus and coordination for success",
+          image:
+            "https://i.postimg.cc/43P1PNGP/Whats-App-Image-2025-01-14-at-13-46-00-a92c5ee1.jpg",
+        },
+        {
+          title: "Badminton",
+          description: "Badminton promotes agility, endurance,& control over rapid movements. The competition encourages both individual excellence & team collaboration, testing players' reflexes and strategic thinking.",
+          image:
+            "https://i.postimg.cc/43s5pHDn/Whats-App-Image-2025-01-14-at-13-46-01-501cd8e6.jpg",
+        },
+        {
+          title: "Cricket",
+          description: "Cricket under Spectrum fosters teamwork, strategy, and skillful play in both batting and bowling. The competition provides a dynamic environment for participants to showcase their abilities and compete at a high level.",
+          image:
+            "https://i.postimg.cc/L5WrC3tH/19-20250115-115513-0002.png",
+        },
+        {
+          title: "Futsal",
+          description: "Futsal, as a football competition, comes under Spectrum FIT, promoting teamwork, agility, and tactical skills in a dynamic, fast-paced environment. It provides players with a platform to enhance their coordination and strategic thinking.",
+          image:
+            "https://i.postimg.cc/3rb5xYPP/18-20250115-115513-0001.png",
+        },
+        {
+          title: "Relay",
+          description: "Relay, as a competition under Spectrum FIT, focuses on teamwork, speed, and coordination. It challenges participants to work together efficiently, passing the baton while maintaining peak performance throughout the race.",
+          image:
+            "https://i.postimg.cc/hj2FxBhQ/17-20250115-115513-0000.png",
+        },
+      ],
     },
     {
-      title: "TECH",
-      cards: Array(3).fill({
-        title: "Tech Innovation",
-        description: "Explore cutting-edge technology and innovation.",
-        image:
-          "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1735998472/beautiful-urban-view-daytime_jsxoxa.jpg",
-      }),
+      title: "SPECTRUM-TECH",
+      cards: [
+        {
+          title: "Fastweb",
+          description: "Fast Web under Spectrum is an exciting web development hackathon where participants race against time to build innovative and functional websites. With creativity, coding skills, and teamwork, developers will tackle challenges and create solutions in a fast-paced environment.",
+          image:
+            "https://i.postimg.cc/C1DkthT9/Whats-App-Image-2025-01-14-at-14-09-17-62f6c946.jpg",
+        },
+        {
+          title: "Byte the Code",
+          description: "Byte the Code under Spectrum is a thrilling competition for coding enthusiasts. It’s a platform where programmers can showcase their skills by solving complex problems, optimizing algorithms, and creating innovative solutions. Whether you're a beginner or a pro, it's the perfect opportunity",
+          image:
+            "https://i.postimg.cc/N0ZRpyV1/Whats-App-Image-2025-01-14-at-14-09-19-6d448a8c.jpg",
+        },
+        {
+          title: "Eniac",
+          description: "Eniac under Spectrum is a competitive programming contest that brings together the brightest minds in coding. Participants tackle complex algorithmic challenges, race against time, and demonstrate their problem-solving prowess. It’s a true test of logic, speed, and programming skills.",
+          image:
+            "https://i.postimg.cc/mksCWvTk/Whats-App-Image-2025-01-14-at-14-09-20-3a322487.jpg",
+        },
+        {
+          title: "Smartdroid",
+          description: "Smartdroid under Spectrum is an exciting Android development hackathon where participants innovate and build cutting-edge mobile applications. Using their knowledge of Android development, coders race against the clock to create functional and user-friendly apps, solving real-world problems.",
+          image:
+            "https://i.postimg.cc/pdmDfQ0W/Whats-App-Image-2025-01-14-at-14-09-21-a703fd53.jpg",
+        },
+      ],
+    },
+    {
+      title: "SPECTRUM- LIT",
+      cards: [
+        {
+          title: "Poesis",
+          description: "Poetry holds the extraordinary power to touch hearts profoundly. It gives voice to emotions and feelings through words. Spectrum  proudly presents POESIS, a stage to celebrate and showcase talented poets",
+          image:
+            "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1735998472/beautiful-urban-view-daytime_jsxoxa.jpg",
+        },
+        {
+          title: "Moments",
+          description: "Photographers are silent storytellers, capturing emotions and tales too intricate for words.Spectrum proudly presents Moments, a dedicated segment to showcase these timeless snapshots.",
+          image:
+            "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1735998472/beautiful-urban-view-daytime_jsxoxa.jpg",
+        },
+        {
+          title: "Minimalist",
+          description: "Spectrum proudly presents Minimalist, a creative doodling contest where simplicity meets imagination. Let your ideas flow through minimal strokes and shapes, proving that less can indeed speak volumes.",
+          image:
+            "https://i.postimg.cc/g05tP2wD/Whats-App-Image-2025-01-14-at-14-09-18-cc315aa1.jpg",
+        },
+        {
+          title: "Knock Your Heads",
+          description: "Knock Your Heads is an exciting quiz competition under Spectrum, designed to challenge your intellect and test your knowledge across diverse domains.",
+          image:
+            "https://i.postimg.cc/6QTbSvQq/Whats-App-Image-2025-01-14-at-14-09-18-5d2cbd4e.jpg",
+        },
+        {
+          title: "Memecraft",
+          description: "Get ready to tickle funny bones with Memecraft, the ultimate meme competition! Unleash your creativity, and humor to craft memes that speak louder than words. ",
+          image:
+            "https://i.postimg.cc/13mjGThp/Whats-App-Image-2025-01-14-at-14-09-18-a7a58cbe.jpg",
+        },
+        {
+          title: "Electrohunt",
+          description: "Gear up for Electrohunt, the thrilling treasure hunt competition! Put your problem-solving skills to the test as you decode clues, unravel mysteries, and chase hidden treasures.",
+          image:
+            "https://i.postimg.cc/1XDjB13K/Whats-App-Image-2025-01-14-at-14-09-22-4be01527.jpg",
+        },
+        {
+          title: "IPL Auction",
+          description: "IPL Auction is an exciting event under Spectrum, where strategy and sportsmanship collide! Teams bid, talents are discovered, and the thrill of cricket takes center stage.",
+          image:
+            "https://i.postimg.cc/rwfYQJM7/Whats-App-Image-2025-01-14-at-14-09-19-9decc442.jpg",
+        },
+        {
+          title: "Open Mic",
+          description: "Open Mic under Spectrum is the perfect platform to express your creativity in your own unique way. Whether through poetry, storytelling, music, or comedy, it's your moment to shine.",
+          image:
+            "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1735998472/beautiful-urban-view-daytime_jsxoxa.jpg",
+        },
+        {
+          title: "Chamber of Secrets",
+          description: "Chamber of Secrets under Spectrum is an exhilarating puzzle competition where participants must decode a website-crashing mystery. Dive into a world of cryptic clues",
+          image:
+            "https://i.postimg.cc/ry43MxNt/Whats-App-Image-2025-01-14-at-14-09-21-f249a60f.jpg",
+        },
+        {
+          title: "Get Hired",
+          description: "Get Hired under Spectrum is more than just an interview competition. It’s a dynamic challenge that tests your overall professional skills, from communication and problem-solving to creativity and teamwork.",
+          image:
+            "https://i.postimg.cc/jdQ1JT9x/Whats-App-Image-2025-01-14-at-14-09-20-6d798c7c.jpg",
+        },
+      ],
     },
   ];
 
@@ -154,4 +275,3 @@ const Events = () => {
 };
 
 export default Events;
- 

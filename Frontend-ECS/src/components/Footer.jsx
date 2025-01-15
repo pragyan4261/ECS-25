@@ -46,7 +46,7 @@ const Footer = () => {
                 className="h-6 w-6"
               />
             </a>
-            <a href="#" target="_blank" aria-label="Linked In">
+            <a href="https://www.linkedin.com/company/electronics-and-communication-society-nit-silchar?trk=blended-typeahead" target="_blank" aria-label="Linked In">
               <img
                 src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-white-icon.png"
                 alt="Facebook"
