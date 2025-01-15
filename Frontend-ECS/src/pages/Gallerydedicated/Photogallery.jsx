@@ -66,11 +66,11 @@ const PhotoGallery = () => {
           animation: marquee 15s linear infinite;
         }
       `}</style>
-    <Orientation/>
-    <Utkrishta/>
-    <Spectrum/>
-    <Dehleez/>
-    <More/>
+    <Orientation id="orienation"/>
+    <Utkrishta id="utkrishta"/>
+    <Spectrum id="spectrum"/>
+    <Dehleez id="dehleez"/>
+    <More id="others"/>
     </section>
   );
 };

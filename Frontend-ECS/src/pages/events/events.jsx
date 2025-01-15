@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 const Events = () => {
   // HeroSection Component
   const HeroSection = () => {
@@ -28,86 +28,121 @@ const Events = () => {
   };
 
   // Card Component
-  const Card = ({ title, description, image }) => {
+  
+
+  const Card = ({ title, description, image, link, isFitSection,isLITSection,isSpectrum,isTECHSection }) => {
     const [buttonImage, setButtonImage] = useState(
-      "https://i.postimg.cc/mgjNYYv7/Component-2.png"
+      isLITSection || isTECHSection
+        ? "https://i.postimg.cc/1506Lky2/Whats-App-Image-2025-01-15-at-21-04-35-dd05225e-removebg-preview.png"
+        : isFitSection
+        ? "https://i.postimg.cc/cCnQ2P6k/Whats-App-Image-2025-01-15-at-20-26-14-1efc9130-removebg-preview.png"
+        : "https://i.postimg.cc/mgjNYYv7/Component-2.png"
     );
+    
 
     const handleMouseEnter = () => {
-      setButtonImage("https://i.postimg.cc/Px3Qjwss/Group-48096106.png");
-    };
-    const handleMouseLeave = () => {
-      setButtonImage("https://i.postimg.cc/mgjNYYv7/Component-2.png");
+      if (isFitSection) {
+        setButtonImage("https://i.postimg.cc/05CC71DZ/Whats-App-Image-2025-01-15-at-20-40-12-d54596a0-removebg-preview.png")
+      }
+      else if(isLITSection || isTECHSection){
+        setButtonImage("https://i.postimg.cc/MKJV36J1/Whats-App-Image-2025-01-15-at-21-05-01-cc2300b5-removebg-preview.png")
+      }
+      else{
+        setButtonImage("https://i.postimg.cc/Px3Qjwss/Group-48096106.png");
+      }
     };
 
-    return (
-      <div className="relative w-full mb-6 sm:w-[200px] lg:w-[450px] text-white">
-        <div
-          className="relative w-[350px] p-4 bg-gradient-to-b from-[#0f1347] to-[#103360] shadow-lg rounded-[20px] border-2 border-[#008bff]"
-        >
-          <div>
-            <img
-              src={image}
-              alt={title}
-              className="w-full h-48 sm:h-56 object-cover rounded-[20px] border-2 border-[#008bff] shadow-md"
-            />
-          </div>
-          <div className="mt-6 text-center">
-            <h2 className="text-lg sm:text-xl font-bold text-[#00d1ff]">
-              {title}
-            </h2>
-            <p className="mt-3 text-sm sm:text-md text-gray-300 leading-relaxed">
-              {description}
-            </p>
-          </div>
-          <div className="mt-4 flex flex-wrap justify-center items-center">
+    const handleMouseLeave = () => {
+      if (isFitSection) {
+        setButtonImage("https://i.postimg.cc/cCnQ2P6k/Whats-App-Image-2025-01-15-at-20-26-14-1efc9130-removebg-preview.png")
+      }
+      else if(isLITSection || isTECHSection){
+        setButtonImage("https://i.postimg.cc/1506Lky2/Whats-App-Image-2025-01-15-at-21-04-35-dd05225e-removebg-preview.png")
+      }
+      else{
+        setButtonImage("https://i.postimg.cc/mgjNYYv7/Component-2.png");
+      }
+    };
+
+  return (
+    <div className="relative w-full mb-6 sm:w-[200px] lg:w-[450px] text-white">
+      <div className="relative w-[350px] p-4 bg-gradient-to-b from-[#0f1347] to-[#103360] shadow-lg rounded-[20px] border-2 border-[#008bff]">
+        <div>
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-48 sm:h-56 object-cover rounded-[20px] border-2 border-[#008bff] shadow-md"
+          />
+        </div>
+        <div className="mt-6 text-center">
+          <h2 className="text-lg sm:text-xl font-bold text-[#00d1ff]">{title}</h2>
+          <p className="mt-3 text-sm sm:text-md text-gray-300 leading-relaxed">
+            {description}
+          </p>
+        </div>
+        <div className="mt-4 flex flex-wrap justify-center items-center">
+          <Link to={link}>
             <button
               className="flex justify-center mx-auto z-20"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <img src={buttonImage} alt="Component 2" />
+              <img src={buttonImage} alt="View More" />
             </button>
-          </div>
+          </Link>
         </div>
       </div>
-    );
-  };
+    </div>
+  );
+};
+
 
   // Card data array
   const categories = [
     {
-      title: "",
+      title: " ",
       cards: [
         {
           title: "ECE Orientation",
           description: "This is a LIT event focusing on literature and creative arts.",
           image:
             "https://i.postimg.cc/xdYFR1kp/Whats-App-Image-2025-01-15-at-19-29-40-435b3f50.jpg",
+          link:'/orientation'
+
         },
         {
           title: "Utkrishtha",
           description: "Join us for an evening of artistic expression and creativity.",
           image:
-            "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1735998472/beautiful-urban-view-daytime_jsxoxa.jpg",
+            "https://i.postimg.cc/CLCJ3Yys/MJ-9663.jpg",
+          link:'/utkrishtha'
         },
         {
           title: "Speaker Sessions",
           description: "Explore the intersection of art, literature, and culture.",
           image:
-            "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1735998472/beautiful-urban-view-daytime_jsxoxa.jpg",
+            "https://res.cloudinary.com/dsj9gr1o3/image/upload/v1724355786/Speakersess_lmlwvl.jpg",
+          link:"/more"
         },
+       
         {
-          title: "Dehleez",
-          description: "Explore the intersection of art, literature, and culture.",
+          title: "EC:ArQ",
+          description: "This is a LIT event focusing on literature and creative arts.",
           image:
-            "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1735998472/beautiful-urban-view-daytime_jsxoxa.jpg",
+            "https://i.postimg.cc/rpBGJhYV/Whats-App-Image-2025-01-15-at-19-48-18-45437702.jpg",
+          link:'/more'
         },
         {
           title: "Spectre-Annual Magazine",
           description: "Explore the intersection of art, literature, and culture.",
           image:
-            "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1735998472/beautiful-urban-view-daytime_jsxoxa.jpg",
+            "https://i.postimg.cc/N0zCw7JS/Whats-App-Image-2025-01-15-at-19-39-43-7a9a294b.jpg",
+        },
+        {
+          title: "Dehleez",
+          description: "Explore the intersection of art, literature, and culture.",
+          image: "https://instagram.fmaa8-1.fna.fbcdn.net/v/t39.30808-6/440323056_17908104839953783_8745844986834733664_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fmaa8-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=RY82HdMN09IQ7kNvgGxmJsW&_nc_gid=67de5aba14ed48adb3137bf410660165&edm=ALQROFkAAAAA&ccb=7-5&ig_cache_key=MzM1ODEzNjAzNDc1MDUyNTc0Ng%3D%3D.3-ccb7-5&oh=00_AYBCIzKWCHFqwkrhB1SjLnhdi2XHCt5F3JPeiyJpMfh-FA&oe=678D96F4&_nc_sid=fc8dfb",
+          link:"/dehleez"
         },
       ],
     },
@@ -119,18 +154,21 @@ const Events = () => {
           description: "The chess competition under the Spectrum FIT domain fosters critical thinking, strategy, and mental agility. It serves as a platform for participants to showcase their intellectual prowess and decision-making skills",
           image:
             "https://i.postimg.cc/Y9SzsKqH/Whats-App-Image-2025-01-14-at-13-45-59-387cf123.jpg",
+          link:"https://docs.google.com/forms/d/e/1FAIpQLSdVd4FTMyXtiQwdjVGN9woDhDo1xNbEfwW104tExrz2qUWtqA/alreadyresponded"
         },
         {
           title: "Table Tennis",
           description: "Table tennis under Spectrum FIT highlights agility, reflexes, and quick decision-making. The competition fosters both individual and team skills, requiring intense focus and coordination for success",
           image:
             "https://i.postimg.cc/43P1PNGP/Whats-App-Image-2025-01-14-at-13-46-00-a92c5ee1.jpg",
+          link:"https://docs.google.com/forms/d/e/1FAIpQLSdvzabebA5eH6TjvtFliHy8jnRAQQRjkJD_68D__jvorok4Zg/viewform"
         },
         {
           title: "Badminton",
           description: "Badminton promotes agility, endurance,& control over rapid movements. The competition encourages both individual excellence & team collaboration, testing players' reflexes and strategic thinking.",
           image:
             "https://i.postimg.cc/43s5pHDn/Whats-App-Image-2025-01-14-at-13-46-01-501cd8e6.jpg",
+          link:"https://docs.google.com/forms/d/e/1FAIpQLSdUsnKg4k-x2xQIuhbgZ95U2_JrkcJMFP5-ALXB61FwREA6qg/viewform"
         },
         {
           title: "Cricket",
@@ -265,6 +303,12 @@ const Events = () => {
                 title={card.title}
                 description={card.description}
                 image={card.image}
+                link={card.link}
+          
+                isFitSection={category.title === "SPECTRUM-FIT"}
+                isLITSection={category.title==="SPECTRUM- LIT"}
+                isTECHSection={category.title==="SPECTRUM-TECH"}
+                isSpectrum={category.title===" "}
               />
             ))}
           </div>
