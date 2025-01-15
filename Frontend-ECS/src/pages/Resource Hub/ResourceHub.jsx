@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import ResHub from './svgs/ResHub'
 import OptionPlate from './svgs/OptionPlate'
 import { Link } from 'react-router-dom'
+import { LuFileSpreadsheet } from "react-icons/lu";
 import './ResHub.css'
 import RadioButtonHigh from './svgs/RadioButtonHigh'
 import StaggeredDropDownSub from '../../components/DropdownMenuSub'
@@ -11,6 +12,30 @@ import { GiTireIronCross } from "react-icons/gi";
 const ResourceHub = () => {
   const [disItem, setdisItem] = useState(false);
   const [currSem, setcurrSem] = useState(0);
+    const [isActive, setIsActive] = useState(false);
+  
+    const handleClick = () => {
+      setIsActive(!isActive);
+      return (
+        <button onClick={handleClick} className={isActive ? 'active' : ''}>
+          Toggle Active
+        </button>
+      );
+    };
+
+  const files1 = [
+    { name: "EC.pdf", link: "https://drive.google.com/uc?export=download&id=1Ny6gDiSDVvmqvUpqP2h_Uk3PfCDBaTAz" },
+    { name: "L01-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=1mZ_uKu9Rje7UzpVROMafLzSREssDD-pJ" },
+    { name: "L02-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=18qEC_Cb7E-hFfGgIl0XUyEXDUOazFzBB" },
+    { name: "L03-EC101.pdf", link: "https://drive.google.com/file/d/1AYC59KePPdo3dYa14bJ_Der34j9U2QhV/view?usp=drive_link" },
+    { name: "L04-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=1THxUgQb1u_CqNSG4u7M8QBaX7eYZbdab" },
+    { name: "L05-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=1_fp7wHrADYImQ4UhHcfIA6a3KCoTf1iQ" },
+    { name: "L06-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=1gQo6Lr0_NOAurRu56_LeoTFvFUytpko5" },
+    { name: "L07-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=17VMgzUo4_9Ix4o55k0wkFVSep1y3nnaf" },
+    { name: "L08-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=1Pf6T0fm7vMiapJdzALQdZqDtaz2AAP6e" },
+    { name: "L09-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=1FEtfuvMKIU9ttT3hKlKP_584ssxa7wWd" },
+    { name: "L010-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=19S671WD9prIxaJToOtrbWPGJ7b5jX_8c" }
+  ];
   const subjects=[
     
     [
@@ -68,16 +93,32 @@ const ResourceHub = () => {
   return (<div className='flex flex-col gap-5 pb-20'>
         <ResHub/>
     <div className='pcmd:flex-col flex justify-around h-full'>
-      <div className={`display-item ${disItem?'visible relative':'absolute invisible'}`}>
-      
-        <button className={`absolute top-6 right-6 `} onClick={()=>{
+        <div className={`display-item overflow-y-scroll ${disItem?'visible relative':'absolute invisible'}`}>
+        <div>
+          {files1.map((file, index) => (
+            <div
+              key={index}
+              className="h-max w-max p-[4vh] mb-[1vh] flex"
+            >
+              <LuFileSpreadsheet className="text-[8vh]" />
+              <a
+                className="my-auto hover:underline hover:text-[#33FCFF]"
+                href={file.link}
+                rel="noopener noreferrer"
+              >
+                <h2 className="ml-[2vw] text-[3vh]">{file.name}</h2>
+              </a>
+            </div>
+          ))}
+        </div>
+        <button className={`absolute top-6 right-6`} onClick={()=>{
           setdisItem(false);
         }}><GiTireIronCross size={24}/></button>
       </div>
       <div className="left-content pcmd:w-full pcmd:h-full pcmd:flex-row w-1/6 flex flex-col items-center">
         
         <ul className='flex flex-col h-full items-end  justify-around text-center text-wrap gap-y-4 pb-4 pt-4 desktopView'>
-          <li onClick={()=>{setcurrSem(0)}}><Link>Ist    Sem</Link></li>
+          <li onClick={()=>{setcurrSem(0), handleClick()}} className={`${isActive ? 'bg-blue-500' : 'bg-gray-500'}`}><Link>Ist    Sem</Link></li>
           <li onClick={()=>{setcurrSem(1)}}><Link>IInd   Sem</Link></li>
           <li onClick={()=>{setcurrSem(2)}}><Link>IIIrd  Sem</Link></li>
           <li onClick={()=>{setcurrSem(3)}}><Link>IVth   Sem</Link></li>
@@ -265,4 +306,4 @@ const ResourceHub = () => {
   )
 }
 
-export default ResourceHub
+export default ResourceHub;

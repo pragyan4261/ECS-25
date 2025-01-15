@@ -74,7 +74,7 @@ stop {
     filter: drop-shadow( 3px 2px 2px #12D6DF);
 }
 
-.left-content  li:hover{
+.left-content  li:active{
     color: #33FCFF;
     text-decoration: underline;
 }
@@ -126,6 +126,8 @@ stop {
     display: flex;
     padding: 10px;
     position: absolute;
+    left:20%;
+    top:10%;
     max-width: 100vw;
     width: 60vw;
     height: 78%;
