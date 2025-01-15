@@ -46,3 +46,7 @@ overflow-x: hidden;
 .read-the-docs {
   color: #888;
 }
+.particlejs{
+  position: absolute;
+  z-index: -99;
+}
