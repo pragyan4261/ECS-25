@@ -17,11 +17,11 @@
             initial={wrapperVariants.closed}
             variants={wrapperVariants}
             style={{ originY: "top", translateX: "-50%" }}
-            className="flex flex-col  p-2 rounded-lg  shadow-xl absolute top-[120%] left-[50%] w-48 overflow-hidden"
+            className="flex flex-col  p-2 rounded-lg  shadow-xl absolute top-[120%] left-[50%] w-48 overflow-hidden text-ellipsis"
           >
             {subjects.map((element => {
             return ( 
-              <Option setOpen={setOpen}  text={element} />
+              <Option setOpen={setOpen}   text={element} />
             )
           }))}
           </motion.ul>
@@ -35,10 +35,10 @@
       <motion.li
         variants={itemVariants}
         onClick={() => setOpen(false)}
-        className="flex items-center p-2 text-xs font-medium whitespace-nowrap rounded-md hover:bg-indigo-100   transition-colors cursor-pointer dropOption"
+        className="flex items-center p-2 text-xs font-medium  rounded-md hover:bg-indigo-100   transition-colors cursor-pointer dropOption"
       >
         
-        <span className="text-indigo">{text}</span>
+        <span className="text-indigo text-ellipsis ">{text}</span>
       </motion.li>
     );
   };

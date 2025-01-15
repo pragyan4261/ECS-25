@@ -2,6 +2,7 @@ import React from "react";
 import "./card.css";
 
 export default function Card({ title, description, imageUrl }) {
+  if(title==="Sibajit Mazumder"){console.log("hi");}
   return (
     <div
       className="card group relative h-[40vh] w-[35vh] flex flex-col items-center justify-end p-4 bg-cover bg-center shadow-lg rounded-lg overflow-hidden"

@@ -80,10 +80,10 @@ const Events = () => {
       title: "",
       cards: [
         {
-          title: "ECS Orientation",
+          title: "ECE Orientation",
           description: "This is a LIT event focusing on literature and creative arts.",
           image:
-            "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1735998472/beautiful-urban-view-daytime_jsxoxa.jpg",
+            "https://i.postimg.cc/xdYFR1kp/Whats-App-Image-2025-01-15-at-19-29-40-435b3f50.jpg",
         },
         {
           title: "Utkrishtha",
@@ -188,13 +188,13 @@ const Events = () => {
           title: "Poesis",
           description: "Poetry holds the extraordinary power to touch hearts profoundly. It gives voice to emotions and feelings through words. Spectrum  proudly presents POESIS, a stage to celebrate and showcase talented poets",
           image:
-            "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1735998472/beautiful-urban-view-daytime_jsxoxa.jpg",
+            "https://i.postimg.cc/13Lnwkbt/Whats-App-Image-2025-01-15-at-18-09-07-8295c63e.jpg",
         },
         {
           title: "Moments",
           description: "Photographers are silent storytellers, capturing emotions and tales too intricate for words.Spectrum proudly presents Moments, a dedicated segment to showcase these timeless snapshots.",
           image:
-            "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1735998472/beautiful-urban-view-daytime_jsxoxa.jpg",
+            "https://i.postimg.cc/Zqp9cfhL/Whats-App-Image-2025-01-15-at-18-09-06-5c1f0a83.jpg",
         },
         {
           title: "Minimalist",
@@ -230,7 +230,7 @@ const Events = () => {
           title: "Open Mic",
           description: "Open Mic under Spectrum is the perfect platform to express your creativity in your own unique way. Whether through poetry, storytelling, music, or comedy, it's your moment to shine.",
           image:
-            "https://res.cloudinary.com/dqlnb4ddv/image/upload/v1735998472/beautiful-urban-view-daytime_jsxoxa.jpg",
+            "https://instagram.fmaa8-1.fna.fbcdn.net/v/t39.30808-6/420032096_17895477107953783_1002736532792049271_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fmaa8-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=Mn9BoZfyQAgQ7kNvgH0Vqb2&_nc_gid=13bececef4534dff9981aff198a2d601&edm=ALQROFkAAAAA&ccb=7-5&ig_cache_key=MzI4MTMxODE1MzE2MTcyOTY2NA%3D%3D.3-ccb7-5&oh=00_AYBBG9Cq_mMkFWxbI5ov2oC07zQTjDozX5dVND08ztsrKA&oe=678D920A&_nc_sid=fc8dfb",
         },
         {
           title: "Chamber of Secrets",

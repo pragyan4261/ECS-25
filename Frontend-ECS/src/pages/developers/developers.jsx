@@ -16,9 +16,9 @@ export default function Developers() {
   }
 
   return (
-    <div className="main mx-auto w-full max-w-7xl space-y-10">
-      <div className="developers p-5 text-center">
-        <div className="Title flex justify-center items-center">
+    <div className="main mx-auto w-full max-w-7xl space-y-10 " >
+      <div className="developers p-5 text-center ">
+        <div className="Title flex justify-center items-center pt-10">
           <img
             src="https://i.postimg.cc/N08H4tBS/Group-15-1.png"
             alt="Developers"

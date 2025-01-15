@@ -12,12 +12,12 @@ export default function Members() {
   }
 
   return (
-    <div className="main mx-auto w-full max-w-7xl space-y-10">
+    <div className="main mx-auto w-full max-w-7xl space-y-10 ">
       
       
 
       <div className="members p-5 text-center">
-        <div className="membersTitle flex justify-center items-center">
+        <div className="membersTitle flex justify-center items-center pt-10">
           <img src="https://i.postimg.cc/nzSYcp3Z/members.png" alt="Members" />
         </div>
 

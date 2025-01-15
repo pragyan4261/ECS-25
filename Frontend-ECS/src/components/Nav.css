@@ -35,7 +35,41 @@ padding-left: 0;
     }
 
     
+<nav className='flex  w-full justify-between items-center p-2'>
+                <div>
+                    
+                <div className='pl-3'>
+                <Link to="/" className="flex items-center ">
+                        <img
+                            src="https://i.postimg.cc/RZrxm2s0/ecs-new-logo-1-black-bg-2.png"
+                            className="h-[50px]"
+                            alt="ECS Logo"
+                            />
+            </Link>
+                </div>
+                </div>
+                <div className="flex  justify-center navUl ">
 
+                <div className={styles.Naveffect} >
+                    <Link to={"/annual-attraction"}>Annual Attraction
+                    </Link></div>
+                <div className={styles.Naveffect}>
+                    <Link to={"/members"}>Members
+                    </Link></div>
+                <div className={styles.Naveffect}>
+                    <Link to={"./developers"}>Developers
+                    </Link></div>
+                <div className={styles.Naveffect}>
+                    <Link to={"./Resource+Hub"}>Resource Hub
+                    </Link></div>
+                </div>
+
+                <div className='pr-4'>
+                <Link to="/" className="flex items-center justify-center ">
+                        <FaUser size={38}/>
+            </Link>
+                </div>
+            </nav>
     ul li ul li {
       clear: both;
       width: 100%;
