@@ -2,7 +2,7 @@
       .swiper-button-next-custom {
         position: absolute !important;
         z-index: 10;
-        top: 50%;
+        top: 115%;
         width: 85px;
         height: 37px;
         background: transparent;
