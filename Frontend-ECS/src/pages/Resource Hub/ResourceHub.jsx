@@ -646,7 +646,7 @@ const subjects = [
   return (<div className='flex flex-col gap-5 pb-20'>
     <ResHub />
     <div className='pcmd:flex-col flex justify-around h-full'>
-      <div className={`display-item overflow-y-scroll ${disItem ? 'visible relative' : 'absolute invisible'}`}>
+      <div className={`display-item overflow-y-scroll mobile:left-0 pc:left-1/4 ${disItem ? 'visible relative' : 'absolute invisible'}`}>
         <div>
           {files[currSub].map((file, index) => (
             <div
