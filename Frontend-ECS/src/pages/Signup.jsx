@@ -130,8 +130,8 @@ function Signup() {
                     value={formData.scholar_ID}
                     onChange={handleChange}
                     className="p-2 border border-gray-300 rounded"
-                    maxLength={6}
-                    minLength={6}
+                    maxLength={7}
+                    minLength={7}
                 />
                 <input
                     id="Mobile_No"
