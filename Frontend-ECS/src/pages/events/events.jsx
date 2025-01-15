@@ -65,7 +65,7 @@ const Events = () => {
     };
 
   return (
-    <div className="relative w-full mb-6 sm:w-[200px] lg:w-[450px] text-white">
+    <div className="relative w-full flex flex-col items-center justify-center mb-6 sm:w-[200px] lg:w-[450px] text-white">
       <div className="relative w-[350px] p-4 bg-gradient-to-b from-[#0f1347] to-[#103360] shadow-lg rounded-[20px] border-2 border-[#008bff]">
         <div>
           <img

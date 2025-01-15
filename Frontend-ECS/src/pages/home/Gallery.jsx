@@ -32,7 +32,7 @@ const ImageCarousel = () => {
 
   return (
     <div className="max-w-screen overflow-hidden">
-                <div className="galImg flex justify-center items-center mb-[20vh]">
+                <div className="galImg relative h-full w-full flex justify-center items-center mt-0 mb-[5vh]">
                     <img src="https://i.postimg.cc/Y9sWX8Rm/Group-48096102.png" alt="" />
                 </div>
 
@@ -75,7 +75,7 @@ const ImageCarousel = () => {
         <img src="https://i.postimg.cc/gcXHZhkB/Group-48096103.png" alt="Next" />
       </button>
       <button
-          className="flex justify-center lg:-translate-y-[850px] mx-auto z-20 mobile:scale-[0.7]"
+          className="flex justify-center lg:-translate-y-[850px] mx-auto z-20 mobile:scale-[0.9]"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
