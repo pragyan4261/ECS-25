@@ -9,7 +9,6 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 const sliderData = [
   "https://i.postimg.cc/BbxgyxS0/ARY-0100.jpg",
   "https://i.postimg.cc/h4dcvhZR/MJ-9663.jpg",
-  "https://i.postimg.cc/L5LcTCnB/Spectrumfit.jpg",
   "https://i.postimg.cc/Lsx6t7jd/Dehleezpic.jpg",
 ];
 

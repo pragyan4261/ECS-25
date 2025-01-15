@@ -7,10 +7,11 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 const sliderData = [
-  "https://i.postimg.cc/BbxgyxS0/ARY-0100.jpg",
-  "https://i.postimg.cc/h4dcvhZR/MJ-9663.jpg",
-  "https://i.postimg.cc/L5LcTCnB/Spectrumfit.jpg",
-  "https://i.postimg.cc/Lsx6t7jd/Dehleezpic.jpg",
+  "https://res.cloudinary.com/nikks/image/upload/v1736972286/a1_zvmjuk.jpg",
+  "https://res.cloudinary.com/nikks/image/upload/v1736972285/a3_xtsce0.jpg",
+  "https://res.cloudinary.com/nikks/image/upload/v1736972285/a2_d07h2e.jpg",
+  "https://res.cloudinary.com/nikks/image/upload/v1736972285/a5_oinkxp.jpg",
+  "https://res.cloudinary.com/nikks/image/upload/v1736972285/a4_vhhoi5.jpg"
 ];
 
 const More = () => {

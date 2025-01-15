@@ -55,7 +55,7 @@ const Message = () => {
       designation: "VICE PRESIDENT ECS",
     },
     {
-      image: "https://i.postimg.cc/13bqBvBN/Profilemsg.png",
+      image: "https://i.postimg.cc/65vL9BZp/Whats-App-Image-2025-01-15-at-22-40-38-c5b5c76c.jpg",
       name: "Chetan Singh Verma",
       content: "As the General Secretary of ECS, I am honored to lead a society dedicated to fostering innovation, collaboration, and excellence in the field of electronics and communication. Our vision is to create a vibrant community where ideas flourish, knowledge is shared, and every member is empowered to reach their full potential. Together, we will strive to uplift our society by embracing new challenges, driving technological advancement, and making a lasting impact both within and beyond our campus. ECE rocks!!!",
       designation: "GENERAL SECRETARY ECS",
