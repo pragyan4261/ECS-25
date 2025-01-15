@@ -16,27 +16,27 @@ const PhotoGallery = () => {
   return (
     <section className=" text-white min-h-screen w-full">
       {/* Header */}
-      <header className="relative w-full h-[98vh] bg-cover bg-center border-0 rounded-b-[50px]" style={{ backgroundImage: "url('https://i.postimg.cc/1XV4NpB6/ecs.jpg')" }}>
+      <header className="relative w-full h-[98vh] bg-cover bg-center border-0 rounded-b-[50px] mobile:h-[45vh]" style={{ backgroundImage: "url('https://i.postimg.cc/1XV4NpB6/ecs.jpg')" }}>
         <div className="absolute inset-0 bg-[#090310] bg-opacity-[50%]"></div>
         <div className="absolute inset-0 z-10 flex flex-col items-center top-[30%] text-center">
           <img
             src="https://i.postimg.cc/SxnBcgbJ/Group-15.png"
             alt="Photo Gallery"
-            className=""
+            className="mobile:scale-[1.8] mobile:relative mobile:top-[8vh]"
           />
         </div>
       </header>
 
       {/* Gallery Section */}
-      <div className="absolute bottom-0 px-10 py-8 w-full overflow-hidden">
-        <div className="relative flex w-[200%] items-center">
-          <div className="flex w-[100%] animate-marquee">
+      <div className="absolute bottom-0 px-10 py-8 w-full overflow-hidden mobile:hidden">
+        <div className="relative flex w-[200%] mobile:w-[500%] items-center">
+          <div className="flex w-[100%] animate-marquee whitespace-nowrap">
             {photoGalleryData.map((item, index) => (
               <div key={index} className="relative inline-block mx-[28px] flex-shrink-0">
                 <img
                   src={item.src}
                   alt=""
-                  className="w-[305px] h-[198px] object-cover rounded-[10px]"
+                  className="w-[20vw] h-[26vh] mobile:w-[65vw] mobile:h-[10vh] object-cover rounded-[10px]"
                 />
                 <img src={item.label} alt="" className="mx-auto"/>
               </div>
@@ -48,7 +48,7 @@ const PhotoGallery = () => {
                 <img
                   src={item.src}
                   alt=""
-                  className="w-[305px] h-[198px] object-cover rounded-[10px]"
+                  className="w-[20vw] h-[26vh] mobile:w-[65vw] mobile:h-[20vh] object-cover rounded-[10px]"
                 />
                 <img src={item.label} alt="" className="mx-auto"/>
               </div>
