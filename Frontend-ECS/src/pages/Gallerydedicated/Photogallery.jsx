@@ -18,7 +18,7 @@ const PhotoGallery = () => {
       {/* Header */}
       <header className="relative w-full h-[98vh] bg-cover bg-center border-0 rounded-b-[50px] mobile:h-[45vh]" style={{ backgroundImage: "url('https://i.postimg.cc/1XV4NpB6/ecs.jpg')" }}>
         <div className="absolute inset-0 bg-[#090310] bg-opacity-[50%]"></div>
-        <div className="absolute inset-0 z-10 flex flex-col items-center top-[30%] text-center">
+        <div className="absolute inset-0 z-10 flex flex-col items-center top-[30%] text-center mobile:overflow-hidden mobile:w-screen">
           <img
             src="https://i.postimg.cc/SxnBcgbJ/Group-15.png"
             alt="Photo Gallery"
