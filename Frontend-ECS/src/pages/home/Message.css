@@ -17,6 +17,9 @@ h2 {
   font-style: normal;
 }
 
+ .polygon{
+  clip-path: polygon(30% 5%, 94% 5%, 94% 81%, 74% 95%, 6% 95%, 6% 20%);
+ }
 .swiper-button-prev-custom,
 .swiper-button-next-custom {
   position: absolute;

@@ -14,6 +14,11 @@ import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Dashboard from './pages/Dashboard/dashboard.jsx';
 import PhotoGallery from './pages/Gallerydedicated/Photogallery.jsx';
+import Dehleez from './pages/Gallerydedicated/Dehleez.jsx';
+import Orientation from './pages/Gallerydedicated/Orientation.jsx';
+import Spectrum from './pages/Gallerydedicated/Spectrum.jsx';
+import Utkrishta from './pages/Gallerydedicated/Utkrishta.jsx';
+import More from './pages/Gallerydedicated/More.jsx';
 // import PrivateRoute from './components/PrivateRoute.jsx';
 
 function App() {
@@ -46,6 +51,14 @@ function App() {
         <Route path="/Resource+Hub" element={<ResourceHub />} />
         <Route path="/profile" element={<Dashboard />} />
         <Route path="/photogallery" element={<PhotoGallery />}/>
+        <Route path='/dehleez' element={<Dehleez/>}/>
+        <Route path='/orientation' element={<Orientation/>}/>
+        <Route path='/spectrum' element={<Spectrum/>}/>
+        <Route path='/utkrishtha' element={<Utkrishta/>}/>
+        <Route path='/more' element={<More/>}/>
+      
+
+
        
       </Routes>
       <Footer />
