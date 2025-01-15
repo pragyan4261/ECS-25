@@ -294,7 +294,7 @@ const Annual = () => {
 
   return (
     <div className=" overflow-hidden">
-      <div className="galImg flex justify-center items-center mb-[5vh]">
+      <div className="galImg relative w-full mobile:scale-150 z-10 flex justify-center items-center mb-[5vh]">
         <img
           src="https://res.cloudinary.com/dqlnb4ddv/image/upload/v1736675717/Group_48096075_jdlhkt.png"
           alt="Gallery"
