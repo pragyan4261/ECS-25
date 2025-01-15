@@ -8,10 +8,11 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 // Images for the slider
 const sliderData = [
-  "https://i.postimg.cc/BbxgyxS0/ARY-0100.jpg",
-  "https://i.postimg.cc/h4dcvhZR/MJ-9663.jpg",
-  "https://i.postimg.cc/L5LcTCnB/Spectrumfit.jpg",
-  "https://i.postimg.cc/Lsx6t7jd/Dehleezpic.jpg",
+  "https://res.cloudinary.com/nikks/image/upload/v1736971854/o2_bpyvpx.jpg",
+  
+  "https://res.cloudinary.com/nikks/image/upload/v1736971852/o5_ksuxxx.jpg",
+  "https://res.cloudinary.com/nikks/image/upload/v1736971852/o4_thsowt.jpg",
+  "https://res.cloudinary.com/nikks/image/upload/v1736971851/o1_admchn.jpg"
 ];
 
 const Orientation = () => {
