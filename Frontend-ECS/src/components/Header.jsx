@@ -27,7 +27,8 @@ export default function Header() {
                 <div>
                     
                 <div className='pl-3'>
-                <Link to="/" className="flex items-center ">
+                <Link to="/" className="flex items-center "
+                onClick={window.scroll(0,0)}>
                         <img
                             src="https://i.postimg.cc/RZrxm2s0/ecs-new-logo-1-black-bg-2.png"
                             className="h-[50px]"

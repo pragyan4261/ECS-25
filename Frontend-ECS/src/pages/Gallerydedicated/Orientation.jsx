@@ -38,7 +38,7 @@ const Orientation = () => {
             };
 
   return (
-    <section className="relative max-w-7xl mx-auto items-center p-5 mt-[60px]">
+    <section className="relative max-w-7xl mx-auto items-center p-5 ">
       <div className="message border border-transparent p-5 h-max text-center space-y-6">
                 <div className="msgImg flex justify-center items-center">
                     <img src="https://i.postimg.cc/gJ1yNMNY/Group-48096102-1.png" alt="" />

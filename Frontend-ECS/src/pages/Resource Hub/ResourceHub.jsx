@@ -651,7 +651,7 @@ const subjects = [
           {files[currSub].map((file, index) => (
             <div
               key={index}
-              className="h-max w-max p-[4vh] mb-[1vh] flex"
+              className="h-max w-full p-[4vh] mb-[1vh] flex"
             >
               <LuFileSpreadsheet className="text-[8vh]" />
               <a
