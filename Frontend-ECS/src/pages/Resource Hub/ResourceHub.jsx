@@ -14,7 +14,6 @@ const ResourceHub = () => {
   const [currSem, setcurrSem] = useState(0);
   const [currSub, setCurrSub] = useState(0);
   const [isActive, setIsActive] = useState(false);
-  const [files, setFiles] = useState([]);
   const handleClick = () => {
     setIsActive(true);
   };
@@ -22,80 +21,80 @@ const ResourceHub = () => {
     [{ name: "numerical.pdf", link: "https://drive.google.com/uc?export=download&id=1pRRsD4rfzQTEnJ9KmZmVu0eEoL2PnWHE" },
     { name: "Maths-notes.pdf", link: "https://drive.google.com/uc?export=download&id=1_fL1ZqFyihiAm4_3wbDFbQcTXQZeA27K" },
     { name: "complex_r.pdf", link: "https://drive.google.com/uc?export=download&id=1Z03L60Fyd-63DK-CGP4vIgWUxUyyaxRD" }],
-
+    
     [{ name: "EC.pdf", link: "https://drive.google.com/uc?export=download&id=1Ny6gDiSDVvmqvUpqP2h_Uk3PfCDBaTAz" },
-    { name: "L01-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=1mZ_uKu9Rje7UzpVROMafLzSREssDD-pJ" },
-    { name: "L02-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=18qEC_Cb7E-hFfGgIl0XUyEXDUOazFzBB" },
-    { name: "L03-EC101.pdf", link: "https://drive.google.com/file/d/1AYC59KePPdo3dYa14bJ_Der34j9U2QhV/view?usp=drive_link" },
-    { name: "L04-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=1THxUgQb1u_CqNSG4u7M8QBaX7eYZbdab" },
-    { name: "L05-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=1_fp7wHrADYImQ4UhHcfIA6a3KCoTf1iQ" },
-    { name: "L06-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=1gQo6Lr0_NOAurRu56_LeoTFvFUytpko5" },
-    { name: "L07-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=17VMgzUo4_9Ix4o55k0wkFVSep1y3nnaf" },
-    { name: "L08-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=1Pf6T0fm7vMiapJdzALQdZqDtaz2AAP6e" },
-    { name: "L09-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=1FEtfuvMKIU9ttT3hKlKP_584ssxa7wWd" },
-    { name: "L010-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=19S671WD9prIxaJToOtrbWPGJ7b5jX_8c" }],
-
-    [{ name: "CS class Notes.pdf", link: "https://drive.google.com/uc?export=download&id=1F0GR1c1pX-syB5MF3zA6wYhTukS3T659" }],
-
-    [{ name: "Water and It_s Treatment.pdf", link: "https://drive.google.com/uc?export=download&id=1eM_-LQ5NA6IUu4PPuRqpCeSIX-btYqq_" },
-    { name: "Viva.pdf", link: "https://drive.google.com/uc?export=download&id=1J8xLdSB_C2dejKRjdWm_TIydWC6U20Ts" },
-    { name: "PPts water treatment.pdf", link: "https://drive.google.com/uc?export=download&id=17gabRD1-7oeHwkmB54rbu334Apc5bcbj" },
-    { name: "Polymers and Plastic.pdf", link: "https://drive.google.com/uc?export=download&id=1ernMg2dlNc5jCTlbVbWaojikj7pbpA7e" },
+      { name: "L01-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=1mZ_uKu9Rje7UzpVROMafLzSREssDD-pJ" },
+      { name: "L02-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=18qEC_Cb7E-hFfGgIl0XUyEXDUOazFzBB" },
+      { name: "L03-EC101.pdf", link: "https://drive.google.com/file/d/1AYC59KePPdo3dYa14bJ_Der34j9U2QhV/view?usp=drive_link" },
+      { name: "L04-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=1THxUgQb1u_CqNSG4u7M8QBaX7eYZbdab" },
+      { name: "L05-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=1_fp7wHrADYImQ4UhHcfIA6a3KCoTf1iQ" },
+      { name: "L06-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=1gQo6Lr0_NOAurRu56_LeoTFvFUytpko5" },
+      { name: "L07-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=17VMgzUo4_9Ix4o55k0wkFVSep1y3nnaf" },
+      { name: "L08-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=1Pf6T0fm7vMiapJdzALQdZqDtaz2AAP6e" },
+      { name: "L09-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=1FEtfuvMKIU9ttT3hKlKP_584ssxa7wWd" },
+      { name: "L010-EC101.pdf", link: "https://drive.google.com/uc?export=download&id=19S671WD9prIxaJToOtrbWPGJ7b5jX_8c" }],
+      
+      [{ name: "CS class Notes.pdf", link: "https://drive.google.com/uc?export=download&id=1F0GR1c1pX-syB5MF3zA6wYhTukS3T659" }],
+      
+      [{ name: "Water and It_s Treatment.pdf", link: "https://drive.google.com/uc?export=download&id=1eM_-LQ5NA6IUu4PPuRqpCeSIX-btYqq_" },
+        { name: "Viva.pdf", link: "https://drive.google.com/uc?export=download&id=1J8xLdSB_C2dejKRjdWm_TIydWC6U20Ts" },
+        { name: "PPts water treatment.pdf", link: "https://drive.google.com/uc?export=download&id=17gabRD1-7oeHwkmB54rbu334Apc5bcbj" },
+        { name: "Polymers and Plastic.pdf", link: "https://drive.google.com/uc?export=download&id=1ernMg2dlNc5jCTlbVbWaojikj7pbpA7e" },
     { name: "Nanoparticles.pdf", link: "https://drive.google.com/uc?export=download&id=1sJQyElnp_OcZYwGbFcs725pBX0fqd2B-" },
     { name: "Nano Chemistry.pdf", link: "https://drive.google.com/uc?export=download&id=1D96qih2lr-hk06NSgTuBiycAI9r96HF8" },
     { name: "Lubricants.pdf", link: "https://drive.google.com/uc?export=download&id=1hgduA9vHPmbFfot68FJgRA1lRMR7Taqd" },
     { name: "Fuel and Coal.pdf", link: "https://drive.google.com/uc?export=download&id=16Y38TPJ08Fl_uhO7wrkOX1X28r35sNJ5" },
     { name: "Corrosion and air pollution.pdf", link: "https://drive.google.com/uc?export=download&id=1uJx87EPITsxf2-YOkgowtwGG-zWxEXAu" },
     { name: "Chemistry Notes - Polymers_Plastics.pdf", link: "https://drive.google.com/uc?export=download&id=18R4VGR-RbAMTx4mWwKmHM3vCYvbJl2kW" }],
-
+    
     [{ name: "PART-4.pdf", link: "https://drive.google.com/uc?export=download&id=1r0VAr4Mg7wDf76H4qBeZmv_a7YrL6SB7" },
-    { name: "PART-3.pdf", link: "https://drive.google.com/uc?export=download&id=10cu9-ilwzQBycLzbBIEYE3-ylEtLWkjJ" },
-    { name: "PART-2.pdf", link: "https://drive.google.com/uc?export=download&id=16ZXi7wo4KBFi6SRCyeO6Mjdg__of0Zd4" },
-    { name: "PART-1.pdf", link: "https://drive.google.com/uc?export=download&id=1uoJAuZ6Q8b_LQZo800VPGzP0MIBv6ykV" },
-    { name: "Evs Textbook-2.pdf", link: "https://drive.google.com/uc?export=download&id=1lVaSUhFuDAeDzTpP8R8MqSqxTmxyDzoc" },
-    { name: "Biodiversity E Bharucha.pdf", link: "https://drive.google.com/uc?export=download&id=1bLgduNwKRakB2a1rBgc9piDV_aHEDFXm" }
+      { name: "PART-3.pdf", link: "https://drive.google.com/uc?export=download&id=10cu9-ilwzQBycLzbBIEYE3-ylEtLWkjJ" },
+      { name: "PART-2.pdf", link: "https://drive.google.com/uc?export=download&id=16ZXi7wo4KBFi6SRCyeO6Mjdg__of0Zd4" },
+      { name: "PART-1.pdf", link: "https://drive.google.com/uc?export=download&id=1uoJAuZ6Q8b_LQZo800VPGzP0MIBv6ykV" },
+      { name: "Evs Textbook-2.pdf", link: "https://drive.google.com/uc?export=download&id=1lVaSUhFuDAeDzTpP8R8MqSqxTmxyDzoc" },
+      { name: "Biodiversity E Bharucha.pdf", link: "https://drive.google.com/uc?export=download&id=1bLgduNwKRakB2a1rBgc9piDV_aHEDFXm" }
     ]
   ];
 
   const files2 = [
     [{ name: "Work and Energy Aishwarya", link: "https://drive.google.com/uc?export=download&id=14vQIc1rGgtowySA9v_Ar7qGQr8OUTxNr" },
-    { name: "Virtual Work Mechanics.pdf", link: "https://drive.google.com/uc?export=download&id=12dLPUgG1uDwBmGMF10yd86KiMVuDRxyi" },
-    { name: "tillTruss.pdf", link: "https://drive.google.com/uc?export=download&id=1OVY8xZbuhtMKoD9qMJ8v5dbO-OtIP1sP" },
-    { name: "SHM Mechanics.pdf", link: "https://drive.google.com/uc?export=download&id=10Ulhc2mGXfmnd1x3PY985y7NoQAe-A93" },
-    { name: "PrincipleVirtualWork.pdf", link: "https://drive.google.com/uc?export=download&id=1p66aLbATViFMB96_TBCyVohv_H_M7Lp_" },
-    { name: "New DOC 2020-03-25 12.47.17.pdf", link: "https://drive.google.com/uc?export=download&id=1mpY33OU_cnOgZEov95hynuSeXqEt5_ri" },
-    { name: "mid and end sem mechanics questions paper-1.pdf", link: "https://drive.google.com/uc?export=download&id=1oBhgQZdLVarDpUUMpNmwPHEOW3gcDMNU" },
-    { name: "mechanics notes.pdf", link: "https://drive.google.com/uc?export=download&id=1JbdKXKK41P1BcmJYPXYRwdze7fVTXneI" },
-    { name: "mechanics note of patnayak sir after mid sem.pdf", link: "https://drive.google.com/uc?export=download&id=1Sm8G2m3ykMVRdiynekGl3F7f4wV1zZcl" },
-    { name: "Mechanics 7.pdf", link: "https://drive.google.com/uc?export=download&id=1cYjRx2TxPZzNs7ibxRHa39vBHCotFw7c" },
-    { name: "Mechanics 6.pdf", link: "https://drive.google.com/uc?export=download&id=1LqHvk0lBxKzXt_tFxobudj0cJoKfFhYa" },
-    { name: "Mechanics 5.pdf", link: "https://drive.google.com/uc?export=download&id=1ao5LMV3CEa6Jw57dkBMUPZAmfG3GrQ55" },
-    { name: "Mechanics 4.pdf", link: "https://drive.google.com/uc?export=download&id=1ttjVTmlKG6cjVec-qKXqppyHNHFXV1Lz" },
-    { name: "Mechanics 3.pdf", link: "https://drive.google.com/uc?export=download&id=1yBVC6fyJs1-EeVea_88Dg7V0OHtT0dB-" },
-    { name: "Mechanics 2.pdf", link: "https://drive.google.com/uc?export=download&id=1Dt-49JvBjQqAK2-3BXbKzAGvUrqwTnqr" },
-    { name: "Mechanics 1st year mid_sem.pdf", link: "https://drive.google.com/uc?export=download&id=1H_1JcM6VbtFDgmi8xFmThrYogdyBWjZ6" },
-    { name: "Mechanics 1.pdf", link: "https://drive.google.com/uc?export=download&id=1GzuI1LocPjUVcBV85oV2-VrFhqzK5ohY" },
-    { name: "Laws Of Motion Aishwarya.pdf", link: "https://drive.google.com/uc?export=download&id=1J1dDD6zUSTNYCaJrPAQcWMGrZ5yTx5ud" },
-    { name: "Engineering Mechanics Notes.pdf", link: "https://drive.google.com/uc?export=download&id=1Bv6o0drS097jjXipF9UmwZRaija9hBPQ" },
-    { name: "Dynamics Notes Aishwarya.pdf", link: "https://drive.google.com/uc?export=download&id=18G3JsZRf6YOTSUen0k89IcNcZHGNNtR5" },
-    { name: "Doc- 21-Feb-2020.pdf", link: "https://drive.google.com/uc?export=download&id=1fag88uz-u9CZvftfgL0tQagMEVGxBeY7" },
-    { name: "CG and MOI Mechanics.pdf", link: "https://drive.google.com/uc?export=download&id=1p6DiA-eWhiB20DQ1tsnjgQyXv1tz9P0v" },
-    { name: "Beam Mechanics.pdf", link: "https://drive.google.com/uc?export=download&id=1MWgSRIS6U7h22lk_ovO0zwrqFNek4mfJ" }
+      { name: "Virtual Work Mechanics.pdf", link: "https://drive.google.com/uc?export=download&id=12dLPUgG1uDwBmGMF10yd86KiMVuDRxyi" },
+      { name: "tillTruss.pdf", link: "https://drive.google.com/uc?export=download&id=1OVY8xZbuhtMKoD9qMJ8v5dbO-OtIP1sP" },
+      { name: "SHM Mechanics.pdf", link: "https://drive.google.com/uc?export=download&id=10Ulhc2mGXfmnd1x3PY985y7NoQAe-A93" },
+      { name: "PrincipleVirtualWork.pdf", link: "https://drive.google.com/uc?export=download&id=1p66aLbATViFMB96_TBCyVohv_H_M7Lp_" },
+      { name: "New DOC 2020-03-25 12.47.17.pdf", link: "https://drive.google.com/uc?export=download&id=1mpY33OU_cnOgZEov95hynuSeXqEt5_ri" },
+      { name: "mid and end sem mechanics questions paper-1.pdf", link: "https://drive.google.com/uc?export=download&id=1oBhgQZdLVarDpUUMpNmwPHEOW3gcDMNU" },
+      { name: "mechanics notes.pdf", link: "https://drive.google.com/uc?export=download&id=1JbdKXKK41P1BcmJYPXYRwdze7fVTXneI" },
+      { name: "mechanics note of patnayak sir after mid sem.pdf", link: "https://drive.google.com/uc?export=download&id=1Sm8G2m3ykMVRdiynekGl3F7f4wV1zZcl" },
+      { name: "Mechanics 7.pdf", link: "https://drive.google.com/uc?export=download&id=1cYjRx2TxPZzNs7ibxRHa39vBHCotFw7c" },
+      { name: "Mechanics 6.pdf", link: "https://drive.google.com/uc?export=download&id=1LqHvk0lBxKzXt_tFxobudj0cJoKfFhYa" },
+      { name: "Mechanics 5.pdf", link: "https://drive.google.com/uc?export=download&id=1ao5LMV3CEa6Jw57dkBMUPZAmfG3GrQ55" },
+      { name: "Mechanics 4.pdf", link: "https://drive.google.com/uc?export=download&id=1ttjVTmlKG6cjVec-qKXqppyHNHFXV1Lz" },
+      { name: "Mechanics 3.pdf", link: "https://drive.google.com/uc?export=download&id=1yBVC6fyJs1-EeVea_88Dg7V0OHtT0dB-" },
+      { name: "Mechanics 2.pdf", link: "https://drive.google.com/uc?export=download&id=1Dt-49JvBjQqAK2-3BXbKzAGvUrqwTnqr" },
+      { name: "Mechanics 1st year mid_sem.pdf", link: "https://drive.google.com/uc?export=download&id=1H_1JcM6VbtFDgmi8xFmThrYogdyBWjZ6" },
+      { name: "Mechanics 1.pdf", link: "https://drive.google.com/uc?export=download&id=1GzuI1LocPjUVcBV85oV2-VrFhqzK5ohY" },
+      { name: "Laws Of Motion Aishwarya.pdf", link: "https://drive.google.com/uc?export=download&id=1J1dDD6zUSTNYCaJrPAQcWMGrZ5yTx5ud" },
+      { name: "Engineering Mechanics Notes.pdf", link: "https://drive.google.com/uc?export=download&id=1Bv6o0drS097jjXipF9UmwZRaija9hBPQ" },
+      { name: "Dynamics Notes Aishwarya.pdf", link: "https://drive.google.com/uc?export=download&id=18G3JsZRf6YOTSUen0k89IcNcZHGNNtR5" },
+      { name: "Doc- 21-Feb-2020.pdf", link: "https://drive.google.com/uc?export=download&id=1fag88uz-u9CZvftfgL0tQagMEVGxBeY7" },
+      { name: "CG and MOI Mechanics.pdf", link: "https://drive.google.com/uc?export=download&id=1p6DiA-eWhiB20DQ1tsnjgQyXv1tz9P0v" },
+      { name: "Beam Mechanics.pdf", link: "https://drive.google.com/uc?export=download&id=1MWgSRIS6U7h22lk_ovO0zwrqFNek4mfJ" }
     ],
-
+    
     [{ name: "solid state physics-1.pdf", link: "https://drive.google.com/uc?export=download&id=1N11pRO8yIAMgwdJzySVnBER3btjzX262" },
-    { name: "solid state notes aishwarya.pdf", link: "https://drive.google.com/uc?export=download&id=1iZqJXgdzQIN5hjteRjw1IqLExpcO9a_Y" },
-    { name: "Quantum.pdf", link: "https://drive.google.com/uc?export=download&id=1u9UAaGQuKOKqNrsScjUIGj7x5QG7AEHU" },
-    { name: "Quantum Mechanics.pdf", link: "https://drive.google.com/uc?export=download&id=1ha5_-zvp5EoMVSiOP0H3IeIJlXnvKTI0" },
-    { name: "quantum mechanics-1.pdf", link: "https://drive.google.com/uc?export=download&id=1lzorBmc28DqfugYzWqRw-lUkTc8S88q8" },
-    { name: "PHYSICS IMP QUESTIONS-1.pdf", link: "https://drive.google.com/uc?export=download&id=1pFvG4oap7crTh5g0UF3eRkhnTcNtGZfA" },
-    { name: "Optics.pdf", link: "https://drive.google.com/uc?export=download&id=18KZ2hhFrwf2XZtNuOOKMnVEJbZiOxNGa" },
-    { name: "EM Waves.pdf", link: "https://drive.google.com/uc?export=download&id=1hbOLeqW_50xdhvQHuugwTmC7-0aPc5Hq" },
-    { name: "Electrodynamics by aditya.pdf", link: "https://drive.google.com/uc?export=download&id=15FZAZfrnTe7dWslc9zTAPJu4lIGFEX2W" },
+      { name: "solid state notes aishwarya.pdf", link: "https://drive.google.com/uc?export=download&id=1iZqJXgdzQIN5hjteRjw1IqLExpcO9a_Y" },
+      { name: "Quantum.pdf", link: "https://drive.google.com/uc?export=download&id=1u9UAaGQuKOKqNrsScjUIGj7x5QG7AEHU" },
+      { name: "Quantum Mechanics.pdf", link: "https://drive.google.com/uc?export=download&id=1ha5_-zvp5EoMVSiOP0H3IeIJlXnvKTI0" },
+      { name: "quantum mechanics-1.pdf", link: "https://drive.google.com/uc?export=download&id=1lzorBmc28DqfugYzWqRw-lUkTc8S88q8" },
+      { name: "PHYSICS IMP QUESTIONS-1.pdf", link: "https://drive.google.com/uc?export=download&id=1pFvG4oap7crTh5g0UF3eRkhnTcNtGZfA" },
+      { name: "Optics.pdf", link: "https://drive.google.com/uc?export=download&id=18KZ2hhFrwf2XZtNuOOKMnVEJbZiOxNGa" },
+      { name: "EM Waves.pdf", link: "https://drive.google.com/uc?export=download&id=1hbOLeqW_50xdhvQHuugwTmC7-0aPc5Hq" },
+      { name: "Electrodynamics by aditya.pdf", link: "https://drive.google.com/uc?export=download&id=15FZAZfrnTe7dWslc9zTAPJu4lIGFEX2W" },
     { name: "damped osc.pdf", link: "https://drive.google.com/uc?export=download&id=1BUm1abszh1jsgVFe9CPQuFqQ2tbOq3kt" },
-    ],
-
-    [{ name: "RP.docx", link: "https://docs.google.com/document/d/1FrHJ0bAN3iCac1mdyFGcQiXmiB2zPVIt/export?format=pdf" },
+  ],
+  
+  [{ name: "RP.docx", link: "https://docs.google.com/document/d/1FrHJ0bAN3iCac1mdyFGcQiXmiB2zPVIt/export?format=pdf" },
     { name: "RikkiTikkiTavi_Kipling.pdf", link: "https://drive.google.com/uc?export=download&id=1CSWfdLKyeOItycx3N_NSRKCBCWydT9mH" },
     { name: "Poems for students.docx", link: "https://docs.google.com/document/d/1_lMJdkTnBKUP7kQ-G6ZZ7nyLcBudrJQB/export?format=pdf" },
     { name: "one word substitutes.docx", link: "https://docs.google.com/document/d/1yWxwKMFqxuS5-H5rfOCaByUtgtXYctSg/export?format=pdf" },
@@ -103,19 +102,19 @@ const ResourceHub = () => {
     { name: "HS (business communication).pdf", link: "https://drive.google.com/uc?export=download&id=1RbyupOOjPk_cGoVeHTppIbSIHIxXeqpE" },
     { name: "grammar.docx", link: "https://docs.google.com/document/d/188JFKkU_qy4x0zQId4vukZsFO-9XFMeO/export?format=pdf" },
     { name: "common errors.pdf", link: "https://drive.google.com/uc?export=download&id=1Fm7qVYy90V5wTTiuHLKlO68xemJ_U8nK" }
-    ],
-
-    [],
-
+  ],
+  
+  [],
+  
     [{ name: "Engineering Drawing by N.D. Bhatt.pdf", link: "https://drive.google.com/uc?export=download&id=1S-V_lUNs49fLezpLHRUrV8HcC_2B-RBg" }],
-
+    
     [{ name: "multiple integral.pdf", link: "https://drive.google.com/uc?export=download&id=1JXgLoIK1ldjhnRNkq8GJki5EkhTUkagI" },
     { name: "MathsAssignments.pdf", link: "https://drive.google.com/uc?export=download&id=1iqV5HbLkuGso0_vL2jguf1-S070ihxM8" },
     { name: "Maths_Multiple_Integrals_Notes.pdf", link: "https://drive.google.com/uc?export=download&id=14ufuhFG0BT1RFkSpjiyFNqB8JXM1QztD" },
     { name: "maths part 1.pdf", link: "https://drive.google.com/uc?export=download&id=1o-F90QYEIBc_JgbaK2LCQCJUpbMhmrFQ" }
-    ]
+  ]
   ];
-
+  
   const files3 = [
     [
       {
@@ -279,9 +278,9 @@ const ResourceHub = () => {
         name: "DSA NOTES",
         link: "https://drive.google.com/uc?export=download&id=1u0CY212BslSfTjrhAlOkKRR4aW7U00pt",
       },
-    ],
+    ]
   ];
-
+  
   const files4 = [[
     { name: "Introductory Notes", link: "https://drive.google.com/uc?export=download&id=1JK8iEue6cUCXScAX8ogUei4Ckuvuc275" },
     {
@@ -302,13 +301,15 @@ const ResourceHub = () => {
     }],
   [{ name: "Basic logic gates and Boolean functions", link: "https://drive.google.com/uc?export=download&id=157-qC2vK0u3I-NdDxsTrM6k9_VM8XPFD" }, { name: "Combinational Circuits", link: "https://drive.google.com/uc?export=download&id=1Ais2OzEdtUmIxWWINjlZ5Gw1S_cUjLQ_" }, { name: "Digital Electronics and Microprocessor", link: "https://drive.google.com/uc?export=download&id=1xcUjRU19DpGDIsoUq_ygsSsG_ebnDsWI" }, { name: "Digital", link: "https://drive.google.com/uc?export=download&id=1Nu-bs5OPSl4kNS0bcAW8-sRLSRNo4TNl" }, { name: "Introduction and Number System", link: "https://drive.google.com/uc?export=download&id=1sGhsYjn5VnQOGnlJbsNkmvPoJ_IAEyib" }],
   [{ name: "Notes1-control system", link: "https://drive.google.com/uc?export=download&id=1ToIrzF4w0gTma1sNuCDjkdYsi5LTVwe4" }, { name: "Control system midsem", link: "https://drive.google.com/uc?export=download&id=1VZZ4I1b7nP1KZ0aucTIBZakluMMOSM8i" }, { name: "book by Anand Kumar", link: "https://drive.google.com/uc?export=download&id=1mkyWp1G8ko32KXZOf_zK9BdcS-YnYdCW" }, { name: "Notes2-control system", link: "https://drive.google.com/uc?export=download&id=1YT7hksZPTa7k4j5sZbtDGRWX-bj-pw9s" }, { name: "Notes3-control system", link: "https://drive.google.com/uc?export=download&id=115xGJLxhi3Ayn2hZjrHaZOmy08E1pJNu" }, { name: "Notes4-control system", link: "https://drive.google.com/uc?export=download&id=11U9PEx3e0RgjRTmBw2PjToWqjdSTcHXZ" }, { name: "Notes5-control system", link: "https://drive.google.com/uc?export=download&id=1Dgr7oAC_lfOMczITPQdiQeqf7mP0HIVz" }, { name: "Notes6-control system", link: "https://drive.google.com/uc?export=download&id=1vYI9N5QVSVgXTIg6fvCf_W5KffRKcDmI" }, { name: "Notes7-control system", link: "https://drive.google.com/uc?export=download&id=1i4eLRx7qgezwDlFnhA_EkKmRsXb3kjXK" }, { name: "Notes8-control system", link: "https://drive.google.com/uc?export=download&id=1M4Q3DlXPrXji7TEb2yVuFgwQxGfIXZnN" }, { name: "Notes9-control system", link: "https://drive.google.com/uc?export=download&id=17VhyIM0gUT9nOtMbJzkzuuAgHuKPz2nm" }, { name: "Notes10-control system", link: "https://drive.google.com/uc?export=download&id=12lrFbJv-eppD2B9cuE-fi-okmLE3745i" }, { name: "Notes11-control system", link: "https://drive.google.com/uc?export=download&id=1IQTgUlAsub9UJqY1Gp1hDnHeOFmJ9ExM" }, { name: "Notes12-control system", link: "https://drive.google.com/uc?export=download&id=1iIonKGrHzBjHWo02U5AHjeXN60i92Ber" }, { name: "Notes13-control system", link: "https://drive.google.com/uc?export=download&id=1S5im4EbIHanZkFqpBI91w4KZDhQHH8Bv" }, { name: "Notes14-control system", link: "https://drive.google.com/uc?export=download&id=1tv7GQIldXN3t0OaQ1nnooD7B4hG9P-m8" }, { name: "Notes15-control system", link: "https://drive.google.com/uc?export=download&id=1xJFZfSAsob-ZDXI36ayl76Y0nQ8WLyFr" }, { name: "Notes16-control system", link: "https://drive.google.com/uc?export=download&id=1mrTJbWkIpazWsX90W-dLzZn22pQUi_OI" }
-  ], [
+  ], 
+  [
     { name: "Notes1-EC207", link: "https://drive.google.com/uc?export=download&id=1eT0u4zqhF5A6FGEDWvvyPIx1IdiaRF53" }, { name: "Notes2-EC207", link: "https://drive.google.com/uc?export=download&id=1EEke6YqyIfh-X2pzjlhAxFbIxvoSua74" }, { name: "NOTES3-EC207", link: "https://drive.google.com/uc?export=download&id=1yNpfwEgpmyuiaadPWY0WGs2RpCrODQP1" }, { name: "Notes4-EC207", link: "https://drive.google.com/uc?export=download&id=1A_YUOmpkJw_7K-ShXruIxzX0sCraSWCa" }, { name: "Notes5-EC207", link: "https://drive.google.com/uc?export=download&id=1VQm3LxucuQ2T6wtiEZRYhr-NU15qedpR" }
-  ], [{ name: "after midsem-EC208", link: "https://drive.google.com/uc?export=download&id=1KwGMeWnb0MeR1h3UcY1aemzSlMNj1GoU" }, { name: "Notes1-EC208", link: "https://drive.google.com/uc?export=download&id=1DiCkgg-NiCGhCKjA8Fv3FlKeVk_I32jc" }, { name: "Notes2-EC208", link: "https://drive.google.com/uc?export=download&id=1hM8svvCzYovt3WU2de3Gpa2LpiihvQov" }, { name: "Notes3-EC208", link: "https://drive.google.com/uc?export=download&id=15QmB3-9VRs4WFrXS2sRiEe5V0Av03AP8" }, { name: "Notes4-EC208", link: "https://drive.google.com/uc?export=download&id=1FsaknxsmEgelTF0FJFTpB7n2r4TiKUl_" }],
+  ], 
+  [{ name: "after midsem-EC208", link: "https://drive.google.com/uc?export=download&id=1KwGMeWnb0MeR1h3UcY1aemzSlMNj1GoU" }, { name: "Notes1-EC208", link: "https://drive.google.com/uc?export=download&id=1DiCkgg-NiCGhCKjA8Fv3FlKeVk_I32jc" }, { name: "Notes2-EC208", link: "https://drive.google.com/uc?export=download&id=1hM8svvCzYovt3WU2de3Gpa2LpiihvQov" }, { name: "Notes3-EC208", link: "https://drive.google.com/uc?export=download&id=15QmB3-9VRs4WFrXS2sRiEe5V0Av03AP8" }, { name: "Notes4-EC208", link: "https://drive.google.com/uc?export=download&id=1FsaknxsmEgelTF0FJFTpB7n2r4TiKUl_" }],
   [
     { name: "EMFT notes ", link: "https://drive.google.com/uc?export=download&id=1GneRhX-cpNeE0iOLg5rzNx4mJoKZyBep" }, { name: "Antenna Analysis-EC209", link: "https://drive.google.com/uc?export=download&id=1vdA1Eeu_Ov8rPiyKhiZNI5OWUWAPJzSo" }, { name: "Lecture Trassmission-EC209", link: "https://drive.google.com/uc?export=download&id=1r_81r24XKvBDvp_pgsU3eAITA0qF_70b" }, { name: "Solution manual-EC209", link: "https://drive.google.com/uc?export=download&id=1_sWoZZBfLlEYU8ucBbXpysZqqzhzcxyt" }, { name: "Wave propagation", link: "https://drive.google.com/uc?export=download&id=1dJy4XPa98MXO3uKvsvmOzGuLnbGA3m78" }, { name: "Notes-EC209", link: "https://drive.google.com/uc?export=download&id=1_NLFbgyRcYs7ZJRSwymrgqlqqIluon9e" }, { name: "Book by Sadiku-EC209", link: "https://drive.google.com/uc?export=download&id=1UqRLMQdG2ZH3zmsA_s6dO1NUGj-x8N5k" }
   ]];
-
+  
   const files5 = [
     [
       {
@@ -400,7 +401,7 @@ const ResourceHub = () => {
         name: "Part 1",
         link: "https://docs.google.com/presentation/d/15857FTJ4A9rPQyrCXqT2P81CS_1XITBv/export/pdf",
       },
-  
+      
       {
         name: "Part 2",
         link: "https://docs.google.com/presentation/d/1NwwIL1dH3wENzwP1JG-m50_TdWzEJjbr/export/pdf",
@@ -491,7 +492,7 @@ const ResourceHub = () => {
       },
     ],
   ];
-
+  
   const files6 = [
     [{name: "waveguides 2.pdf", link: "https://drive.google.com/uc?id=1qlIw6VszzmXkC4N3w-1aYmJ4W5d0Ld4U&export=download"},
       {name: "waveguides 1.pdf", link: "https://drive.google.com/uc?id=1qrC0xLuc9HJ19Q3vCpm4DTJauVb4iZtv&export=download"},
@@ -504,9 +505,9 @@ const ResourceHub = () => {
       {name: "Maxwell equations.pdf", link: "https://drive.google.com/uc?id=1qtCk755aZyvJw8C9V4o0OZzglVmRqIuh&export=download"},
       {name: "Introductory lecture.pdf", link: "https://drive.google.com/uc?id=1xUIGQ-Q8oh-7He4N-cUE7HVt0ICemVd0&export=download"},
     ],
-
+    
     [],
-
+    
     [{name: "vlsi notes.pdf", link: "https://drive.google.com/uc?id=13-qZk7KlEoz4XNBW7GHdCLhOz8_BeJZZ&export=download"},
     ],
 
@@ -516,21 +517,21 @@ const ResourceHub = () => {
     ]
 
   ];
-
+  
   const files7 = [
     [{ name: "wireless_L-8.pdf", link: "https://drive.google.com/uc?id=1O3EhdlTfFWQqD8Nd5TFbjo4zSGmiEPQh&export=download" },
-    { name: "Wireless Communicaton.pdf", link: "https://drive.google.com/uc?id=12jEkaYPjXb-ehFlasYi3HRAgOCz_0pww&export=download" },
-    { name: "Small scale fading.pdf", link: "https://drive.google.com/uc?id=1GXDcMSx5xHYo4bmewZzX8c8JOCTPKrD_&export=download" },
+      { name: "Wireless Communicaton.pdf", link: "https://drive.google.com/uc?id=12jEkaYPjXb-ehFlasYi3HRAgOCz_0pww&export=download" },
+      { name: "Small scale fading.pdf", link: "https://drive.google.com/uc?id=1GXDcMSx5xHYo4bmewZzX8c8JOCTPKrD_&export=download" },
     { name: "Large scale path loss.pdf", link: "https://drive.google.com/uc?id=1U4mX30jr5WE2rDB0vdKKdEbe71XJbAk-&export=download" },
-      { name: "L-9.pdf", link: "https://drive.google.com/uc?id=1rrxzSKp9u54FKIyiVd4pgkmqFSIqzKpx&export=download" },
+    { name: "L-9.pdf", link: "https://drive.google.com/uc?id=1rrxzSKp9u54FKIyiVd4pgkmqFSIqzKpx&export=download" },
     { name: "L-7.pdf", link: "https://drive.google.com/uc?id=1Txl5gEWdAQnF93mfCFAIBJLpbW4LzRq4&export=download" },
     { name: "L-5.pdf", link: "https://drive.google.com/uc?id=1AoeaZ6oK6VKorpCx2uyA2HOI5rDgEBaJ&export=download" },
     { name: "L-3-1.pdf", link: "https://drive.google.com/uc?id=1NR5yNwl13ckrqI4M8I7Ma9mvrd20yCGt&export=download" },
     { name: "L-8.pdf", link: "https://drive.google.com/uc?id=1A2p7yPbs_cvEilLeG8b3PdZnDa3lJBCK&export=download" },
     { name: "Intro to wireless comm", link: "https://drive.google.com/uc?id=14TVgbQqCT9BCDC2a7DInlTLtoasXYA8i&export=download" },
-    ],
-
-    [{ name: "Management studies syllabus.jpg", link: "" },
+  ],
+  
+  [{ name: "Management studies syllabus.jpg", link: "" },
     { name: "OB Classs 1.pptx", link: "https://docs.google.com/uc?id=1T01AiRTiucY2anWUiuWv-Gztc_Pw8P7V&export=download" },
     { name: "OB Classs 2.pptx", link: "https://docs.google.com/uc?id=1mPon_IdwjgnpBJGmiIvWNVpsZX3Jmjgd&export=download" },
     { name: "OB Classs 3.pptx", link: "https://docs.google.com/uc?id=1YYDwUcmcZ6nr8SR75Czmesc1HCgUR4ya&export=download" },
@@ -539,23 +540,24 @@ const ResourceHub = () => {
     { name: "OB Classs 6.pptx", link: "https://docs.google.com/uc?id=19ipylI4L098ZZe7qbqtBAv0YCVAc1uB7&export=download" },
     { name: "OB Classs 7.pptx", link: "https://docs.google.com/uc?id=1_NI0Tphcmm26D-_0ysjAsQj8W99OLZio&export=download" },
     { name: "OB Classs 8.pptx", link: "https://docs.google.com/uc?id=1JZWhaHx9akkdQ5h7Qh8F-GfvPEgsFtSS&export=download" },
-    ]
-  ];
+  ]
+];
 
-  const files8 = [
-    [{ name: "End Sem-EC-1444-Mobile Comm.pdf", link: "https://drive.google.com/uc?id=1y29BKPt1rEp57bIDy57w_XZtwAKMDouW&export=download" },
+const files8 = [
+  [{ name: "End Sem-EC-1444-Mobile Comm.pdf", link: "https://drive.google.com/uc?id=1y29BKPt1rEp57bIDy57w_XZtwAKMDouW&export=download" },
     { name: "END B.TECH HCI.docx", link: "https://docs.google.com/document/d/1JT5BQK0V1_IwsuzG9h-mdheDJ8AgjNQG/edit" },
     { name: "Elective Syllabus.docx", link: "https://docs.google.com/document/d/1y58BB9k2LhrMZzq72XWZEWUGvswhv4ea/edit" },
     { name: "EC1455.pdf", link: "https://docs.google.com/document/d/1GnjaHMTDS-zL3obi6HoKJ6XI57CqI8GC/edit" },
     { name: "EC1467.pdf", link: "https://drive.google.com/uc?id=1irdfMtnKqGyaEEBu48e0PFI1QHnG_tWA&export=download" },
     { name: "AC.pdf", link: "https://drive.google.com/uc?id=1VsMm6KdM2CStqEI3jMCnw-J4_Ax-MH6O&export=download" }
-    ],
-  ];
+  ],
+];
+const [files, setFiles] = useState(files1);
 
-  const subjects = [
-
-    [
-      "Mathematics I",
+const subjects = [
+  
+  [
+    "Mathematics I",
       "Basic Electronics",
       "Introduction to Computing",
       "Chemistry",
@@ -614,13 +616,13 @@ const ResourceHub = () => {
 
     switch (currSem) {
       case 0:
-        setFiles(files1); // Set files for Semester 1
+        setFiles(files1);
         break;
       case 1:
-        setFiles(files2); // Set files for Semester 2
+        setFiles(files2);
         break;
       case 2:
-        setFiles(files3); // Set files for Semester 2
+        setFiles(files3);
         break;
       case 3:
         setFiles(files4);
@@ -635,10 +637,7 @@ const ResourceHub = () => {
         setFiles(files7);
         break;
       case 7:
-        setFiles(files8); // Set files for Semester 2
-        break;
-      default:
-        setFiles([]); // Default to empty files if no match
+        setFiles(files8);
         break;
     }
 
