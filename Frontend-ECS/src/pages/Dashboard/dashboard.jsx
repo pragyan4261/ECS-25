@@ -101,7 +101,7 @@ const Dashboard = () => {
     }
 
     return (
-        <section className="vh-100 flex justify-center">
+        <section className="vh-100 flex justify-center pt-20">
             <MDBContainer className="h-100 m-auto">
                 <MDBRow className="flex justify-content-center align-items-center h-100">
                     <MDBCol lg="6" className="mb-4 mb-lg-0">
