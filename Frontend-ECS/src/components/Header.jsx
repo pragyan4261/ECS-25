@@ -70,8 +70,8 @@ export default function Header() {
                     }
             </nav>
         </header>
-        <header className='pc:hidden pc:absolute relative' >
-            <div className='relative p-2 flex flex-row gap-2 justify-between items-center' style={{flexDirection:"row"}}  >
+        <header className='pc:hidden pc:absolute relative w-screen overflow-x-clip' >
+            <div className='relative  flex flex-row gap-2 justify-between items-center' style={{flexDirection:"row"}}  >
                 <div className='absolute left-5 z-10 top-5'>
 
             <Link to="/" className="flex items-center ">
@@ -85,23 +85,29 @@ export default function Header() {
                             
              <div>
 
-                <div className='absolute -top-3 right-20 z-20'>
+                <div className='absolute -top-3 right-20 z-20 '>
         
         <div className={classNames(styles.dots, { [styles.active]: isActive })} onClick={toggleActive}>
   <div className={styles.dot}></div>
   <div className={styles.dot}></div>
-  <div className={classNames(styles.shadow, styles.cut,{ [styles.popNav]: isActive })}></div>
+  <div className={classNames(styles.shadow, styles.cut,{ [styles.popNav]: isActive })} style={{overflow:"hidden"}}></div>
   <div className={classNames(styles.container ,styles.cut, { [styles.popNav]: isActive })}>
     <div className={classNames(styles.drop, styles.cut2, { [styles.popNav]: isActive })}></div>
   </div>
   <div className={classNames(styles.list,  styles.popNav)}>
     <ul className='flex gap-3 '>
       
-      
-      <li className={classNames(styles.liItem,{[styles.popNav]:isActive})}>
+      {isLoggedIn?
+      (<li className={classNames(styles.liItem,{[styles.popNav]:isActive})}>
         <Link to="/">Home
         </Link>
+      </li>):(
+        <li className={classNames(styles.liItem,{[styles.popNav]:isActive})}>
+        <Link to="/sign-up">Register
+        </Link>
       </li>
+      )
+    }
 
       <li className={classNames(styles.liItem,{[styles.popNav]:isActive})}>
         <Link to="Annual-Attraction">Annual Attraction</Link>
@@ -115,13 +121,26 @@ export default function Header() {
       <li  className={classNames(styles.liItem,{[styles.popNav]:isActive})}>
       <Link to="/Resource+Hub">Resource Hub</Link>
       </li>
+      {isLoggedIn?
+      (<li className={classNames(styles.liItem,{[styles.popNav]:isActive})}>
+        <Link to="/profile">
+            Profile
+        </Link>
+      </li>):(
+        <li className={classNames(styles.liItem,{[styles.popNav]:isActive})}>
+        <Link to="/sign-in">
+            Sign-In
+        </Link>
+      </li>
+      )
+    }
     </ul>
   </div>
   <div className={styles.dot}></div>
 </div>
 <div className={classNames(styles.dots, { [styles.active]: isActive })} onClick={toggleActive}></div>
     </div>
-                        
+                       
                     </div>
                     
                     
