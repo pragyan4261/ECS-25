@@ -10,8 +10,8 @@ export default function Home() {
     return (
         <div className="mx-auto w-full space-y-10 overflow-x-hidden">
             <ParticlesComponent id='particlejs' />
-            <div  className='absolute w-full  mobile:-top-40 h-screen flex justify-center items-center'>
-                    <h2 className="text-white mobile:mb-10 mobile:pl-20 flex justify-center items-center text-4xl font-bold sm:text-5xl pl-6">
+            <div  className='absolute w-full top-1/3'>
+                    <h2 className="text-white flex justify-center items-center text-4xl font-bold sm:text-5xl pl-6">
                         Electronics and Communication Society
                     </h2>
                     <div id="hero" className="text-yellow-400 flex justify-center items-center text-4xl font-bold sm:text-5xl pl-6">
@@ -22,7 +22,6 @@ export default function Home() {
                         .typeString("NIT SILCHAR")
                         .pauseFor(1000)
                         .start();
-                        
                 }}
             />
                 </span>
