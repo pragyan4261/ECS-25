@@ -19,7 +19,7 @@ function Profile() {
         formData.append("avatar", file);
   
         // Send the file to the backend
-        const response = await fetch("/api/v1/users/updateAvatar", {
+        const response = await fetch("https://ecs-25.onrender.com/api/v1/users/updateAvatar", {
           method: "PATCH",
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`, 

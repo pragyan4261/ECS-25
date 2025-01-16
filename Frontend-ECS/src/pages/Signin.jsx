@@ -34,12 +34,12 @@ function Signin() {
         }
 
         try {
-            const res = await fetch("/api/v1/users/login", {
+            const res = await fetch("https://ecs-25.onrender.com/api/v1/users/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                credentials: "include", // Include cookies in requests
+                // credentials: "include", // Include cookies in requests
                 body: JSON.stringify(formData),
             });
 
