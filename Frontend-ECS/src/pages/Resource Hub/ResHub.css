@@ -141,6 +141,21 @@ backdrop-filter: blur(12.5px);
 border: 4px solid rgba(106, 105, 105, 0.049);
 }
 
+.display-item::-webkit-scrollbar {
+    width: 8px;
+}
+
+.display-item::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: #e7e7e700;
+    border: 1px solid #cacaca00;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+}
+
+.display-item::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #363636;
+}
 /* media queries */
 .mobileView{
     visibility: hidden;
