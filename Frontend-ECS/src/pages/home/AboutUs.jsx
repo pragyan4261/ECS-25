@@ -1,10 +1,10 @@
 import React from 'react';
-
+import "./about.css"
 const AboutUs = () => {
   return (
     <>
-        <div className="aboutImg flex justify-center items-center relative h-full w-full z-10">
-            <img src="https://i.postimg.cc/7ZpR078Y/Group-48096073.png" alt="" />
+        <div className="aboutImg flex justify-center items-center relative h-full w-full z-10 pt-20">
+            <img src="https://i.postimg.cc/7ZpR078Y/Group-48096073.png"  alt="" />
         </div>
         <section className="relative text-white pt-0 py-2 px-8">
         <div className="flex flex-col-reverse lg:flex-row justify-around items-center">
@@ -15,7 +15,7 @@ const AboutUs = () => {
           </p>
         </div>
 
-        <img src="https://i.postimg.cc/13bqBvBN/Profilemsg.png" alt="" />
+        <img src="https://i.postimg.cc/zvgpvc7s/ARY-0090.jpg" alt="" className="polygon" />
       </div>
 
       {/* Decorative Lines */}

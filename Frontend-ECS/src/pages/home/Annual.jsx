@@ -10,282 +10,248 @@ const Annual = () => {
   const data = [
     {
       title: "ECE Orientation",
-      description:
-        "This is a LIT event focusing on literature and creative arts.",
+      description: "ECS proudly conducts an Orientation for ECE department freshers, where professors and seniors warmly welcome them into the world of electronics and communication. The session offer insights into the branch’s vast opportunities, innovative projects, and the guidance available to help students excel in their journey.",
       image:
         "https://i.postimg.cc/xdYFR1kp/Whats-App-Image-2025-01-15-at-19-29-40-435b3f50.jpg",
     },
     
     {
       title: "EC:ArQ",
-      description:
-        "This is a LIT event focusing on literature and creative arts.",
-      image:
-        "https://i.postimg.cc/rpBGJhYV/Whats-App-Image-2025-01-15-at-19-48-18-45437702.jpg",
+          description: "For the first time,ECS presented its inaugural module at Tecnoesis 2024-inspired by epic journey of Interstellar.ARDUINO-QUEST was a space themed challenge in which teams explore,innovate and conquer interstellar challenges using Arduino.",
+          image:
+            "https://i.postimg.cc/rpBGJhYV/Whats-App-Image-2025-01-15-at-19-48-18-45437702.jpg",
     },
     {
       title: "Utkrishtha",
-      description:
-        " Join us for an evening of artistic expression and creativity.",
+      description: "ECS hosts Utkrishta, a vibrant fresher’s event to welcome the new ECE batch. The celebration fills with fun activities, introductions, and opportunities for students to bond with peers and seniors.New comer batch showcase their talent to crown the title of Mr.Utkrishta and Miss.Utkrishta and make memories of a lifetime.",
       image:
         "https://i.postimg.cc/CLCJ3Yys/MJ-9663.jpg",
     },
     {
       title: "Spectre-Annual Magazine",
-      description:
-        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+          description: "Spectre, the official magazine of ECS, is a celebration of innovation, creativity, and knowledge in the field of electronics and communication. It showcases insightful articles, groundbreaking projects, and achievements of students and faculty.",
+          image:
+            "https://i.postimg.cc/N0zCw7JS/Whats-App-Image-2025-01-15-at-19-39-43-7a9a294b.jpg",
+    },
+    {
+      title: "Dehleez",
+          description: "Dehleez, the farewell ceremony organized by ECS, is a heartfelt celebration of the graduating ECE batch. The event honors their achievements, cherishes memories, and bids them an emotional goodbye as they step into a new phase of life.",
+          image: "https://instagram.fmaa8-1.fna.fbcdn.net/v/t39.30808-6/440323056_17908104839953783_8745844986834733664_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fmaa8-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=RY82HdMN09IQ7kNvgGxmJsW&_nc_gid=67de5aba14ed48adb3137bf410660165&edm=ALQROFkAAAAA&ccb=7-5&ig_cache_key=MzM1ODEzNjAzNDc1MDUyNTc0Ng%3D%3D.3-ccb7-5&oh=00_AYBCIzKWCHFqwkrhB1SjLnhdi2XHCt5F3JPeiyJpMfh-FA&oe=678D96F4&_nc_sid=fc8dfb",
+    },{
+      title: "ECE Orientation",
+          description: "ECS proudly conducts an Orientation for ECE department freshers, where professors and seniors warmly welcome them into the world of electronics and communication. The session offer insights into the branch’s vast opportunities, innovative projects, and the guidance available to help students excel in their journey.",
+          image:
+            "https://i.postimg.cc/xdYFR1kp/Whats-App-Image-2025-01-15-at-19-29-40-435b3f50.jpg",
+    },
+    
+    {
+      title: "EC:ArQ",
+          description: "For the first time,ECS presented its inaugural module at Tecnoesis 2024-inspired by epic journey of Interstellar.ARDUINO-QUEST was a space themed challenge in which teams explore,innovate and conquer interstellar challenges using Arduino.",
+          image:
+            "https://i.postimg.cc/rpBGJhYV/Whats-App-Image-2025-01-15-at-19-48-18-45437702.jpg",
+    },
+    {
+      title: "Utkrishtha",
+      description: "ECS hosts Utkrishta, a vibrant fresher’s event to welcome the new ECE batch. The celebration fills with fun activities, introductions, and opportunities for students to bond with peers and seniors.New comer batch showcase their talent to crown the title of Mr.Utkrishta and Miss.Utkrishta and make memories of a lifetime.",
       image:
-        "https://i.postimg.cc/N0zCw7JS/Whats-App-Image-2025-01-15-at-19-39-43-7a9a294b.jpg",
+        "https://i.postimg.cc/CLCJ3Yys/MJ-9663.jpg",
+    },
+    {
+      title: "Spectre-Annual Magazine",
+          description: "Spectre, the official magazine of ECS, is a celebration of innovation, creativity, and knowledge in the field of electronics and communication. It showcases insightful articles, groundbreaking projects, and achievements of students and faculty.",
+          image:
+            "https://i.postimg.cc/N0zCw7JS/Whats-App-Image-2025-01-15-at-19-39-43-7a9a294b.jpg",
     },
     {
       title: "Dehleez",
       description:
-        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "Dehleez, the farewell ceremony organized by ECS, is a heartfelt celebration of the graduating ECE batch. The event honors their achievements, cherishes memories, and bids them an emotional goodbye as they step into a new phase of life.",
       image:
         "https://instagram.fmaa8-1.fna.fbcdn.net/v/t39.30808-6/440323056_17908104839953783_8745844986834733664_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fmaa8-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=RY82HdMN09IQ7kNvgGxmJsW&_nc_gid=67de5aba14ed48adb3137bf410660165&edm=ALQROFkAAAAA&ccb=7-5&ig_cache_key=MzM1ODEzNjAzNDc1MDUyNTc0Ng%3D%3D.3-ccb7-5&oh=00_AYBCIzKWCHFqwkrhB1SjLnhdi2XHCt5F3JPeiyJpMfh-FA&oe=678D96F4&_nc_sid=fc8dfb",
     },{
       title: "ECE Orientation",
-      description:
-        "This is a LIT event focusing on literature and creative arts.",
-      image:
-        "https://i.postimg.cc/xdYFR1kp/Whats-App-Image-2025-01-15-at-19-29-40-435b3f50.jpg",
+          description: "ECS proudly conducts an Orientation for ECE department freshers, where professors and seniors warmly welcome them into the world of electronics and communication. The session offer insights into the branch’s vast opportunities, innovative projects, and the guidance available to help students excel in their journey.",
+          image:
+            "https://i.postimg.cc/xdYFR1kp/Whats-App-Image-2025-01-15-at-19-29-40-435b3f50.jpg",
     },
     
     {
       title: "EC:ArQ",
-      description:
-        "This is a LIT event focusing on literature and creative arts.",
-      image:
-        "https://i.postimg.cc/rpBGJhYV/Whats-App-Image-2025-01-15-at-19-48-18-45437702.jpg",
+          description: "For the first time,ECS presented its inaugural module at Tecnoesis 2024-inspired by epic journey of Interstellar.ARDUINO-QUEST was a space themed challenge in which teams explore,innovate and conquer interstellar challenges using Arduino.",
+          image:
+            "https://i.postimg.cc/rpBGJhYV/Whats-App-Image-2025-01-15-at-19-48-18-45437702.jpg",
     },
     {
       title: "Utkrishtha",
-      description:
-        " Join us for an evening of artistic expression and creativity.",
+      description: "ECS hosts Utkrishta, a vibrant fresher’s event to welcome the new ECE batch. The celebration fills with fun activities, introductions, and opportunities for students to bond with peers and seniors.New comer batch showcase their talent to crown the title of Mr.Utkrishta and Miss.Utkrishta and make memories of a lifetime.",
       image:
         "https://i.postimg.cc/CLCJ3Yys/MJ-9663.jpg",
     },
     {
       title: "Spectre-Annual Magazine",
-      description:
-        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-      image:
-        "https://i.postimg.cc/N0zCw7JS/Whats-App-Image-2025-01-15-at-19-39-43-7a9a294b.jpg",
+          description: "Spectre, the official magazine of ECS, is a celebration of innovation, creativity, and knowledge in the field of electronics and communication. It showcases insightful articles, groundbreaking projects, and achievements of students and faculty.",
+          image:
+            "https://i.postimg.cc/N0zCw7JS/Whats-App-Image-2025-01-15-at-19-39-43-7a9a294b.jpg",
     },
     {
       title: "Dehleez",
       description:
-        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "Dehleez, the farewell ceremony organized by ECS, is a heartfelt celebration of the graduating ECE batch. The event honors their achievements, cherishes memories, and bids them an emotional goodbye as they step into a new phase of life.",
       image:
         "https://instagram.fmaa8-1.fna.fbcdn.net/v/t39.30808-6/440323056_17908104839953783_8745844986834733664_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fmaa8-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=RY82HdMN09IQ7kNvgGxmJsW&_nc_gid=67de5aba14ed48adb3137bf410660165&edm=ALQROFkAAAAA&ccb=7-5&ig_cache_key=MzM1ODEzNjAzNDc1MDUyNTc0Ng%3D%3D.3-ccb7-5&oh=00_AYBCIzKWCHFqwkrhB1SjLnhdi2XHCt5F3JPeiyJpMfh-FA&oe=678D96F4&_nc_sid=fc8dfb",
     },{
       title: "ECE Orientation",
-      description:
-        "This is a LIT event focusing on literature and creative arts.",
+      description: "ECS proudly conducts an Orientation for ECE department freshers, where professors and seniors warmly welcome them into the world of electronics and communication. The session offer insights into the branch’s vast opportunities, innovative projects, and the guidance available to help students excel in their journey.",
       image:
         "https://i.postimg.cc/xdYFR1kp/Whats-App-Image-2025-01-15-at-19-29-40-435b3f50.jpg",
     },
     
     {
       title: "EC:ArQ",
-      description:
-        "This is a LIT event focusing on literature and creative arts.",
-      image:
-        "https://i.postimg.cc/rpBGJhYV/Whats-App-Image-2025-01-15-at-19-48-18-45437702.jpg",
+          description: "For the first time,ECS presented its inaugural module at Tecnoesis 2024-inspired by epic journey of Interstellar.ARDUINO-QUEST was a space themed challenge in which teams explore,innovate and conquer interstellar challenges using Arduino.",
+          image:
+            "https://i.postimg.cc/rpBGJhYV/Whats-App-Image-2025-01-15-at-19-48-18-45437702.jpg",
     },
     {
       title: "Utkrishtha",
-      description:
-        " Join us for an evening of artistic expression and creativity.",
+      description: "ECS hosts Utkrishta, a vibrant fresher’s event to welcome the new ECE batch. The celebration fills with fun activities, introductions, and opportunities for students to bond with peers and seniors.New comer batch showcase their talent to crown the title of Mr.Utkrishta and Miss.Utkrishta and make memories of a lifetime.",
       image:
         "https://i.postimg.cc/CLCJ3Yys/MJ-9663.jpg",
     },
     {
       title: "Spectre-Annual Magazine",
-      description:
-        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-      image:
-        "https://i.postimg.cc/N0zCw7JS/Whats-App-Image-2025-01-15-at-19-39-43-7a9a294b.jpg",
+          description: "Spectre, the official magazine of ECS, is a celebration of innovation, creativity, and knowledge in the field of electronics and communication. It showcases insightful articles, groundbreaking projects, and achievements of students and faculty.",
+          image:
+            "https://i.postimg.cc/N0zCw7JS/Whats-App-Image-2025-01-15-at-19-39-43-7a9a294b.jpg",
     },
     {
       title: "Dehleez",
       description:
-        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "Dehleez, the farewell ceremony organized by ECS, is a heartfelt celebration of the graduating ECE batch. The event honors their achievements, cherishes memories, and bids them an emotional goodbye as they step into a new phase of life.",
       image:
         "https://instagram.fmaa8-1.fna.fbcdn.net/v/t39.30808-6/440323056_17908104839953783_8745844986834733664_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fmaa8-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=RY82HdMN09IQ7kNvgGxmJsW&_nc_gid=67de5aba14ed48adb3137bf410660165&edm=ALQROFkAAAAA&ccb=7-5&ig_cache_key=MzM1ODEzNjAzNDc1MDUyNTc0Ng%3D%3D.3-ccb7-5&oh=00_AYBCIzKWCHFqwkrhB1SjLnhdi2XHCt5F3JPeiyJpMfh-FA&oe=678D96F4&_nc_sid=fc8dfb",
     },{
       title: "ECE Orientation",
-      description:
-        "This is a LIT event focusing on literature and creative arts.",
-      image:
-        "https://i.postimg.cc/xdYFR1kp/Whats-App-Image-2025-01-15-at-19-29-40-435b3f50.jpg",
+          description: "ECS proudly conducts an Orientation for ECE department freshers, where professors and seniors warmly welcome them into the world of electronics and communication. The session offer insights into the branch’s vast opportunities, innovative projects, and the guidance available to help students excel in their journey.",
+          image:
+            "https://i.postimg.cc/xdYFR1kp/Whats-App-Image-2025-01-15-at-19-29-40-435b3f50.jpg",
     },
     
     {
       title: "EC:ArQ",
-      description:
-        "This is a LIT event focusing on literature and creative arts.",
-      image:
-        "https://i.postimg.cc/rpBGJhYV/Whats-App-Image-2025-01-15-at-19-48-18-45437702.jpg",
+          description: "For the first time,ECS presented its inaugural module at Tecnoesis 2024-inspired by epic journey of Interstellar.ARDUINO-QUEST was a space themed challenge in which teams explore,innovate and conquer interstellar challenges using Arduino.",
+          image:
+            "https://i.postimg.cc/rpBGJhYV/Whats-App-Image-2025-01-15-at-19-48-18-45437702.jpg",
     },
     {
       title: "Utkrishtha",
-      description:
-        " Join us for an evening of artistic expression and creativity.",
-      image:
-        "https://i.postimg.cc/CLCJ3Yys/MJ-9663.jpg",
+          description: "ECS hosts Utkrishta, a vibrant fresher’s event to welcome the new ECE batch. The celebration fills with fun activities, introductions, and opportunities for students to bond with peers and seniors.New comer batch showcase their talent to crown the title of Mr.Utkrishta and Miss.Utkrishta and make memories of a lifetime.",
+          image:
+            "https://i.postimg.cc/CLCJ3Yys/MJ-9663.jpg",
     },
     {
       title: "Spectre-Annual Magazine",
-      description:
-        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-      image:
-        "https://i.postimg.cc/N0zCw7JS/Whats-App-Image-2025-01-15-at-19-39-43-7a9a294b.jpg",
+          description: "Spectre, the official magazine of ECS, is a celebration of innovation, creativity, and knowledge in the field of electronics and communication. It showcases insightful articles, groundbreaking projects, and achievements of students and faculty.",
+          image:
+            "https://i.postimg.cc/N0zCw7JS/Whats-App-Image-2025-01-15-at-19-39-43-7a9a294b.jpg",
     },
     {
       title: "Dehleez",
       description:
-        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "Dehleez, the farewell ceremony organized by ECS, is a heartfelt celebration of the graduating ECE batch. The event honors their achievements, cherishes memories, and bids them an emotional goodbye as they step into a new phase of life.",
       image:
         "https://instagram.fmaa8-1.fna.fbcdn.net/v/t39.30808-6/440323056_17908104839953783_8745844986834733664_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fmaa8-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=RY82HdMN09IQ7kNvgGxmJsW&_nc_gid=67de5aba14ed48adb3137bf410660165&edm=ALQROFkAAAAA&ccb=7-5&ig_cache_key=MzM1ODEzNjAzNDc1MDUyNTc0Ng%3D%3D.3-ccb7-5&oh=00_AYBCIzKWCHFqwkrhB1SjLnhdi2XHCt5F3JPeiyJpMfh-FA&oe=678D96F4&_nc_sid=fc8dfb",
     },{
       title: "ECE Orientation",
-      description:
-        "This is a LIT event focusing on literature and creative arts.",
-      image:
-        "https://i.postimg.cc/xdYFR1kp/Whats-App-Image-2025-01-15-at-19-29-40-435b3f50.jpg",
+          description: "ECS proudly conducts an Orientation for ECE department freshers, where professors and seniors warmly welcome them into the world of electronics and communication. The session offer insights into the branch’s vast opportunities, innovative projects, and the guidance available to help students excel in their journey.",
+          image:
+            "https://i.postimg.cc/xdYFR1kp/Whats-App-Image-2025-01-15-at-19-29-40-435b3f50.jpg",
     },
     
     {
       title: "EC:ArQ",
-      description:
-        "This is a LIT event focusing on literature and creative arts.",
-      image:
-        "https://i.postimg.cc/rpBGJhYV/Whats-App-Image-2025-01-15-at-19-48-18-45437702.jpg",
+          description: "For the first time,ECS presented its inaugural module at Tecnoesis 2024-inspired by epic journey of Interstellar.ARDUINO-QUEST was a space themed challenge in which teams explore,innovate and conquer interstellar challenges using Arduino.",
+          image:
+            "https://i.postimg.cc/rpBGJhYV/Whats-App-Image-2025-01-15-at-19-48-18-45437702.jpg",
     },
     {
       title: "Utkrishtha",
-      description:
-        " Join us for an evening of artistic expression and creativity.",
+      description: "ECS hosts Utkrishta, a vibrant fresher’s event to welcome the new ECE batch. The celebration fills with fun activities, introductions, and opportunities for students to bond with peers and seniors.New comer batch showcase their talent to crown the title of Mr.Utkrishta and Miss.Utkrishta and make memories of a lifetime.",
       image:
         "https://i.postimg.cc/CLCJ3Yys/MJ-9663.jpg",
     },
     {
       title: "Spectre-Annual Magazine",
-      description:
-        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-      image:
-        "https://i.postimg.cc/N0zCw7JS/Whats-App-Image-2025-01-15-at-19-39-43-7a9a294b.jpg",
+          description: "Spectre, the official magazine of ECS, is a celebration of innovation, creativity, and knowledge in the field of electronics and communication. It showcases insightful articles, groundbreaking projects, and achievements of students and faculty.",
+          image:
+            "https://i.postimg.cc/N0zCw7JS/Whats-App-Image-2025-01-15-at-19-39-43-7a9a294b.jpg",
     },
     {
       title: "Dehleez",
       description:
-        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "Dehleez, the farewell ceremony organized by ECS, is a heartfelt celebration of the graduating ECE batch. The event honors their achievements, cherishes memories, and bids them an emotional goodbye as they step into a new phase of life.",
       image:
         "https://instagram.fmaa8-1.fna.fbcdn.net/v/t39.30808-6/440323056_17908104839953783_8745844986834733664_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fmaa8-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=RY82HdMN09IQ7kNvgGxmJsW&_nc_gid=67de5aba14ed48adb3137bf410660165&edm=ALQROFkAAAAA&ccb=7-5&ig_cache_key=MzM1ODEzNjAzNDc1MDUyNTc0Ng%3D%3D.3-ccb7-5&oh=00_AYBCIzKWCHFqwkrhB1SjLnhdi2XHCt5F3JPeiyJpMfh-FA&oe=678D96F4&_nc_sid=fc8dfb",
     },{
       title: "ECE Orientation",
-      description:
-        "This is a LIT event focusing on literature and creative arts.",
-      image:
-        "https://i.postimg.cc/xdYFR1kp/Whats-App-Image-2025-01-15-at-19-29-40-435b3f50.jpg",
+          description: "ECS proudly conducts an Orientation for ECE department freshers, where professors and seniors warmly welcome them into the world of electronics and communication. The session offer insights into the branch’s vast opportunities, innovative projects, and the guidance available to help students excel in their journey.",
+          image:
+            "https://i.postimg.cc/xdYFR1kp/Whats-App-Image-2025-01-15-at-19-29-40-435b3f50.jpg",
     },
     
     {
       title: "EC:ArQ",
-      description:
-        "This is a LIT event focusing on literature and creative arts.",
-      image:
-        "https://i.postimg.cc/rpBGJhYV/Whats-App-Image-2025-01-15-at-19-48-18-45437702.jpg",
+          description: "For the first time,ECS presented its inaugural module at Tecnoesis 2024-inspired by epic journey of Interstellar.ARDUINO-QUEST was a space themed challenge in which teams explore,innovate and conquer interstellar challenges using Arduino.",
+          image:
+            "https://i.postimg.cc/rpBGJhYV/Whats-App-Image-2025-01-15-at-19-48-18-45437702.jpg",
     },
     {
       title: "Utkrishtha",
-      description:
-        " Join us for an evening of artistic expression and creativity.",
+      description: "ECS hosts Utkrishta, a vibrant fresher’s event to welcome the new ECE batch. The celebration fills with fun activities, introductions, and opportunities for students to bond with peers and seniors.New comer batch showcase their talent to crown the title of Mr.Utkrishta and Miss.Utkrishta and make memories of a lifetime.",
       image:
         "https://i.postimg.cc/CLCJ3Yys/MJ-9663.jpg",
     },
     {
       title: "Spectre-Annual Magazine",
-      description:
-        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-      image:
-        "https://i.postimg.cc/N0zCw7JS/Whats-App-Image-2025-01-15-at-19-39-43-7a9a294b.jpg",
+          description: "Spectre, the official magazine of ECS, is a celebration of innovation, creativity, and knowledge in the field of electronics and communication. It showcases insightful articles, groundbreaking projects, and achievements of students and faculty.",
+          image:
+            "https://i.postimg.cc/N0zCw7JS/Whats-App-Image-2025-01-15-at-19-39-43-7a9a294b.jpg",
     },
     {
       title: "Dehleez",
       description:
-        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "Dehleez, the farewell ceremony organized by ECS, is a heartfelt celebration of the graduating ECE batch. The event honors their achievements, cherishes memories, and bids them an emotional goodbye as they step into a new phase of life.",
       image:
         "https://instagram.fmaa8-1.fna.fbcdn.net/v/t39.30808-6/440323056_17908104839953783_8745844986834733664_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fmaa8-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=RY82HdMN09IQ7kNvgGxmJsW&_nc_gid=67de5aba14ed48adb3137bf410660165&edm=ALQROFkAAAAA&ccb=7-5&ig_cache_key=MzM1ODEzNjAzNDc1MDUyNTc0Ng%3D%3D.3-ccb7-5&oh=00_AYBCIzKWCHFqwkrhB1SjLnhdi2XHCt5F3JPeiyJpMfh-FA&oe=678D96F4&_nc_sid=fc8dfb",
     },{
       title: "ECE Orientation",
-      description:
-        "This is a LIT event focusing on literature and creative arts.",
-      image:
-        "https://i.postimg.cc/xdYFR1kp/Whats-App-Image-2025-01-15-at-19-29-40-435b3f50.jpg",
+          description: "ECS proudly conducts an Orientation for ECE department freshers, where professors and seniors warmly welcome them into the world of electronics and communication. The session offer insights into the branch’s vast opportunities, innovative projects, and the guidance available to help students excel in their journey.",
+          image:
+            "https://i.postimg.cc/xdYFR1kp/Whats-App-Image-2025-01-15-at-19-29-40-435b3f50.jpg",
     },
     
     {
       title: "EC:ArQ",
-      description:
-        "This is a LIT event focusing on literature and creative arts.",
-      image:
-        "https://i.postimg.cc/rpBGJhYV/Whats-App-Image-2025-01-15-at-19-48-18-45437702.jpg",
+          description: "For the first time,ECS presented its inaugural module at Tecnoesis 2024-inspired by epic journey of Interstellar.ARDUINO-QUEST was a space themed challenge in which teams explore,innovate and conquer interstellar challenges using Arduino.",
+          image:
+            "https://i.postimg.cc/rpBGJhYV/Whats-App-Image-2025-01-15-at-19-48-18-45437702.jpg",
     },
     {
       title: "Utkrishtha",
-      description:
-        " Join us for an evening of artistic expression and creativity.",
+      description: "ECS hosts Utkrishta, a vibrant fresher’s event to welcome the new ECE batch. The celebration fills with fun activities, introductions, and opportunities for students to bond with peers and seniors.New comer batch showcase their talent to crown the title of Mr.Utkrishta and Miss.Utkrishta and make memories of a lifetime.",
       image:
         "https://i.postimg.cc/CLCJ3Yys/MJ-9663.jpg",
     },
     {
       title: "Spectre-Annual Magazine",
-      description:
-        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-      image:
-        "https://i.postimg.cc/N0zCw7JS/Whats-App-Image-2025-01-15-at-19-39-43-7a9a294b.jpg",
+          description: "Spectre, the official magazine of ECS, is a celebration of innovation, creativity, and knowledge in the field of electronics and communication. It showcases insightful articles, groundbreaking projects, and achievements of students and faculty.",
+          image:
+            "https://i.postimg.cc/N0zCw7JS/Whats-App-Image-2025-01-15-at-19-39-43-7a9a294b.jpg",
     },
     {
       title: "Dehleez",
       description:
-        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-      image:
-        "https://instagram.fmaa8-1.fna.fbcdn.net/v/t39.30808-6/440323056_17908104839953783_8745844986834733664_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fmaa8-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=RY82HdMN09IQ7kNvgGxmJsW&_nc_gid=67de5aba14ed48adb3137bf410660165&edm=ALQROFkAAAAA&ccb=7-5&ig_cache_key=MzM1ODEzNjAzNDc1MDUyNTc0Ng%3D%3D.3-ccb7-5&oh=00_AYBCIzKWCHFqwkrhB1SjLnhdi2XHCt5F3JPeiyJpMfh-FA&oe=678D96F4&_nc_sid=fc8dfb",
-    },{
-      title: "ECE Orientation",
-      description:
-        "This is a LIT event focusing on literature and creative arts.",
-      image:
-        "https://i.postimg.cc/xdYFR1kp/Whats-App-Image-2025-01-15-at-19-29-40-435b3f50.jpg",
-    },
-    
-    {
-      title: "EC:ArQ",
-      description:
-        "This is a LIT event focusing on literature and creative arts.",
-      image:
-        "https://i.postimg.cc/rpBGJhYV/Whats-App-Image-2025-01-15-at-19-48-18-45437702.jpg",
-    },
-    {
-      title: "Utkrishtha",
-      description:
-        " Join us for an evening of artistic expression and creativity.",
-      image:
-        "https://i.postimg.cc/CLCJ3Yys/MJ-9663.jpg",
-    },
-    {
-      title: "Spectre-Annual Magazine",
-      description:
-        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-      image:
-        "https://i.postimg.cc/N0zCw7JS/Whats-App-Image-2025-01-15-at-19-39-43-7a9a294b.jpg",
-    },
-    {
-      title: "Dehleez",
-      description:
-        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "Dehleez, the farewell ceremony organized by ECS, is a heartfelt celebration of the graduating ECE batch. The event honors their achievements, cherishes memories, and bids them an emotional goodbye as they step into a new phase of life.",
       image:
         "https://instagram.fmaa8-1.fna.fbcdn.net/v/t39.30808-6/440323056_17908104839953783_8745844986834733664_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fmaa8-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=RY82HdMN09IQ7kNvgGxmJsW&_nc_gid=67de5aba14ed48adb3137bf410660165&edm=ALQROFkAAAAA&ccb=7-5&ig_cache_key=MzM1ODEzNjAzNDc1MDUyNTc0Ng%3D%3D.3-ccb7-5&oh=00_AYBCIzKWCHFqwkrhB1SjLnhdi2XHCt5F3JPeiyJpMfh-FA&oe=678D96F4&_nc_sid=fc8dfb",
     },

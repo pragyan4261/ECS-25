@@ -7,10 +7,12 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 const sliderData = [
-  "https://i.postimg.cc/BbxgyxS0/ARY-0100.jpg",
   "https://i.postimg.cc/h4dcvhZR/MJ-9663.jpg",
-  "https://i.postimg.cc/L5LcTCnB/Spectrumfit.jpg",
-  "https://i.postimg.cc/Lsx6t7jd/Dehleezpic.jpg",
+  "https://i.postimg.cc/wB2BK4Qk/MJ-9364.jpg",
+  "https://i.postimg.cc/gcQ2PZ81/MJ-9548.jpg",
+  "https://i.postimg.cc/rpMpP2xm/MJ-9542.jpg",
+  "https://i.postimg.cc/NM0jQ8Nv/MJ-9652.jpg",
+
 ];
 
 const Utkrishta = () => {

@@ -10,6 +10,7 @@ const sliderData = [
   "https://res.cloudinary.com/nikks/image/upload/v1736972110/s4_xcsiax.jpg",
   "https://res.cloudinary.com/nikks/image/upload/v1736972112/s3_jdj3ry.jpg",
   "https://i.postimg.cc/L5LcTCnB/Spectrumfit.jpg",
+  "https://i.postimg.cc/5tVHWCdf/IMG-20240121-170209.jpg",
   "https://res.cloudinary.com/nikks/image/upload/v1736972109/s2_jo33tx.jpg",
 ];
 

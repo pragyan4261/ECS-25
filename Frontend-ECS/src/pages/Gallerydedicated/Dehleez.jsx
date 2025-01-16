@@ -7,9 +7,10 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 const sliderData = [
-  "https://i.postimg.cc/BbxgyxS0/ARY-0100.jpg",
-  "https://i.postimg.cc/h4dcvhZR/MJ-9663.jpg",
-  "https://i.postimg.cc/Lsx6t7jd/Dehleezpic.jpg",
+  "https://i.postimg.cc/fWBY7B4m/IMG-0378.jpg",
+  "https://i.postimg.cc/ncW7grhL/IMG-0424.jpg",
+  "https://i.postimg.cc/vTq9QH73/IMG-0400.jpg",
+  "https://i.postimg.cc/26CBhB20/IMG-0417.jpg",
 ];
 
 const Dehleez = () => {

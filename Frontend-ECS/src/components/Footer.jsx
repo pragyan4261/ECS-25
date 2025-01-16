@@ -63,8 +63,8 @@ const Footer = () => {
           <ul className="mobile:absolute tablet:static top-[18.1vw] right-[15vw] space-y-2 text-right text-base font-rajdhani">
             <li><a href="/members" className="hover:text-[#819BE2]">Members</a></li>
             <li><a href="/photogallery" className="hover:text-[#819BE2]">Gallery</a></li>
-            <li><a href="#" className="hover:text-[#819BE2]">About Us</a></li>
-            <li><a href="#" className="hover:text-[#819BE2]">FAQs</a></li>
+            <li><a href="/about" className="hover:text-[#819BE2]">About Us</a></li>
+            <li><a href="/faq" className="hover:text-[#819BE2]">FAQs</a></li>
           </ul>
         </div>
       </div>

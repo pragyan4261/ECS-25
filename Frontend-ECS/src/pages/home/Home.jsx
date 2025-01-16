@@ -14,7 +14,7 @@ export default function Home() {
                         Electronics and Communication Society
                     </h2>
                 </div>
-                <div className="pc:h-[90vh] mobile:h-[60vh]" ></div>
+                <div className="pc:h-[90vh] mobile:h-[90vh]" ></div>
             <Message/>
             <AboutUs/>
             <Annual/>

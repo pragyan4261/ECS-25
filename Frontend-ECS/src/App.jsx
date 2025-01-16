@@ -19,6 +19,8 @@ import Orientation from './pages/Gallerydedicated/Orientation.jsx';
 import Spectrum from './pages/Gallerydedicated/Spectrum.jsx';
 import Utkrishta from './pages/Gallerydedicated/Utkrishta.jsx';
 import More from './pages/Gallerydedicated/More.jsx';
+import FAQ from './components/FAQs.jsx';
+
 // import PrivateRoute from './components/PrivateRoute.jsx';
 
 function App() {
@@ -56,7 +58,7 @@ function App() {
         <Route path='/spectrum' element={<Spectrum/>}/>
         <Route path='/utkrishtha' element={<Utkrishta/>}/>
         <Route path='/more' element={<More/>}/>
-      
+        <Route path='/faq' element={<FAQ/>}/>
 
 
        

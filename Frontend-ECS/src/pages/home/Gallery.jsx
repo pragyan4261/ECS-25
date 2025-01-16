@@ -27,7 +27,7 @@ const ImageCarousel = () => {
     "https://i.postimg.cc/HWy6tXBK/IMG-0417.jpg",
     "https://i.postimg.cc/sx7KDCMy/IMG-20240426-WA0012.jpg",
     "https://i.postimg.cc/mZv5x8PB/ARY-0100.jpg",
-    "https://via.placeholder.com/600x400/FFA500/FFFFFF?text=Image+5",
+    "https://i.postimg.cc/wB2BK4Qk/MJ-9364.jpg",
   ];
 
   return (
