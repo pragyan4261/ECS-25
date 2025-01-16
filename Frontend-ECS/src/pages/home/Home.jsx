@@ -4,6 +4,7 @@ import Message from './Message';
 import AboutUs from './AboutUs';
 import Annual from './Annual';
 import ParticlesComponent from '../Particle/Particle';
+import Typewriter from "typewriter-effect";
 
 export default function Home() {
     return (
@@ -13,6 +14,19 @@ export default function Home() {
                     <h2 className="text-white flex justify-center items-center text-4xl font-bold sm:text-5xl pl-6">
                         Electronics and Communication Society
                     </h2>
+                    <div id="hero" className="text-yellow-400 flex justify-center items-center text-4xl font-bold sm:text-5xl pl-6">
+              <span className='typingText'>
+              <Typewriter
+                onInit={(typewriter) => {
+                    typewriter
+                        .typeString("NIT SILCHAR")
+                        .pauseFor(1000)
+                        .start();
+                }}
+            />
+                </span>
+            </div>
+                    
                 </div>
                 <div className="pc:h-[90vh] mobile:h-[90vh]" ></div>
             <Message/>
