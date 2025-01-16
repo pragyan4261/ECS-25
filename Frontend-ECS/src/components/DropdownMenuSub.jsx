@@ -1,7 +1,8 @@
   import { motion } from "framer-motion";
   import { Dispatch, SetStateAction, useState } from "react";
-  const StaggeredDropDown = ({subjects}) => {
+  const StaggeredDropDown = ({subjects, setCurrSub}) => {
     const [open, setOpen] = useState(false);
+    const [SubText, setsubText]=useState(null);
     
     return (
       <div className="p-8 pcmd:p-0 pcmd:m-0 pb-56 flex items-center justify-center  ">
@@ -12,29 +13,29 @@
           >
             <span className="font-medium text-sm">Subjects</span>
           </button>
-
+          {/* <div>{SubText}</div> */}
           <motion.ul
             initial={wrapperVariants.closed}
             variants={wrapperVariants}
             style={{ originY: "top", translateX: "-50%" }}
             className="flex flex-col  p-2 rounded-lg  shadow-xl absolute top-[120%] left-[50%] w-48 overflow-hidden text-ellipsis"
           >
-            {subjects.map((element => {
+            {subjects.map((element,index) => {
             return ( 
-              <Option setOpen={setOpen}   text={element} />
+              <Option setOpen={setOpen} setCurrSub={setCurrSub} index={index} setsubText={setsubText} text={element} />
             )
-          }))}
+          })}
           </motion.ul>
         </motion.div>
       </div>
     );
   };
-  
-  const Option = ({ text, setOpen }) => {
+  /* Yehsb chorhke cg mei dhyaan do -By sibajit  */
+  const Option = ({ text, setOpen,setCurrSub, setsubText,index}) => {
     return (
       <motion.li
         variants={itemVariants}
-        onClick={() => setOpen(false)}
+        onClick={() => {setOpen(false), setCurrSub(index), setsubText(text)}}
         className="flex items-center p-2 text-xs font-medium  rounded-md hover:bg-indigo-100   transition-colors cursor-pointer dropOption"
       >
         
