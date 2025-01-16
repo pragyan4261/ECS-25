@@ -694,19 +694,14 @@ const subjects = [
         </div>
       </div>
       <div className="middle-content justify-center flex flex-col ">
-        <div className='contentPlate flex p-10 justify-between  '>
+        <div className='contentPlate flex mobile:p-10 pl-10 pr-5 justify-between  '>
           <div className="50L flex flex-col justify-center ml-5">
-            <div className="paper desktopView">
-              <svg width="230" height="274" viewBox="0 0 230 274" fill='none' xmlns="http://www.w3.org/2000/svg">
-              <img className='absolute z-10'src="https://i.postimg.cc/2510gyvj/Screenshot-2025-01-16-105032-removebg-preview.png" alt="" />
-                {/* <path d="M8.4 272H221.6C225.135 272 228 269.135 228 265.6V53L183.5 2H8.4C4.86538 2 2 4.86538 2 8.4V265.6C2 269.135 4.86538 272 8.4 272Z" fill="white" stroke="#0066FF" stroke-width="2.4" /> */}
-              </svg>
+            <div className="paper  desktopView">
+
 
             </div>
             <div className="paper mobileView">
-              <svg className='mobileView' width="184" height="220" viewBox="0 0 184 220" fill='none' xmlns="http://www.w3.org/2000/svg">
-                <path className='mobileView ' d="M8.4 272H221.6C225.135 272 228 269.135 228 265.6V53L183.5 2H8.4C4.86538 2 2 4.86538 2 8.4V265.6C2 269.135 4.86538 272 8.4 272Z" fill="white" stroke="#0066FF" stroke-width="2.4" />
-              </svg>
+              
             </div>
           </div>
           <div className="50r flex flex-col justify-end">
