@@ -168,6 +168,7 @@ function Signup() {
                     Sign Up
                 </button>
             </form>
+            <div className="text-center">Already Have an account? Click here to <a href="/profile" className="text-blue-600">Sign-In</a></div>
         </div>
         </div>
     );
