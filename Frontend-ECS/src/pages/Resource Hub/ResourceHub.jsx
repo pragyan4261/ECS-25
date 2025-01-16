@@ -7,12 +7,15 @@ import './ResHub.css'
 import RadioButtonHigh from './svgs/RadioButtonHigh'
 import StaggeredDropDownSub from '../../components/DropdownMenuSub'
 import StaggeredDropDownSem from '../../components/DropdownMenuSem'
-import { GiTireIronCross } from "react-icons/gi";
+import { GiTireIronCross, GiWoodenClogs } from "react-icons/gi";
 
 const ResourceHub = () => {
   const [disItem, setdisItem] = useState(false);
   const [currSem, setcurrSem] = useState(0);
   const [currSub, setCurrSub] = useState(0);
+  useEffect(()=>{
+    console.log(currSem)
+  },[currSem])
   const [isActive, setIsActive] = useState(false);
   const handleClick = () => {
     setIsActive(true);
@@ -645,8 +648,8 @@ const subjects = [
 
   return (<div className='flex flex-col gap-5 pb-20'>
     <ResHub />
-    <div className='pcmd:flex-col flex justify-around h-full'>
-      <div className={`display-item overflow-y-scroll mobile:left-0 pc:left-1/4 ${disItem ? 'visible relative' : 'absolute invisible'}`}>
+    <div className='pcmd:flex-col flex justify-around items-center w-full h-full'>
+      <div className={`display-item overflow-y-scroll mt-10 ${disItem ? 'visible relative' : 'absolute invisible'}`}>
         <div>
           {files[currSub].map((file, index) => (
             <div
@@ -682,27 +685,23 @@ const subjects = [
         </ul>
         <div className='pcmd:flex pcmd:justify-around pcmd:w-full mobileView z-10'>
           <ul className='pcmd:m-0 pcmd:p-0  flex flex-col h-full items-end  justify-around text-center text-wrap gap-y-4 pb-4 pt-4 mobileView'>
-            <StaggeredDropDownSem />
+            <StaggeredDropDownSem setcurrSem={setcurrSem} setCurrSub={setCurrSub} currSem={currSem} handleClick={handleClick} />
           </ul>
           <ul className='pcmd:m-0 pcmd:p-0  flex flex-col h-full items-end  justify-around text-center text-wrap gap-y-4 pb-4 pt-4 mobileView'>
-            <StaggeredDropDownSub subjects={subjects} />
+            <StaggeredDropDownSub setCurrSub={setCurrSub} currSem={currSem}  subjects={subjects[currSem]} handleClick={[handleClick]} />
           </ul>
 
         </div>
       </div>
       <div className="middle-content justify-center flex flex-col ">
-        <div className='contentPlate flex p-10 justify-between  '>
+        <div className='contentPlate flex mobile:p-10 pl-10 pr-5 justify-between  '>
           <div className="50L flex flex-col justify-center ml-5">
-            <div className="paper desktopView">
-              <svg width="230" height="274" viewBox="0 0 230 274" fill='none' xmlns="http://www.w3.org/2000/svg">
-                <path d="M8.4 272H221.6C225.135 272 228 269.135 228 265.6V53L183.5 2H8.4C4.86538 2 2 4.86538 2 8.4V265.6C2 269.135 4.86538 272 8.4 272Z" fill="white" stroke="#0066FF" stroke-width="2.4" />
-              </svg>
+            <div className="paper  desktopView">
+
 
             </div>
             <div className="paper mobileView">
-              <svg className='mobileView' width="184" height="220" viewBox="0 0 184 220" fill='none' xmlns="http://www.w3.org/2000/svg">
-                <path className='mobileView ' d="M8.4 272H221.6C225.135 272 228 269.135 228 265.6V53L183.5 2H8.4C4.86538 2 2 4.86538 2 8.4V265.6C2 269.135 4.86538 272 8.4 272Z" fill="white" stroke="#0066FF" stroke-width="2.4" />
-              </svg>
+              
             </div>
           </div>
           <div className="50r flex flex-col justify-end">
