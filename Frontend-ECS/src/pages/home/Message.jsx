@@ -63,7 +63,7 @@ const Message = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto items-center p-2">
+    <div className="max-w-6xl mx-auto items-center p-2 mobile:-mt-10">
       <div className="message border border-transparent p-5 h-max text-center space-y-6">
         <div className="msgImg relative w-full h-full z-10 flex justify-center items-center mb-[70px]">
           <img src="https://i.postimg.cc/hGJ1bPRD/Group-15.png" alt="" />
