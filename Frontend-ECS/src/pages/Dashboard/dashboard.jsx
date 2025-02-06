@@ -15,15 +15,15 @@ const Dashboard = () => {
     };
     const handleLogout = async () => {
       try {
-          const response = await fetch("https://ecs-25.onrender.com/api/v1/users/logout", {
+          const response = await fetch("/api/v1/users/logout", {
               method: "POST",
               headers: {
-                  Authorization: `Bearer ${localStorage.getItem("token")}`,
+                  Authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
               },
           });
 
           if (response.ok) {
-              localStorage.removeItem("token");
+              localStorage.removeItem("accesstoken");
               localStorage.removeItem("user");
               setUser(null); // Reset the user state
           } else {
@@ -45,10 +45,10 @@ const Dashboard = () => {
             formData.append("avatar", file);
 
             // Send the file to the backend
-            const response = await fetch("https://ecs-25.onrender.com/api/v1/users/updateAvatar", {
+            const response = await fetch("/api/v1/users/updateAvatar", {
                 method: "PATCH",
                 headers: {
-                    Authorization: `Bearer ${localStorage.getItem("token")}`, 
+                    Authorization: `Bearer ${localStorage.getItem("accesstoken")}`, 
                 },
                 body: formData,
             });

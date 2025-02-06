@@ -34,7 +34,7 @@ function Signin() {
         }
 
         try {
-            const res = await fetch("https://ecs-25.onrender.com/api/v1/users/login", {
+            const res = await fetch("/api/v1/users/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -62,8 +62,8 @@ function Signin() {
             console.log(data)
 
             // Store the token and user in localStorage
-            localStorage.setItem("token", accessToken);
-            localStorage.setItem("token", refreshToken);
+            localStorage.setItem("accesstoken", accessToken);
+            localStorage.setItem("refreshtoken", refreshToken);
             localStorage.setItem("user", JSON.stringify({ currentUser: user }));
             console.log("User data saved to localStorage:", { currentUser: user });
 
