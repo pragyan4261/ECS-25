@@ -14,47 +14,47 @@ const Dashboard = () => {
         }
     };
     const handleLogout = async () => {
-      try {
-          const response = await fetch("/api/v1/users/logout", {
-              method: "POST",
-              headers: {
-                  Authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
-              },
-          });
-
-          if (response.ok) {
-              localStorage.removeItem("accesstoken");
-              localStorage.removeItem("user");
-              setUser(null); // Reset the user state
-          } else {
-              const data = await response.json();
-              throw new Error(data.message || "Failed to log out");
-          }
-      } catch (error) {
-          console.error("Error logging out:", error);
-          alert("Failed to log out. Please try again.");
-      }
+        
+        try {
+            const response = await fetch("/api/v1/users/logout", {
+                method: "POST",
+                credentials: "include", // Ensures cookies are included in the request
+            });
+    
+            if (response.ok) {
+                setUser(null); // Reset the user state
+                
+                window.location.href = "/sign-in"; // Redirect to login page
+            } else {
+                const data = await response.json();
+                throw new Error(data.message || "Failed to log out");
+            }
+        } catch (error) {
+            console.error("Error logging out:", error);
+            alert("Failed to log out. Please try again.");
+        }
     };
     const handleFileChange = async (event) => {
         try {
             const file = event.target.files[0];
             if (!file) return;
-
+    
             // Create FormData to send the file
             const formData = new FormData();
             formData.append("avatar", file);
-
-            // Send the file to the backend
+    
+            // Send the file to the backend with cookies included
             const response = await fetch("/api/v1/users/updateAvatar", {
                 method: "PATCH",
                 headers: {
-                    Authorization: `Bearer ${localStorage.getItem("accesstoken")}`, 
+                    // Authorization header is not needed because cookies will be automatically sent with credentials: 'include'
                 },
+                credentials: "include",  // This ensures cookies are sent with the request
                 body: formData,
             });
-
+    
             const data = await response.json();
-
+    
             if (response.ok) {
                 // Update user avatar in local state and localStorage
                 const updatedUser = { ...user, avatar: data.data.avatar };
@@ -72,6 +72,7 @@ const Dashboard = () => {
             alert("Failed to update avatar. Please try again.");
         }
     };
+    
 
     // Fetch user data from localStorage on component mount
     React.useEffect(() => {

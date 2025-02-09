@@ -22,61 +22,65 @@ function Signin() {
         });
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setError("");
-        setSuccess(false);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    setSuccess(false);
 
-        // Frontend validation
-        if (!formData.email || !formData.scholar_ID || !formData.password) {
-            setError("All fields are required.");
-            return;
+    // Frontend validation
+    if (!formData.email || !formData.scholar_ID || !formData.password) {
+        setError("All fields are required.");
+        return;
+    }
+
+    try {
+        const res = await fetch("/api/v1/users/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            credentials: "include", // Include cookies in requests
+            body: JSON.stringify(formData),
+        });
+
+        if (!res.ok) {
+            const errorText = await res.text();
+            throw new Error(errorText || "An error occurred.");
         }
 
-        try {
-            const res = await fetch("/api/v1/users/login", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                // credentials: "include", // Include cookies in requests
-                body: JSON.stringify(formData),
-            });
+        const data = await res.json();
+        console.log("Login successful:", data);
 
-            if (!res.ok) {
-                const errorText = await res.text();
-                throw new Error(errorText || "An error occurred.");
-            }
+        setSuccess(true);
+        setFormData({
+            email: "",
+            scholar_ID: "",
+            password: ""
+        });
 
-            const data = await res.json();
-            console.log("Login successful:", data);
-            setSuccess(true);
-            setFormData({
-                email: "",
-                scholar_ID: "",
-                password: ""
-            });
+        // Destructure data and ensure correct reference to the user object
+        const { data: { user, accessToken, refreshToken } } = data;
 
-            const { data: { user, accessToken, refreshToken} } = data;
-
-            console.log(data)
-
-            // Store the token and user in localStorage
-            localStorage.setItem("accesstoken", accessToken);
-            localStorage.setItem("refreshtoken", refreshToken);
-            localStorage.setItem("user", JSON.stringify({ currentUser: user }));
-            console.log("User data saved to localStorage:", { currentUser: user });
-
-            // Update the context
-            isLoggedIn.setIsLoggedIn(true);
-            navigate('/profile')
-            window.location.reload();
-        } catch (error) {
-            console.error("Error during login:", error);
-            setError(error.message);
+        // Ensure user is defined before using it
+        if (!user) {
+            throw new Error("User data is missing");
         }
-    };
 
+        // Set user data in localStorage
+        localStorage.setItem("user", JSON.stringify({ currentUser: user }));
+        // localStorage.setItem("accessToken",accessToken)
+
+        // Update the context
+        isLoggedIn.setIsLoggedIn(true);
+        navigate('/profile'); // Redirect to profile page
+        window.location.reload();
+    } catch (error) {
+        console.error("Error during login:", error);
+        setError(error.message);
+    }
+};
+
+    
     return (
         <div className="mb-5">
             <div className="pt-14">
